@@ -21,7 +21,7 @@ _List the 4 problems selected in MS2-O1._
 > One subsection per interview. Duplicate the block below for each team member's interview.
 > **OJO: This is a template**
 
-### Interview 1 — Conducted by [Team Member]
+### Interview n — Conducted by [Team Member]
 
 **Interviewee:** [name / anonymized identifier]
 **Problem/domain explored:** [problem]
