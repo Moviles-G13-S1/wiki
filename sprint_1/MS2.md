@@ -10,7 +10,7 @@ _Members: [Name 1], [Name 2], [Name 3], [Name 4], [Name 5], [Name 6]_
 _List the 4 problems selected in MS2-O1._
 
 1. **Problem 1:** People who shop online regularly struggle to keep track of the products they want to buy. Interesting items get lost across scattered screenshots, open browser tabs, and notes-app entries, with no price, image, or link kept together in one place. As a result, users forget about products they liked, lose track of price changes, and have no easy way to compare or revisit items later and often re-discovering something they wanted weeks after first seeing it, or giving up on it altogether.
-2. **Problem 2:** [description]
+2. **Problem 2:** Hikers often want to know, "How long until I reach the summit?" Most hiking apps display a 2D map in which you can check the linear progress of the trail but factors like elevation gain or slope are not clearly represented. As a result, hikers can see how far they've traveled, but not how much effort is actually left.
 3. **Problem 3:** [description]
 4. **Problem 4:** [description]
 
