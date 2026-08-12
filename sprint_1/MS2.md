@@ -31,7 +31,7 @@ _List the 4 problems selected in MS2-O1._
 | # | Question | Purpose |
 |---|----------|---------|
 | 1 | 	Tell me a bit about yourself — what do you usually shop for online? | Rapport-building; get comfortable, establish shopping profile |
-| 2 | How often would you say you browse online stores or social media for things you might want to buy? | social media for things you might want to buy?	Rapport-building; gauge engagement level with the problem space |
+| 2 | How often would you say you browse online stores or social media for things you might want to buy? | Rapport-building; gauge engagement level with the problem space |
 
 #### Understanding the Problem (current behavior)
  
