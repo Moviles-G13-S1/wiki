@@ -9,7 +9,7 @@ _Members: [Name 1], [Name 2], [Name 3], [Name 4], [Name 5], [Name 6]_
 
 _List the 4 problems selected in MS2-O1._
 
-1. **Problem 1:** [description]
+1. **Problem 1:** People who shop online regularly struggle to keep track of the products they want to buy. Interesting items get lost across scattered screenshots, open browser tabs, and notes-app entries, with no price, image, or link kept together in one place. As a result, users forget about products they liked, lose track of price changes, and have no easy way to compare or revisit items later and often re-discovering something they wanted weeks after first seeing it, or giving up on it altogether.
 2. **Problem 2:** [description]
 3. **Problem 3:** [description]
 4. **Problem 4:** [description]
@@ -21,10 +21,24 @@ _List the 4 problems selected in MS2-O1._
 > One subsection per interview. Duplicate the block below for each team member's interview.
 > **OJO: This is a template**
 
-### Interview 1 — Conducted by [Member Name]
+### Interview 1 — Conducted by [Team Member]
 
 **Interviewee:** [name / anonymized identifier]
 **Problem/domain explored:** [problem]
+ 
+| # | Question | Purpose |
+|---|----------|---------|
+| 1 | [question] | [e.g., build rapport] |
+| 2 | [question] | [e.g., understand the problem] |
+| 3 | [question] | [e.g., clarify a specific aspect] |
+| ... | | |
+ 
+**Evidence of participation:** [link to photo/screenshot/recording snippet proving this member conducted the interview]
+
+### Interview 1 — Conducted by Santiago Casasbuenas
+
+**Interviewee:** [name / anonymized identifier]
+**Problem/domain explored:** Problem 1
 
 #### Warm-up / Rapport-building
 
