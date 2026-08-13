@@ -194,6 +194,8 @@ The interviewee didn't want to take a Photo :(
 
 ### Interview 1 - Santiago Casasbuenas
 
+**Who (Same for all situations):** Emilio, 23-year-old student at Universidad de los Andes, buys books and clothes online.
+
 **Situation 1 — Abandoning the pants purchase**
 
 - **What:** Emilio saw a pair of pants online that he liked but didn't buy them right away.
