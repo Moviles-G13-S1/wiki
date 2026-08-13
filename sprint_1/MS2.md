@@ -125,7 +125,7 @@ _List the 4 problems selected in MS2-O1._
 | Interview | Interviewer | Full recording | Transcript |
 |-----------|-------------|-----------------|------------|
 | Interview 1 | [Member Name] | [link] | [link] |
-| Interview 2 | [Member Name] | [link] | [Read the complete Interview 2 transcript](evidence/interview-2-transcript.md) |
+| Interview 2 | [Member Name] | [listen the full interview](evidence/interview-2/interview-2-audio) | [Read the complete Interview 2 transcript](evidence/interview-2-transcript.md) |
 | ... | | | |
 
 ---
