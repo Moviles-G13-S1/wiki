@@ -170,7 +170,7 @@ The interviewee didn't want to take a Photo :(
 
 > 4 situations per interview, using the What–How–Why methodology from MS2-O1.
 
-### Interview 1 — [Member Name]
+### Interview x — [Member Name]
 
 **Situation 1**
 - **What:** [descriptive account of what the person is doing]
@@ -191,6 +191,32 @@ The interviewee didn't want to take a Photo :(
 - **What:**
 - **How:**
 - **Why:**
+
+### Interview 1 - Santiago Casasbuenas
+
+**Situation 1 — Abandoning the pants purchase**
+
+- **What:** Emilio saw a pair of pants online that he liked but didn't buy them right away.
+- **How:** He kept looking at them for a while, then simply decided not to buy them and closed the page — without saving the item anywhere or noting it down.
+- **Why:** He didn't consider the item important enough to warrant tracking it; low emotional investment in the purchase meant it wasn't worth the effort of saving it.
+
+**Situation 2 — Forgetting things he wanted to buy**
+
+- **What:** Emilio has repeatedly lost track of and forgotten about things he wanted to buy, especially clothes.
+- **How:** He only actively tracks wants in one narrow case — an Amazon wishlist, and only for books. Everything else (like clothes) has no system behind it at all.
+- **Why:** He deprioritizes items he judges as "not that important" in the moment, so he never creates a record for them, and they naturally fade from memory over time.
+
+**Situation 3 — Using retargeted ads as an unintentional price tracker**
+
+- **What:** Emilio checks whether the price of something he wanted has changed since he first saw it.
+- **How:** He doesn't do this proactively or through any tool — he waits for the same product ad to resurface repeatedly on social media/browsing, then clicks through to check the price.
+- **Why:** He has no structured way to monitor price changes himself, so he's outsourced that job to ad algorithms — revealing an unmet need a dedicated tracking feature could fill.
+
+**Situation 4 — Skepticism toward organized wishlists**
+
+- **What:** When asked if separate categorized wishlists (clothes, tech, travel, etc.) would be useful, Emilio said he liked the idea but doubted he'd actually use it.
+- **How:** He described a pattern where lists get filled with many items but are never revisited or acted on, and mentioned that having too much saved information about his wants feels overwhelming.
+- **Why:** His hesitation isn't about disinterest in organizing purchases — it stems from a fear that the tool would become clutter without follow-through, and anxiety around information overload.
 
 ### Interview 2 — Juan Felipe Sáenz García
 
