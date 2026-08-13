@@ -72,7 +72,7 @@ _List the 4 problems selected in MS2-O1._
 **Evidence of participation:** [link to photo/screenshot/recording snippet proving this member conducted the interview]
 
 
-### Interview 2 — Conducted by Juan Felipe Saenz Garcia
+### Interview 2 — Conducted by Juan Felipe Sáenz García
 
 **Interviewee:** Catherine Jaque
 **Problem/domain explored:** Problem 1
@@ -160,7 +160,7 @@ The interviewee didn't want to take a Photo :(
 |-----------|-------------|-----------------|------------|
 | Interview 1 | [Member Name] | [link] | [link] |
 | Interview 2 | Juan Felipe Saenz Garcia | [Listen to the full interview](evidence/interview-2/Interview-2-audio) | [Read the complete transcript](evidence/interview-2/transcript.md) |
-| ... | | | |
+| Interview 3 | Miguel Angel Velandia | [Listen to the full interview](evidence/interview-3/Interview-3-audio.mp4) | [Read the complete transcript](evidence/interview-3/transcript.md) |
 
 ---
 
@@ -190,7 +190,7 @@ The interviewee didn't want to take a Photo :(
 - **How:**
 - **Why:**
 
-### Interview 2 — Juan Felipe Saenz Garcia
+### Interview 2 — Juan Felipe Sáenz García
 
 **Situation 1**
 - **What:** Catherine finds a handbag online that she wants to buy, but she does not purchase it immediately. She saves the product so that she can return to it later, when she has both the money and the motivation to complete the purchase.
@@ -215,6 +215,36 @@ The interviewee didn't want to take a Photo :(
 - **How:** She responds positively to the concept but emphasizes simplicity, easy access, an attractive user interface, and limited extra functionality. She appears frustrated that her desired products are currently divided among different platforms, yet she does not want the solution to overwhelm her with unnecessary information or features.
 - **Why:** She likely wants greater control and organization without replacing one source of friction with another. Item-level privacy would allow her to keep personal interests private while sharing selected products when asking for opinions or suggesting gifts. Her preference suggests that adoption will depend on the application being centralized, visually appealing, quick to use, and flexible about sharing.
 - **Who:** Catherine is the prospective user of the wishlist application. She is digitally experienced, shops online regularly, and values visual design, convenience, control over privacy, and the ability to organize products from multiple sources.
+
+### Interview 3 — Miguel Velandia
+
+**Situation 1**
+- **What:** The user is saving web links of products he wants to buy directly into a personal WhatsApp chat that acts as a makeshift wishlist. He also uses Steam's built-in wishlist features and checks Google Flights once a week to track flight prices.
+- **How:** He behaves in a practical yet rudimentary way. He copies and paste links into his own chat without any organization or tags. He admits that when he reviews the links later, he often doesn't recognize what product the URL belongs to until he clicks it, causing mild friction and extra effort.
+- **Why:** He does this because WhatsApp is an application he checks constantly throughout the day, making it convenient and accessible. He lacks a dedicated, centralized tool that automatically structures, categorizes, and tracks price changes for items across different stores, forcing him to rely on manual, fragmented methods.
+- **Who:** A tech-savvy young adult who frequently buys tech accessories and video games online, values efficiency, but relies on quick personal workarounds (like self-messaging) to manage his shopping intent.
+
+**Situation 2**
+- **What:** The user manually checks product links every week or two to see if prices have dropped, or misses out on purchases because he forgets about the items until it is too late or the offer has expired.
+- **How:** He behaves passively and somewhat regretfully. He accepts that he frequently loses track of good deals or forgets why he wanted to buy something in the first place, expressing a sense of missed opportunity when he realizes a product went out of stock or returned to its full price.
+- **Why:** He does not have an automated notification system for general web products (outside of Steam). Because tracking prices manually requires high cognitive effort and constant memory recall, he naturally forgets to follow up, leading to impulsive abandonment or missed discounts.
+- **Who:** A price-conscious online shopper who prioritizes finding the lowest price and good quality, but whose busy routine prevents him from constantly monitoring e-commerce sites manually.
+
+**Situation 3**
+- **What:** The user insists on keeping all his wishlists completely private, explicitly rejecting any feature that forces or encourages social sharing with friends or family.
+- **How:** He expresses his stance firmly, decisively, and pragmatically. He shows zero interest in receiving unsolicited gifts or sharing his personal shopping preferences, stating clearly that he is the sole buyer and user of those items.
+- **Why:** He views shopping and wishlist management as an entirely personal and utility-driven activity rather than a social experience. He values personal privacy and independence in his purchasing decisions, avoiding any social expectation or awkwardness around asking others for gifts.
+- **Who:** An independent consumer who prefers clean, utility-focused tools that respect personal privacy over social-network-style features or public sharing options.
+
+**Situation 4**
+- **What:** The user evaluates whether an item is worth purchasing by weighing its price against its quality, and considers writing personal notes to record the initial spark or motivation behind wanting the product.
+- **How:** He behaves self-reflectively and analytically. He acknowledges his own tendency toward spontaneous or impulsive buying ("consumerism by nature") and deliberates on whether his desire for an item will persist after a few days.
+- **Why:** He wants to prevent impulse buying and ensure his money is spent wisely. Having a space for personal notes and price context helps him validate his emotional motivations over time, distinguishing genuine needs/desires from temporary impulses.
+- **Who:** A rational buyer who is self-aware of consumerist habits and seeks mechanisms to control spending while ensuring the product meets a minimum threshold of quality and true utility.
+
+
+
+
 <!-- Duplicate ### Interview N block (with its 4 situations) for each interview -->
 
 ---
