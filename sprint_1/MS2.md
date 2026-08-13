@@ -156,6 +156,31 @@ _List the 4 problems selected in MS2-O1._
 - **How:**
 - **Why:**
 
+### Interview 2 — Juan Felipe Saenz Garcia
+
+**Situation 1**
+- **What:** Catherine finds a handbag online that she wants to buy, but she does not purchase it immediately. She saves the product so that she can return to it later, when she has both the money and the motivation to complete the purchase.
+- **How:** She behaves casually and postpones the decision without following a structured process. Her response suggests that buying the item is not urgent. She relies on the platform’s save function and expects herself to remember the product later.
+- **Why:** She may be delaying the purchase because completing the payment feels inconvenient at that moment and because she wants to wait until she feels financially and emotionally ready. This suggests that wanting a product does not always lead to an immediate purchase, so she needs a convenient way to preserve that interest without committing to buying it.
+- **Who:** Catherine is a Systems and Computing Engineering student at Universidad de los Andes. She frequently shops online for clothes, handbags, and skincare products and browses online stores or social media approximately once or twice a week.
+
+**Situation 2**
+- **What:** Catherine saves desired products in different ways depending on where she finds them. On Instagram, she uses saved posts; on other websites, she takes screenshots and stores them in her phone’s gallery.
+- **How:** Her behavior is improvised and fragmented across multiple platforms. She chooses the fastest available method rather than using a consistent organizational system. Although screenshots are convenient in the moment, she later has difficulty finding them, and some desired products are eventually forgotten.
+- **Why:** She probably uses screenshots and saved posts because these actions require little effort and are immediately available while browsing. However, the lack of a centralized system causes information to become scattered. This suggests a need for a simple tool that gathers products from different sources in one place without adding significant effort to her current browsing routine.
+- **Who:** Catherine is a frequent social-media and online-store user who discovers products across Instagram and other websites. In this situation, she is acting as a potential buyer trying to preserve products for future consideration.
+
+**Situation 3**
+- **What:** When Catherine considers similar products, she searches for different versions using tools such as Google Lens or Pinterest. She is particularly interested in comparing products by price and would like to see product images, sources, and prices organized from lowest to highest.
+- **How:** She behaves visually and price-consciously. She explores alternatives rather than conducting a detailed comparison of the exact same product across several sellers. Her current comparison process is manual and spread across different search tools, which may make it difficult to evaluate all the options efficiently.
+- **Why:** She may be trying to find an option that satisfies both her aesthetic preferences and her budget. Price becomes especially important when a product is expensive. This suggests that visual comparison and price organization could create value, while automatic or frequent price tracking may be less relevant for inexpensive items.
+- **Who:** Catherine is a young online shopper interested mainly in fashion and skincare products. She appears comfortable using visual digital tools and is attentive to price when evaluating alternatives.
+
+**Situation 4**
+- **What:** Catherine considers using a centralized wishlist application where she could save products from different apps and websites. She wants to decide which individual items remain private and which can be shared, rather than making an entire list either public or private.
+- **How:** She responds positively to the concept but emphasizes simplicity, easy access, an attractive user interface, and limited extra functionality. She appears frustrated that her desired products are currently divided among different platforms, yet she does not want the solution to overwhelm her with unnecessary information or features.
+- **Why:** She likely wants greater control and organization without replacing one source of friction with another. Item-level privacy would allow her to keep personal interests private while sharing selected products when asking for opinions or suggesting gifts. Her preference suggests that adoption will depend on the application being centralized, visually appealing, quick to use, and flexible about sharing.
+- **Who:** Catherine is the prospective user of the wishlist application. She is digitally experienced, shops online regularly, and values visual design, convenience, control over privacy, and the ability to organize products from multiple sources.
 <!-- Duplicate ### Interview N block (with its 4 situations) for each interview -->
 
 ---
