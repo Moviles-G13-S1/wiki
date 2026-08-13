@@ -307,7 +307,33 @@ The interviewee didn't want to take a Photo :(
 - **Who:** A rational buyer who is self-aware of consumerist habits and seeks mechanisms to control spending while ensuring the product meets a minimum threshold of quality and true utility.
 
 
+### Interview 4 — Jeronimo Franco 
 
+**Who (Same for all situations):** A San Francisco resident who considers themself an avid hiker, hikes approximately twice a month—usually with their roommate and has experience with long urban and coastal trails.
+
+**Situation 1 — Tracking progress with limited information**
+
+- **What:** The interviewee sometimes wants to know how much of the trail has been completed and how much remains.
+- **How:** When time is not a concern, they may continue hiking without actively checking their progress. In other situations, they use AllTrails to monitor the route.
+- **Why:** Their need to track progress depends on the circumstances of the hike. When time or difficulty matters, they require more information to understand their position and plan the rest of the journey.
+
+**Situation 2 — Estimating the remaining difficulty**
+
+- **What:** The interviewee estimates how difficult the remaining part of a hike will be.
+- **How:** They primarily look at the distance and elevation remaining on the trail.
+- **Why:** Distance alone does not fully represent the physical effort required. Elevation helps them form a better estimate of how demanding the rest of the hike may be.
+
+**Situation 3 — Adapting pace to upcoming steep sections**
+
+- **What:** During a long hike, the interviewee would adjust their pace if they knew that steep sections were approaching.
+- **How:** They would use information about the upcoming terrain to manage their energy before reaching more demanding sections.
+- **Why:** On longer hikes, conserving energy is important. Knowing what lies ahead would help them avoid becoming unnecessarily tired before completing the trail.
+
+**Situation 4 — Seeking a personalized effort estimate**
+
+- **What:** The interviewee considers what would make a new hiking tool more useful than their current application, AllTrails.
+- **How:** They propose combining information from a wearable device with their hiking history and the effort already exerted during the current hike.
+- **Why:** A generic route overview may not accurately represent the difficulty experienced by each person. A personalized estimate based on their previous experience and physical effort would help them understand how demanding the remaining trail will be.
 
 <!-- Duplicate ### Interview N block (with its 4 situations) for each interview -->
 
