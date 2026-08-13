@@ -148,7 +148,39 @@ _List the 4 problems selected in MS2-O1._
 **Evidence of participation:**
 The interviewee didn't want to take a Photo :( 
 
-<!-- Duplicate ### Interview N block for each team member -->
+### Interview 4 — Conducted by Jeronimo Franco
+
+**Interviewee:** Ari Sabogal  
+**Problem/domain explored:** Problem 2
+
+#### Warm-up / Rapport-building
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 1 | Tell me a bit about your hiking experience. What kinds of trails do you usually hike? | Rapport-building; understand the interviewee’s hiking background |
+| 2 | How often do you go hiking, and who do you usually hike with? | Rapport-building; establish frequency and social context |
+
+#### Understanding the Problem (current behavior)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 3 | During a hike, how do you determine how much of the trail you have completed and how much remains? | Discover the methods and tools currently used to monitor progress |
+| 4 | Tell me about a time when the remaining part of a hike was harder or longer than you expected. What happened? | Identify differences between perceived progress and actual remaining effort |
+| 5 | What information do you consider when estimating how difficult the rest of a hike will be? | Determine whether hikers consider distance, elevation, slope, terrain, or fatigue |
+| 6 | Has uncertainty about the remaining trail ever affected your pace, breaks, motivation, or decision to continue? How? | Understand the practical and emotional consequences of the problem |
+
+#### Reactions & Clarifying Specifics (light concept validation)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 7 | What information would help you better understand the effort required to complete the remaining trail? | Identify the information most valuable to hikers |
+| 8 | How would you prefer to see that information: a map, elevation profile, estimated time, effort level, or something else? | Explore the preferred way to present the information |
+| 9 | Would knowing about upcoming steep sections change how you manage your pace, breaks, water, or food? How? | Evaluate the usefulness of anticipating difficult sections |
+| 10 | What would make you use a tool like this instead of, or alongside, your current hiking app? | Identify adoption requirements and desired value |
+
+**Evidence of participation:**
+
+<img width="400" height="350" alt="Evidence Interview 4" src="https://github.com/user-attachments/assets/36cee25d-06ec-48ef-940d-d9277be632c5" />
 
 ---
 
@@ -163,6 +195,8 @@ The interviewee didn't want to take a Photo :(
 | Interview 1 | Santiago Casasbuens | [Listen to the full interview](evidence/interview-1/interview-1.mp4) | [Read the complete transcript](evidence/interview-1/transcript.md) |
 | Interview 2 | Juan Felipe Saenz Garcia | [Listen to the full interview](evidence/interview-2/Interview-2-audio) | [Read the complete transcript](evidence/interview-2/transcript.md) |
 | Interview 3 | Miguel Angel Velandia | [Listen to the full interview](evidence/interview-3/Interview-3-audio.mp4) | [Read the complete transcript](evidence/interview-3/transcript.md) |
+| Interview 4 | Jeronimo Franco | [Listen to the full interview](evidence/interview-4/interview-4-audio.m4a) | [Read the complete transcript](evidence/interview-4/transcript.md) |
+
 
 ---
 
