@@ -111,6 +111,8 @@ _List the 4 problems selected in MS2-O1._
 
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/254dfe9b-1c56-4706-a824-9eb67482e181" />
 
+[Read the complete Interview 2 transcript](evidence/interview-2-transcript.md)
+
 
 ---
 
