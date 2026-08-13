@@ -69,7 +69,9 @@ _List the 4 problems selected in MS2-O1._
 | 13 | Is there anything about managing your "wants" that frustrates you that we haven't talked about? | Clarifying specifics — open-ended catch-all for unexpected insights |
 
 
-**Evidence of participation:** <img width="544" height="346" alt="image" src="https://github.com/user-attachments/assets/b06e9d82-0766-4fcf-9736-56824cebcf73" />
+**Evidence of participation:** 
+
+<img width="544" height="346" alt="image" src="https://github.com/user-attachments/assets/b06e9d82-0766-4fcf-9736-56824cebcf73" />
 
 
 ### Interview 2 — Conducted by Juan Felipe Sáenz García
