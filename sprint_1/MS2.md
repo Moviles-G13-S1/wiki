@@ -160,7 +160,7 @@ The interviewee didn't want to take a Photo :(
 
 | Interview | Interviewer | Full recording | Transcript |
 |-----------|-------------|-----------------|------------|
-| Interview 1 | [Member Name] | [link] | [link] |
+| Interview 1 | Santiago Casasbuens | [Listen to the full interview](evidence/interview-1/interview-1.mp4) | [Read the complete transcript](evidence/interview-1/transcript.md) |
 | Interview 2 | Juan Felipe Saenz Garcia | [Listen to the full interview](evidence/interview-2/Interview-2-audio) | [Read the complete transcript](evidence/interview-2/transcript.md) |
 | Interview 3 | Miguel Angel Velandia | [Listen to the full interview](evidence/interview-3/Interview-3-audio.mp4) | [Read the complete transcript](evidence/interview-3/transcript.md) |
 
