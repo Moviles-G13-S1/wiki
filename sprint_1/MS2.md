@@ -182,6 +182,43 @@ The interviewee didn't want to take a Photo :(
 
 <img width="400" height="350" alt="Evidence Interview 4" src="https://github.com/user-attachments/assets/36cee25d-06ec-48ef-940d-d9277be632c5" />
 
+### Interview 6 — Conducted by Juliana Durán López
+
+**Interviewee:** Laura Pardo
+**Interviewee:** Mariana Cediel
+**Problem/domain explored:** Problem 1
+
+#### Warm-up / Rapport-building
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 1 | Tell me a bit about yourself — what do you usually shop for online? | Rapport-building; get comfortable, establish shopping profile |
+| 2 | How often would you say you browse online stores or social media for things you might want to buy? | Rapport-building; gauge engagement level with the problem space |
+
+#### Understanding the Problem (current behavior)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 3 | Walk me through the last time you saw something online you wanted to buy but didn't buy right away. What did you do next? | Understanding the problem — surfaces current workaround (screenshot, tab, note, nothing) |
+| 4 | Where do you currently keep track of things you want to buy? (notes app, screenshots, browser tabs, Pinterest, etc.) | Understanding the problem — maps existing "solution" landscape |
+| 5 | Have you ever lost track of something you wanted to buy, or forgotten about it entirely? What happened? | Understanding the problem — surfaces pain point / cost of current approach |
+| 6 | When you're deciding between similar products, how do you compare them (price, reviews, options)? | Understanding the problem — reveals comparison behavior WhyNot could support |
+| 7 | Do you ever go back and check if the price of something changed since you first saw it? How? | Understanding the problem — tests appetite for price-tracking feature |
+| 8 | Have you ever shared a wishlist or product idea with someone else (for a gift, trip, or just an opinion)? How did you do that? | Understanding the problem — tests relevance of the social/sharing angle |
+
+#### Reactions & Clarifying Specifics (light concept validation)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 9 | If you could organize everything you want to buy into separate lists — like clothes, tech, gifts, travel — would that be useful to you? Why or why not? | Clarifying specifics — validates the category/multi-wishlist structure |
+| 10 | What information would you want saved about an item — just the link, or also price, image, notes? | Clarifying specifics — informs what fields matter (name, price, image, link, category) |
+| 11 | Would you want to keep your wishlist private, or would you want to share it with friends/family? | Clarifying specifics — tests private vs. giftable/shared list needs |
+| 12 | What would make you actually use an app like this instead of your current method? | Clarifying specifics — surfaces adoption barrier / value proposition test |
+| 13 | Is there anything about managing your "wants" that frustrates you that we haven't talked about? | Clarifying specifics — open-ended catch-all for unexpected insights |
+
+**Evidence of participation:**
+The interviewees didn’t want to take a photo, but you can hear all three of our voices in the interview transcript.
+
 ---
 
 ## 3. Interview Summary
@@ -196,7 +233,8 @@ The interviewee didn't want to take a Photo :(
 | Interview 2 | Juan Felipe Saenz Garcia | [Listen to the full interview](evidence/interview-2/Interview-2-audio) | [Read the complete transcript](evidence/interview-2/transcript.md) |
 | Interview 3 | Miguel Angel Velandia | [Listen to the full interview](evidence/interview-3/Interview-3-audio.mp4) | [Read the complete transcript](evidence/interview-3/transcript.md) |
 | Interview 4 | Jeronimo Franco | [Listen to the full interview](evidence/interview-4/interview-4-audio.m4a) | [Read the complete transcript](evidence/interview-4/transcript.md) |
-| Interview 5 | Juliana Duran | [Listen to the full interview](evidence/interview-5/interview-5-audio.m4a) | [Read the complete transcript](evidence/interview-5/transcript.md) |
+| Interview 5 | Martin | [Listen to the full interview](evidence/interview-5/interview-5-audio.m4a) | [Read the complete transcript](evidence/interview-5/transcript.md) |
+| Interview 6 | Juliana Duran | [Listen to the full interview](evidence/interview-6/interview-6-audio.m4a) | [Read the complete transcript](evidence/interview-6/transcript.md) |
 
 
 ---
