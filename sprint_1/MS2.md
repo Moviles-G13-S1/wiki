@@ -494,17 +494,9 @@ The interviewee didn't want to take a Photo.
 | [Stage 3] | | | | |
 | ... | | | | |
 
-### Journey Map 2 — [User/persona name] — [Problem addressed]
+### Journey Map 2 — Nico Alvarez — Problem 1
+<img width="3536" height="2332" alt="Journey Map 2" src="https://github.com/user-attachments/assets/31788721-b9a7-4c05-9084-3bbe35e14601" />
 
-[Insert image/diagram/sketch of the journey map]
-
-**Stages:**
-
-| Stage | Actions | Thoughts | Emotions | Pain points / Opportunities |
-|-------|---------|----------|----------|------------------------------|
-| [Stage 1] | | | | |
-| [Stage 2] | | | | |
-| ... | | | | |
 
 <!-- Add more Journey Map sections if needed -->
 
