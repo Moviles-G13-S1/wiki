@@ -1,7 +1,7 @@
 # MS2 – Design Thinking Process Practice
 
-_Team: [Team name / number]_
-_Members: [Name 1], [Name 2], [Name 3], [Name 4], [Name 5], [Name 6]_
+_Team: #13
+_Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira 202321727, 
 
 ---
 
