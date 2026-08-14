@@ -183,6 +183,36 @@ The interviewee didn't want to take a Photo :(
 
 <img width="400" height="350" alt="Evidence Interview 4" src="https://github.com/user-attachments/assets/36cee25d-06ec-48ef-940d-d9277be632c5" />
 
+### Interview 5 — Conducted by Martin Riveira
+
+**Interviewee:** Gabriela Arrieta  
+**Problem/domain explored:** Problem 3
+
+#### Warm-up / Rapport-building
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 1 | Do you ever go to concerts, music festivals, or large events in general? | Rapport-building; establish the interviewee's familiarity with large events |
+| 2 | How often do you go to these kinds of events? | Rapport-building; understand the interviewee's level of experience with festivals and concerts |
+| 3 | Who do you usually go with to these kinds of events? Do you go alone or with a group? | Rapport-building; establish the social context in which the interviewee attends events |
+
+#### Understanding the Problem (current behavior)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 4 | The last time you went to Festival Estéreo Picnic, did you ever get separated from your friends? Was it very crowded? | Understand whether the interviewee has personally experienced the problem in a large event |
+| 5 | At what point did you realize you had lost track of each other? | Identify how and why group separation occurs during festivals |
+| 6 | What did you try to do to find your friend again? | Discover the current methods used to reconnect with separated friends |
+| 7 | When you say there was no internet, was it the event Wi-Fi or did your mobile data also fail? | Determine whether connectivity problems affect normal mobile communication |
+| 8 | Did poor signal, noise, crowds, or anything else make communicating harder? | Identify environmental and technical factors that make finding friends difficult |
+| 9 | How did being separated affect your experience of the event? | Understand the emotional and social consequences of being separated |
+| 10 | Did you miss part of the event, change your plans, or become worried because you could not find your friend? | Identify concrete consequences caused by the communication problem |
+| 11 | Before entering the event, did you and your friends agree on what to do if someone got lost? | Discover preventive strategies currently used by festival attendees |
+| 12 | Did the meeting point actually work? | Evaluate the effectiveness and limitations of existing low-tech solutions |
+| 13 | While you were at the event, did you have trouble finding artists or accessing general event information? | Determine whether the problem also affects access to schedules, maps, or event information |
+
+**Evidence of participation:**  
+
 ### Interview 6 — Conducted by Juliana Durán López
 
 **Interviewee:** Laura Pardo
@@ -416,6 +446,34 @@ The interviewee didn't want to take a Photo.
 - **What:** The interviewee considers what would make a new hiking tool more useful than their current application, AllTrails.
 - **How:** They propose combining information from a wearable device with their hiking history and the effort already exerted during the current hike.
 - **Why:** A generic route overview may not accurately represent the difficulty experienced by each person. A personalized estimate based on their previous experience and physical effort would help them understand how demanding the remaining trail will be.
+
+### Interview 5 — Martin Riveira
+
+**Who (Same for all situations):** Gabriela is a young adult who attended Festival Estéreo Picnic with her boyfriend and friends. She does not frequently attend large music festivals, but she is interested in attending more in the future. She normally attends these events with people she knows rather than alone.
+
+**Situation 1 — Separating to see different artists**
+
+- **What:** Gabriela and her group separated during Festival Estéreo Picnic because she and her boyfriend wanted to see one artist while her friend went to see another.
+- **How:** The group intentionally split up to enjoy different parts of the festival, expecting that they would later be able to communicate and find each other again.
+- **Why:** Large festivals have several artists and activities happening at the same time, so members of the same group may want to follow different plans. This creates a need to separate temporarily without permanently losing track of one another.
+
+**Situation 2 — Communication tools failing in the crowd**
+
+- **What:** After losing track of her friend, Gabriela attempted to contact her through phone calls, WhatsApp, and Instagram direct messages.
+- **How:** None of these methods worked reliably because her mobile data was failing. Messages were not delivered in either direction, and the large number of people also made it impossible to visually locate her friend in the crowd.
+- **Why:** The high concentration of people at the festival appears to have affected mobile connectivity, making internet-dependent communication unreliable precisely when Gabriela needed it to find someone.
+
+**Situation 3 — Missing part of the festival while searching for a friend**
+
+- **What:** Gabriela had to leave one of the final concerts early so that she would have enough time to search for her missing friend before they had to go home.
+- **How:** Instead of continuing to enjoy the performance, she changed her plans and dedicated part of the remaining festival time to finding her friend. She described being disappointed because they had expected to enjoy the event together.
+- **Why:** Because communication was unreliable and they could not determine each other's locations, finding the missing group member became more important than continuing to watch the concert. The problem therefore had a direct negative impact on their festival experience.
+
+**Situation 4 — A predetermined meeting point was not enough**
+
+- **What:** Gabriela and her friends had agreed on a meeting point before the end of the festival so that they could regroup and go home together.
+- **How:** The strategy only worked partially because the meeting point was intended mainly for the end of the night and did not help them coordinate while they were moving between different artists and activities during the festival.
+- **Why:** A fixed meeting point can help at a predetermined time, but it does not provide enough flexibility when group members separate unexpectedly or want to follow different schedules. The group still lacked an effective way to coordinate dynamically throughout the event.
 
 ### Interview 6 — Juliana Durán López
 

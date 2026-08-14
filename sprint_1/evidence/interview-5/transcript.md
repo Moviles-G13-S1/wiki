@@ -1,97 +1,71 @@
-## Interview — Problem 3
+# Interview Transcript — Martin Riveira and Gabriela
 
-**Interviewer:** Martin Riveira
-**Interviewee:** Gabriela Arrieta
-**Problem explored:** Difficulty locating friends at large music festivals and events
+**Martin Riveira:** Hi, how are you? I wanted to ask you a few things specifically about music festivals.
 
----
+**Gabriela:** Hello?
 
-**Martin:** Hi, how are you?
+**Martin Riveira:** Do you ever go to concerts, music festivals, or just large events in general?
 
-**Gabriela:** Hi, fine. And you?
+**Gabriela:** Sure. Yes. Last year, I went to Festival Estéreo Picnic.
 
-**Martin:** I'd like to ask you a few questions. Do you often go to concerts or music festivals?
+**Martin Riveira:** That's a pretty big one, right?
 
-**Gabriela:** Sure. Yes, I do.
+**Gabriela:** Yeah, it's pretty big.
 
-**Martin:** Do you go to big music festivals or smaller ones?
+**Martin Riveira:** And how often do you go to these kinds of events?
 
-**Gabriela:** Last year I went to Festival Estéreo Picnic.
+**Gabriela:** Almost never, but I want to go more.
 
-**Martin:** Okay, that's a pretty big one.
+**Martin Riveira:** Okay. And who do you usually go with to these kinds of events? Do you go alone, or do you go with a group?
 
-**Gabriela:** Yeah.
+**Gabriela:** I go with my boyfriend or with my friends.
 
-**Martin:** Think about the last time you got separated from your friends at a crowded event. Can you walk me through what happened?
+**Martin Riveira:** Okay. You told me the last event you went to was Estéreo Picnic. Did you ever get separated from your friends? Was it very crowded?
 
-**Gabriela:** Okay. Basically, it was time to go, and my boyfriend and I were supposed to find my friend because we were going home with her in her car. It was really hard to find her because there was no Wi-Fi. Our normal ways of communicating didn't work, so we had to use SMS, like in the old days, to find each other. It was hard.
+**Gabriela:** Yeah, it was very crowded. There were a lot of people. There was one time when I had to find my friend because I lost her for a moment.
 
-**Martin:** I imagine the crowds didn't help much either.
+**Martin Riveira:** Okay, interesting. At what point did you realize you had lost track of each other?
 
-**Gabriela:** Yeah, that too. There were a lot of people.
+**Gabriela:** I went to watch an artist with my boyfriend, and she went to see another one, so we lost each other.
 
-**Martin:** What was the first thing you tried to do to find your friend?
+**Martin Riveira:** Okay. Before talking about whether you were able to find each other, what did you try to do to find her again?
 
-**Gabriela:** I tried to call her first. It didn't work. Then she wrote to me using SMS messages.
+**Gabriela:** I tried to call her. I tried to text her on WhatsApp and send her DMs on Instagram. It didn't work because the network was overloaded and there was no internet. There were a lot of people. And yeah, that was what I did.
 
-**Martin:** So, WhatsApp?
+**Martin Riveira:** When you say internet, do you mean the event Wi-Fi, or did your mobile data not work either?
 
-**Gabriela:** No, regular SMS.
+**Gabriela:** No, the data on my phone.
 
-**Martin:** Okay, I understand. So WhatsApp didn't work, location sharing didn't work—nothing worked?
+**Martin Riveira:** Okay. So did the poor signal, the noise, the crowds, or anything else make communicating harder?
 
-**Gabriela:** Yeah, nothing worked.
+**Gabriela:** Yes. The text messages didn't work. She never received mine, and I didn't receive hers. So it was the data that was failing. There were also a lot of people, so I couldn't see her anywhere. It was a big event, so that's why.
 
-**Martin:** How long did it take you to find each other?
+**Martin Riveira:** Okay. So how did being separated affect your experience of the event?
 
-**Gabriela:** Maybe around 40 minutes. Something like that.
+**Gabriela:** I think we were supposed to enjoy the event together, and during one part of the night, we couldn't. We were disappointed about that.
 
-**Martin:** So that was a pretty long time to be separated.
+**Martin Riveira:** Did you miss part of the event, change your plans, or become worried because you couldn't find her?
 
-**Gabriela:** Yeah.
+**Gabriela:** We had to leave one of the last concerts because we needed more time to search for her before going home. So we kind of missed part of the event because of the lack of efficiency in the communication.
 
-**Martin:** Since it took so long, did you feel like you missed part of the event or couldn't see some of the music you wanted to see while trying to find her?
+**Martin Riveira:** Okay. Before entering an event like that, did you and your friends agree on what to do if someone got lost?
 
-**Gabriela:** Yeah. We had a deadline to find each other, so we had to leave a concert to look for her. It took a long time, so yes.
+**Gabriela:** We agreed on a common point where we could find each other, but only at the end of the night.
 
-**Martin:** Did mobile data also have problems during the event, for example when you wanted to check schedules or other information?
+**Martin Riveira:** Like a meeting point?
 
-**Gabriela:** Yeah. It didn't work as well as it should have.
+**Gabriela:** Yeah, a meeting point at the end of the night to go home.
 
-**Martin:** Before entering the event, did you and your friends agree on what to do if someone got lost?
+**Martin Riveira:** And did it work?
 
-**Gabriela:** Yes. We talked about having a meeting point to find each other.
+**Gabriela:** Kind of. We were also thinking about seeing the artists we wanted to see, so it wasn't that good.
 
-**Martin:** Did it work?
+**Martin Riveira:** Okay, perfect. Final question, just in general: while you were at the event, did you ever have trouble finding artists or accessing general information about the event?
 
-**Gabriela:** Kind of. The timing was weird. I don't know.
+**Gabriela:** No. I had a screenshot of the map of the place and the schedule of the event, so I didn't have a problem with that.
 
-**Martin:** Imagine there were a way to see where the people in your group were, along with general updates—for example, if a group was running late or where certain things were happening through an interactive map. Do you think that would have helped you that day?
+**Martin Riveira:** Okay, perfect. Well, thank you. I'll keep these things in mind. Thank you for taking time out of your day.
 
-**Gabriela:** Yeah, of course. That would be helpful in other situations too.
+**Gabriela:** Thank you. You're welcome. Bye.
 
-**Martin:** Assuming an app like that existed, what information would you want to see?
-
-**Gabriela:** Maybe location sharing with my friends. Maybe short voice messages. Yeah, that would be helpful.
-
-**Martin:** Would you prefer something built into a specific event's app, or would you prefer one application that could be used at every event—a universal app?
-
-**Gabriela:** It would be better to have just one app for every concert.
-
-**Martin:** So, a universal one?
-
-**Gabriela:** Yes. But I don't know if that would work. Maybe it would be too much information in one app. I don't know much about apps.
-
-**Martin:** What would make you want to use an app like that instead of WhatsApp, Find My iPhone, or similar services?
-
-**Gabriela:** If it works, I would use it. In situations with a lot of people, WhatsApp, Instagram, and everything else stop working. So if the app worked better than those other apps for finding my friends, then I would use it.
-
-**Martin:** Final question. If you went to a music festival with a large group, do you think having an app like this would allow people in the group to go to different things they wanted to see without worrying about losing each other?
-
-**Gabriela:** Yes. It would help us be more relaxed about where our friends are.
-
-**Martin:** All right. That's pretty much it. Thank you for answering my questions. I appreciate your time.
-
-**Gabriela:** Thank you.
-
-**Martin:** All right. See you.
+**Martin Riveira:** Bye.
