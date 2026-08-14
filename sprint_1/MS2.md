@@ -258,6 +258,8 @@ The interviewees didn’t want to take a photo, but you can hear all three of ou
 | 17 | What would make you trust a system that shows information about your child's school bus? | Identify trust and adoption requirements |
 | 18 | Is there anything about your child's trip home from school that frustrates or worries you that we haven't talked about? | Discover additional needs or problems |
 ---
+**Evidence of participation:**
+The interviewee didn't want to take a Photo.
 
 ## 3. Interview Summary
 
