@@ -12,7 +12,8 @@ _List the 4 problems selected in MS2-O1._
 1. **Problem 1:** People who shop online regularly struggle to keep track of the products they want to buy. Interesting items get lost across scattered screenshots, open browser tabs, and notes-app entries, with no price, image, or link kept together in one place. As a result, users forget about products they liked, lose track of price changes, and have no easy way to compare or revisit items later and often re-discovering something they wanted weeks after first seeing it, or giving up on it altogether.
 2. **Problem 2:** Hikers often want to know, "How long until I reach the summit?" Most hiking apps display a 2D map in which you can check the linear progress of the trail but factors like elevation gain or slope are not clearly represented. As a result, hikers can see how far they've traveled, but not how much effort is actually left.
 3. **Problem 3:** People who often go to music festivals or big events have a hard time tracking their friends once separated. This is because of high volumes of people, lousy signal, and general chaos. Not only that, but on the host side, it would be too expensive to individually develop an app that helps solve this issue for each event.
-4. **Problem 4:** [description]
+4. **Problem 4:** Parents whose children return home from school by school bus often have limited information about where their children are during the trip. Traffic, delays, and route changes can make arrival times unpredictable. As a result, parents may not know whether their child has left school, where the bus is, or when they will arrive home.
+
 
 ---
 
@@ -219,6 +220,43 @@ The interviewee didn't want to take a Photo :(
 **Evidence of participation:**
 The interviewees didn’t want to take a photo, but you can hear all three of our voices in the interview transcript.
 
+### Interview — Conducted by Juliana Duran
+
+**Interviewee:** Alfonso Duran
+**Problem/domain explored:** Problem 4
+
+#### Warm-up / Rapport-building
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 1 | Tell me a little about your children and how they usually get home from school. | Rapport-building; understand the family's transportation context |
+| 2 | How often do they use the school bus to come home? | Rapport-building; establish how frequently they experience the situation |
+
+#### Understanding the Problem (current behavior)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 3 | Walk me through what usually happens from the moment your child leaves school until they arrive home. | Understand the parent's current routine |
+| 4 | While your child is on the bus, how do you currently know where they are or how close they are to home? | Discover current methods for getting information |
+| 5 | Tell me about the last time the bus took longer than expected. What did you do? | Identify current workarounds when delays occur |
+| 6 | Have you ever been unsure whether your child had already left school, was still on the bus, or was close to arriving? What happened? | Understand the uncertainty caused by limited information |
+| 7 | Do you usually contact your child, the bus driver, the school, or other parents to find out where the bus is? | Identify existing communication methods |
+| 8 | How do you currently know when you should be ready for your child to arrive home? | Understand how parents estimate arrival time |
+| 9 | Has a bus delay ever affected your plans or made you change what you were doing? Can you give me an example? | Identify practical consequences of unpredictable arrival times |
+| 10 | What worries you the most when you don't know exactly where your child is during the trip home? | Understand the parent's main concerns |
+
+#### Reactions & Clarifying Specifics (light concept validation)
+
+| # | Question | Purpose |
+|---|----------|---------|
+| 11 | What information would make you feel more informed while your child is traveling home from school? | Discover what information parents value |
+| 12 | Would knowing the bus's current location be useful to you? Why or why not? | Validate the usefulness of real-time bus location |
+| 13 | Would an estimated arrival time be useful? How would you use that information? | Validate the usefulness of estimated arrival times |
+| 14 | At what moments would you want to receive a notification? For example, when the bus leaves school, when it is nearby, or when your child gets off. | Determine which notifications provide value |
+| 15 | Would you prefer to check the bus on a map, receive automatic notifications, or have both options? Why? | Explore preferred ways of receiving information |
+| 16 | Is there any information about your child's trip that you would not feel comfortable having available in an app? | Explore privacy and safety concerns |
+| 17 | What would make you trust a system that shows information about your child's school bus? | Identify trust and adoption requirements |
+| 18 | Is there anything about your child's trip home from school that frustrates or worries you that we haven't talked about? | Discover additional needs or problems |
 ---
 
 ## 3. Interview Summary
@@ -235,6 +273,7 @@ The interviewees didn’t want to take a photo, but you can hear all three of ou
 | Interview 4 | Jeronimo Franco | [Listen to the full interview](evidence/interview-4/interview-4-audio.m4a) | [Read the complete transcript](evidence/interview-4/transcript.md) |
 | Interview 5 | Martin | [Listen to the full interview](evidence/interview-5/interview-5-audio.m4a) | [Read the complete transcript](evidence/interview-5/transcript.md) |
 | Interview 6 | Juliana Duran | [Listen to the full interview](evidence/interview-6/interview-6-audio.m4a) | [Read the complete transcript](evidence/interview-6/transcript.md) |
+| Interview 7 | Juliana Duran | [Listen to the full interview](evidence/interview-7/interview-7-audio.m4a) | [Read the complete transcript](evidence/interview-7/transcript.md) |
 
 
 ---
@@ -373,6 +412,34 @@ The interviewees didn’t want to take a photo, but you can hear all three of ou
 - **What:** The interviewee considers what would make a new hiking tool more useful than their current application, AllTrails.
 - **How:** They propose combining information from a wearable device with their hiking history and the effort already exerted during the current hike.
 - **Why:** A generic route overview may not accurately represent the difficulty experienced by each person. A personalized estimate based on their previous experience and physical effort would help them understand how demanding the remaining trail will be.
+
+### Interview 6 — Juliana Durán López
+
+**Who (Same for all situations):** Laura and Mariana are young online shoppers who browse online stores and social media every day, mainly looking for clothes, makeup, accessories, and other small items.
+
+**Situation 1 — Saving products across different places**
+
+- **What:** Laura and Mariana frequently find products online that they like but do not buy immediately.
+- **How:** Laura saves Instagram posts or takes screenshots, while Mariana takes screenshots or leaves browser tabs open so she can return to the products later.
+- **Why:** These methods are quick and convenient while browsing, but their desired products end up scattered across different places because they do not have one centralized way to save them.
+
+**Situation 2 — Losing products they wanted**
+
+- **What:** Laura and Mariana sometimes lose track of products they were interested in buying.
+- **How:** Mariana explained that she may lose the link or webpage and then cannot find the product again. Laura mentioned losing products when her computer unexpectedly shuts down and the tabs she had left open disappear.
+- **Why:** Their current methods depend on temporary information such as open tabs, screenshots, or saved posts. Because these methods are fragmented, finding a specific product again can become difficult.
+
+**Situation 3 — Comparing products before buying**
+
+- **What:** When Laura and Mariana find multiple options for a product, they compare them before deciding which one to buy.
+- **How:** They mainly compare price and quality. Mariana also checks reviews from previous buyers, while Laura considers the type of store she is purchasing from.
+- **Why:** They want to find a good price without sacrificing quality or buying from an unreliable store. Reviews and store credibility help them feel more confident about their purchase.
+
+**Situation 4 — Wanting an easier and more visual way to save products**
+
+- **What:** Laura and Mariana consider what would make them use a dedicated application instead of screenshots, saved Instagram posts, open tabs, or notes.
+- **How:** Mariana would want to easily export a product directly from an app like Instagram instead of manually copying links, images, and information. Laura emphasizes that the application should be very visual because seeing the product helps her remember it.
+- **Why:** A new application would only be valuable if it required less effort than their current methods. They want a centralized system that is quick to use and visually shows the products they have saved.
 
 <!-- Duplicate ### Interview N block (with its 4 situations) for each interview -->
 
