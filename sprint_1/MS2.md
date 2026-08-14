@@ -480,13 +480,8 @@ The interviewees didn’t want to take a photo, but you can hear all three of ou
 
 ## 6. Brainstorming Process & Solutions
 <img width="2041" height="1959" alt="Brainstorm MS2" src="https://github.com/user-attachments/assets/6c2fe404-0092-478b-b62f-26dde9dc3aa5" />
-**Brainstorming procedure (MS2-C2):** We started with a brainstorming session where each team member proposed different app ideas and added possible features or improvements. Then, we evaluated them using three conventions: a red X for ideas we definitely did not want to pursue, a green circle for ideas we were unsure about but still found interesting, and a star for the idea we liked the most and wanted to develop further. This process helped us select the wishlist for organizing online purchases as our final idea.
-**Solutions derived:**
+Brainstorming procedure (MS2-C2): We started with a brainstorming session where each team member proposed different app ideas and added possible features or improvements. Then, we evaluated them using three conventions: a red X for ideas we definitely did not want to pursue, a green circle for ideas we were unsure about but still found interesting, and a star for the idea we liked the most and wanted to develop further. This process helped us select the wishlist for organizing online purchases as our final idea.
 
-1. **Solution 1:** [description] — _derived from:_ [situation(s)/journey map(s)/interview(s) referenced]
-2. **Solution 2:** [description] — _derived from:_ [...]
-3. **Solution 3:** [description] — _derived from:_ [...]
-...
 
 ---
 
