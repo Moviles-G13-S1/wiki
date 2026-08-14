@@ -220,7 +220,7 @@ The interviewee didn't want to take a Photo :(
 **Evidence of participation:**
 The interviewees didn’t want to take a photo, but you can hear all three of our voices in the interview transcript.
 
-### Interview — Conducted by Juliana Duran
+### Interview 7 — Conducted by Juliana Duran
 
 **Interviewee:** Alfonso Duran
 **Problem/domain explored:** Problem 4
@@ -440,6 +440,34 @@ The interviewees didn’t want to take a photo, but you can hear all three of ou
 - **What:** Laura and Mariana consider what would make them use a dedicated application instead of screenshots, saved Instagram posts, open tabs, or notes.
 - **How:** Mariana would want to easily export a product directly from an app like Instagram instead of manually copying links, images, and information. Laura emphasizes that the application should be very visual because seeing the product helps her remember it.
 - **Why:** A new application would only be valuable if it required less effort than their current methods. They want a centralized system that is quick to use and visually shows the products they have saved.
+
+### Interview 7 — Juliana Durán López
+
+**Who (Same for all situations):** Alfonso is a father whose children used the school bus every day to return home from school. He was responsible for being aware of their arrival and, at times, picking them up at the bus stop.
+
+**Situation 1 — Waiting without knowing where the bus was**
+
+- **What:** Alfonso often waited for his children at the bus stop without knowing exactly where the school bus was or when it would arrive.
+- **How:** For a long time, there was no way to track the bus, so he would simply go to the drop-off point and wait. The school later introduced a tracking system, but it did not always work.
+- **Why:** Without reliable information about the bus location or arrival time, waiting at the stop was the only way to make sure he was there when his children arrived.
+
+**Situation 2 — Looking for information when the bus was delayed**
+
+- **What:** When the bus took longer than expected, Alfonso tried to find out whether something had happened.
+- **How:** After waiting what he considered a reasonable amount of time, he would call the transportation company's central office or contact his children to confirm that they were on the bus and everything was okay.
+- **Why:** Delays created uncertainty because he did not know whether the bus was simply stuck in traffic or had experienced a problem such as an accident.
+
+**Situation 3 — Changing his routine to wait for the bus**
+
+- **What:** Unpredictable bus arrival times sometimes affected Alfonso's daily activities.
+- **How:** He occasionally had to stop what he was doing to be ready for his children's arrival or wait at the drop-off point without knowing whether the bus was five, ten, or more minutes away.
+- **Why:** Having an estimated arrival time would allow him to better organize his time while still making sure he was available when his children arrived.
+
+**Situation 4 — Wanting reliable and secure information about the trip**
+
+- **What:** Alfonso would like to know when his child boards the bus, where the bus is during the trip, and when the child gets off safely.
+- **How:** He would prefer to check the bus location on a map and receive notifications when the bus leaves school and when his child gets off. He also emphasized that the system should be stable and access should be restricted to authorized parents.
+- **Why:** Having reliable information throughout the trip would give him greater visibility into his child's journey, while restricted access would protect sensitive information about the children and their location.
 
 <!-- Duplicate ### Interview N block (with its 4 situations) for each interview -->
 
