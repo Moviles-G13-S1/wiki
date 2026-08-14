@@ -212,6 +212,8 @@ The interviewee didn't want to take a Photo :(
 | 13 | While you were at the event, did you have trouble finding artists or accessing general event information? | Determine whether the problem also affects access to schedules, maps, or event information |
 
 **Evidence of participation:**  
+<img width="966" height="720" alt="Screenshot 2026-08-13 214621" src="https://github.com/user-attachments/assets/f7842a93-40cd-47d8-a515-ee28a43c5fed" />
+
 
 ### Interview 6 — Conducted by Juliana Durán López
 
