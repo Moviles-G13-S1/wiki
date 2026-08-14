@@ -600,6 +600,13 @@ WhyNot is a low-fidelity digital prototype of a wishlist and smart shopping appl
 
 
 ---
+## 7. Podcast Video
+
+
+https://github.com/user-attachments/assets/e8a5f1ed-5a1c-4e16-936a-673773a084e0
+
+
+
 
 ## References
 
