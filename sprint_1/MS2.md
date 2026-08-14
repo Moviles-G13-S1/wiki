@@ -519,21 +519,33 @@ Brainstorming procedure (MS2-C2): We started with a brainstorming session where 
 
 ## 7. Prototype Video
 
-**Video link:** [link]
+**Video**
 
-**Solution presented:** [name/description of the first solution — low-fidelity prototype]
+https://github.com/user-attachments/assets/d5642dab-ef5e-4394-9bfc-090ad6ae10e9
+
+**Interactive prototype:** 
+https://why-not-wish-shop.lovable.app
+
+**Solution presented:** 
+
+WhyNot is a low-fidelity digital prototype of a wishlist and smart shopping application designed to help users save and organize products they are interested in buying. Instead of keeping products scattered across screenshots, browser tabs, shopping carts, notes, and different websites, users can save them in one place and organize them into different wishlists. The proposed solution also includes price tracking, allowing users to monitor price changes and set a target price to be notified when a product becomes more convenient to buy. The prototype uses a clean, elegant, and modern interface focused on making the main user flow simple and intuitive.
 
 **Summary of what the video covers:**
-- How the solution emerged from the brainstorming process
-- [key points shown in the prototype]
+
+- How the solution emerged from the brainstorming and convergence process, where WhyNot was selected as the idea with the most potential.
+- The main problem WhyNot aims to solve.
+- How a user can save a product and organize it into a wishlist.
+- How users can view their saved products and access product information.
+- How price tracking and target-price alerts can support purchasing decisions.
+- The clean and simple design approach used for the prototype.
+
 
 **Evidence of team contribution:**
 
 | Member | Contribution |
 |--------|---------------|
-| [Name 1] | [e.g., storyboard, voiceover, sketch] |
-| [Name 2] | [...] |
-| ... | |
+|Juliana Durán | Prototype and video |
+
 
 ---
 
