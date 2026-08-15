@@ -297,7 +297,11 @@ The interviewee didn't want to take a Photo.
 
 ## 3. Interview Summary
 
-**Podcast-style summary recording (≤ 5 min):** [link]
+
+
+https://github.com/user-attachments/assets/0b8589e7-8a25-4115-a981-e2eab4ff38d2
+
+
 
 ### Full recordings / transcripts per interview
 
@@ -602,12 +606,6 @@ WhyNot is a low-fidelity digital prototype of a wishlist and smart shopping appl
 
 
 ---
-## 7. Podcast Video
-
-
-https://github.com/user-attachments/assets/e8a5f1ed-5a1c-4e16-936a-673773a084e0
-
-
 
 
 ## References
