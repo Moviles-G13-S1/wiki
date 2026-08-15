@@ -551,14 +551,7 @@ https://www.canva.com/design/DAHSO44sXkQ/6veSmmbL9p6Rd1-75qv06A/edit
 
 <img width="1686" height="950" alt="image" src="https://github.com/user-attachments/assets/1ecfe256-9f55-4b59-9793-fdc6aa91ff35" />
 
-**Stages:**
 
-| Stage | Actions | Thoughts | Emotions | Pain points / Opportunities |
-|-------|---------|----------|----------|------------------------------|
-| [Stage 1] | | | | |
-| [Stage 2] | | | | |
-| [Stage 3] | | | | |
-| ... | | | | |
 
 ### Journey Map 2 — Nico Alvarez — Problem 1
 <img width="3536" height="2332" alt="Journey Map 2" src="https://github.com/user-attachments/assets/31788721-b9a7-4c05-9084-3bbe35e14601" />
