@@ -543,7 +543,9 @@ The interviewee didn't want to take a Photo.
 
 ### Journey Map 1 — [User/persona name] — [Problem addressed]
 
-[Insert image/diagram/sketch of the journey map]
+https://www.canva.com/design/DAHSO44sXkQ/6veSmmbL9p6Rd1-75qv06A/edit
+
+<img width="1686" height="950" alt="image" src="https://github.com/user-attachments/assets/1ecfe256-9f55-4b59-9793-fdc6aa91ff35" />
 
 **Stages:**
 
