@@ -1,6 +1,6 @@
 # MS3 Checklist — Week 3 (ISIS-3510)
 
-> MS3 has no standalone deliverable. These are the artifacts you need to produce this week that feed into the **Sprint 1 Deliverable**, due **September 5th, 5:00 AM**.
+> MS3 has no standalone deliverable. These are the artifacts that need to be produced this week that feed into the **Sprint 1 Deliverable**, due **September 5th, 5:00 AM**.
 
 ## O1 — Before Class 1
 - [x] Read Chapter 3 of the book
