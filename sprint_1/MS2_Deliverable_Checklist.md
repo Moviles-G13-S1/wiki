@@ -16,11 +16,11 @@
 ## Deliverable Checklist
 
 ### 1. Selected Problems — `[0 points, mandatory]`
-- [ ] List the 4 selected problems chosen in **MS2-O1**.
+- [x] List the 4 selected problems chosen in **MS2-O1**.
 - Failure to include this will result in the **entire deliverable not being graded**.
 
 ### 2. Interview Structure — `[2 points]`
-- [ ] Submit the interview structure used for **each interview**.
+- [x] Submit the interview structure used for **each interview**.
 - Include, at minimum:
   - All questions asked
   - The purpose of each question (e.g., building rapport, understanding the problem, clarifying specific aspects)
@@ -33,31 +33,31 @@
 - Include evidence that each member conducted their interview (verifiable participation).
 
 ### 3. Interview Summary Recording — `[2 points]`
-- [ ] Submit a single **podcast-style audio recording** summarizing the interviews.
+- [x] Submit a single **podcast-style audio recording** summarizing the interviews.
   - Max **5 minutes**
   - Includes the most relevant excerpts from each interview
-- [ ] Also link the **complete audio recording or full transcript** for each individual interview.
+- [x] Also link the **complete audio recording or full transcript** for each individual interview.
   - No length restriction on these individual files.
 
 ### 4. Situations (What–How–Why) — `[2 points]`
-- [ ] For each interview, identify **4 complete situations**.
+- [x] For each interview, identify **4 complete situations**.
 - Describe each using the **"What–How–Why" methodology** outlined in **MS2-O1**.
 
 ### 5. Journey Maps — `[2 points]`
-- [ ] Submit **at least 2 journey maps** for potential users.
+- [x] Submit **at least 2 journey maps** for potential users.
 - Built using the observational methodologies from **MS2-O1**, supported by interview data.
 - Can focus on a single problem or multiple problems (if leaning toward one, prioritize journey maps for that one).
 - Include visual elements: images, photos, sketches, or diagrams.
 - Recommended reference: [Qualaroo — Customer Journey Map guide](https://qualaroo.com/customer-journey-map/)
 
 ### 6. Brainstorming Process & Solutions — `[1 point]`
-- [ ] Describe the brainstorming process performed in **MS2-C2**.
-- [ ] Detail all solutions that emerged from it.
+- [x] Describe the brainstorming process performed in **MS2-C2**.
+- [x] Detail all solutions that emerged from it.
 - Describe the procedure used to derive the solutions.
 - Solutions must trace back to the situations, journey maps, and interviews already included in the report.
 
 ### 7. Prototype Video — `[1 point]`
-- [ ] Create a video presenting your **first solution** as a **low-fidelity prototype (blueprint)**.
+- [x] Create a video presenting your **first solution** as a **low-fidelity prototype (blueprint)**.
 - Explain the proposed solution and how it emerged from the brainstorming process.
 - All team members must contribute to both the prototype and the video.
 - Include evidence of each member's individual contribution.
