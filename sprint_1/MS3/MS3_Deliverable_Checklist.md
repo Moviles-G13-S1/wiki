@@ -1,6 +1,6 @@
 # MS3 Checklist — Week 3 (ISIS-3510)
 
-## 📌 MS3 Deliverable
+## MS3 Deliverable
 - **Deadline:** August 22nd, 2026 – 5:00 AM
 - **Submit:** Link to the "MS3" Wiki page in BN
 - **Points:** 10 points
