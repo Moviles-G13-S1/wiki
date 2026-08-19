@@ -5,6 +5,7 @@
 Team 13 · Sprint 1 project: **WhyNot** — a wishlist and smart shopping app that helps users save, organize, and track products they want to buy in one place.
 
 **Interactive prototype:** https://why-not-wish-shop.lovable.app
+
 **Project Wiki:** https://github.com/Moviles-G13-S1/wiki/wiki
 
 ---
