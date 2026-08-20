@@ -32,8 +32,6 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 | 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
 
 
-https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5
-
 **Persona description:** Emilio, 23 years old. Student at Universidad de los Andes. Mainly shops online for books and clothes. Browses online stores/social media about once a week. Uses an Amazon wishlist only for books, nothing for clothes. Compares products mainly by price. Prefers to keep his wants and lists private. Gets easily overwhelmed by too much information.
 
 **THINKS**
