@@ -1,0 +1,24 @@
+# Persona Links — MS3
+
+This table tracks each persona's HTML file in the repo, alongside a **wrapped preview link** (via [htmlpreview.github.io](https://htmlpreview.github.io/)) that renders the page live instead of showing raw source. Click the "Preview" link to view the styled persona.
+
+| # | Persona | Description | Source (repo) | Live Preview |
+|---|---------|--------------|----------------|--------------|
+| 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) |
+| 2 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
+| 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
+
+---
+
+### How to add a new persona
+
+1. Create the persona HTML file following the `MS3/resources/Persona Template.html` layout and commit it under `sprint_1/MS3/personas/`.
+2. Copy its GitHub blob URL, e.g.:
+   ```
+   https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/<file-name>.html
+   ```
+3. Wrap it with the htmlpreview prefix to get the live preview link:
+   ```
+   https://htmlpreview.github.io/?<paste the blob URL here>
+   ```
+4. Add a new row to the table above with the persona's name, a short description, the source link, and the wrapped preview link.
