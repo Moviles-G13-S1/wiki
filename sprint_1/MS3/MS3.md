@@ -44,7 +44,7 @@
 ### Empathy Map 2 — *Cristian*
 **Persona Description:** Cristian, 19 years old. Mainly shops online for video games and technology products. Browses online stores occasionally, around once or twice a month. Uses Steam wishlists for games and saves other product links in his personal WhatsApp chat. Compares products mainly by price and quality. Often waits for discounts before buying and prefers to keep his wishlists private. Values price alerts because he dislikes having to repeatedly check whether prices have changed.
 
-<img width="500" height="504" alt="image" src="https://github.com/user-attachments/assets/f9f07ad2-adf8-4dba-b7ac-1be542a5d027" />
+<img width="470" height="504" alt="image" src="https://github.com/user-attachments/assets/8d082ef7-0da2-4563-8892-20d284e276ec" />
 
 
 ### Empathy Map 3 — *Violeta*
