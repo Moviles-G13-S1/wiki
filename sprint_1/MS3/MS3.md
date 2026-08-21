@@ -67,11 +67,11 @@
 
 > Teams of 6 must submit **at least 3 personas**. Each persona uses the layout from `MS3/resources/Persona Template.html` (Basic Info, Demographics, Goals, Pain Points, Environment). The table below links each persona's rendered HTML page — since GitHub only shows raw source for `.html` files, the "Live Preview" column wraps the source link with [htmlpreview.github.io](https://htmlpreview.github.io/) so it renders live in the browser.
 
-| # | Persona | Description | Source (repo) | Live Preview |
-|---|---------|--------------|----------------|--------------|
-| 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) |
-| 2 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
-| 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
+| # | Persona | Description | Source (repo) | Live Preview | Done By |
+|---|---------|--------------|----------------|--------------|----------|
+| 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) | Santiago Casasbuenas |
+| 2 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* | *(add team member)* |
+| 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* | *(add team member)* |
 
 **How to add a new persona:**
 1. Create the persona HTML file following the `MS3/resources/Persona Template.html` layout and commit it under `sprint_1/MS3/personas/`.
