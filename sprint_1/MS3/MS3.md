@@ -72,7 +72,7 @@ Carlos is a 29-year-old practical online shopper who carefully researches electr
 | # | Persona | Description | Source (repo) | Live Preview | Done By |
 |---|---------|--------------|----------------|--------------|----------|
 | 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) | Santiago Casasbuenas |
-| 2 | Carlos | Carlos is a practical, budget-conscious online shopper who carefully compares prices, reviews, and product quality before making confident purchasing decisions. | [carlos-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) |
+| 2 | Carlos | Carlos is a practical, budget-conscious online shopper who carefully compares prices, reviews, and product quality before making confident purchasing decisions. | [carlos-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | Jeronimo Franco |
 | 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* | *(add team member)* |
 
 **How to add a new persona:**
