@@ -37,49 +37,7 @@
 
 **Persona description:** Emilio, 23 years old. Student at Universidad de los Andes. Mainly shops online for books and clothes. Browses online stores/social media about once a week. Uses an Amazon wishlist only for books, nothing for clothes. Compares products mainly by price. Prefers to keep his wants and lists private. Gets easily overwhelmed by too much information.
 
-**THINKS**
-- "I want to compare prices before I decide to buy."
-- "Maybe I should wait and see if it goes on sale."
-- "I like it, but I'm not sure I'll actually use it if I buy it."
-- "I don't want to fill this list with stuff I'll never look at again."
-- "Is this actually available here in Colombia?"
-- "I've seen this before... where did I see it?"
-- "This is too much information, it's overwhelming."
-- "I'd rather this stay private, not shared with anyone."
-- "If it's not that important, I'll just forget about it."
-
-**SEES**
-- Ads repeatedly for the same product after browsing it ("pops up ten times")
-- Clothes (like pants) he considers buying but often closes the tab without deciding
-- His Amazon wishlist, but only populated with books
-- No equivalent tracking system for clothing items
-- Social media and online stores casually, about once a week
-- Friends' reactions when sharing travel plans or ideas
-- A gap between what he wants to buy and what he actually tracks
-- Ads as his main (accidental) way of "rechecking" prices
-- His own shopping habits as informal and unstructured
-
-**FEELS**
-- **Overwhelmed** when he gets too much information about a product.
-- **Indifferent** about items he abandons without buying.
-- **Casual** about tracking clothes, since he doesn't see it as important.
-- **Frustrated** when he loses track of something he wanted, though only mildly.
-- **Comfortable** sharing travel plans with friends, but not personal wants.
-- **Skeptical** that an organized wishlist app would actually change his habits.
-- **Reassured** when retargeting ads let him recheck a price.
-- **Private** about his personal purchase intentions.
-- **Practical**, prioritizing convenience over extra features in a shopping tool.
-
-**DOES**
-- Buys mainly books and clothes online
-- Browses online stores/social media roughly once a week
-- Closes the tab/app when he decides not to buy something right away
-- Maintains an Amazon wishlist, but only for books
-- Does nothing to track clothing items he's interested in
-- Forgets about items over time without following up
-- Compares similar products primarily by checking price
-- Rechecks prices passively, only when retargeting ads reappear
-- Shares travel-related ideas/wishlists with friends, but not other categories
+<img width="662" height="707" alt="image" src="https://github.com/user-attachments/assets/10590a76-7e8d-4bdd-a364-982e3681c074" />
 
 **Evidence:** [Full interview transcript](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS2/evidence/interview-1/transcript.md)
 
