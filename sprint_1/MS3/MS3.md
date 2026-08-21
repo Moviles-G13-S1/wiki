@@ -26,13 +26,13 @@ Separating generation from selection is the core of the divergence–convergence
 | Item | Detail |
 |------|--------|
 | Format | Collaborative brainstorming on a shared Miro board |
-| Date | *(add date)* |
-| Duration | *(add — approx. XX minutes)* |
+| Date | 10-08-2026 |
+| Duration | 20 minutes |
 | Participants | All six team members, one idea each |
-| Facilitator | *(add member — who set up the board and closed the round)* |
-| Board | *(add Miro link, view permission)* |
+| Facilitator | Juliana Duran |
+| Board | [Miro Link](https://miro.com/app/board/uXjVHv5hGls=/?share_link_id=243210882480) |
 | Selection | Asynchronous vote in the team's WhatsApp group chat |
-| Vote date | *(add date)* |
+| Vote date | 11-08-2026 |
 | Rules | One idea per member; no idea discarded during generation; no evaluation until the round closed; every idea had to point back to MS2 material |
 
 ### 1.3 Solutions generated
@@ -41,12 +41,12 @@ Six ideas from six members, one each:
 
 | # | Solution idea | Proposed by | Description | MS2 evidence it comes from |
 |---|---------------|-------------|-------------|-----------------------------|
-| 1 | **Wishlist + price alerts** | *(add member)* | A centralized app to save products from any store or social network into organized lists, keeping name, image, price, link and personal notes together, with price tracking and target-price alerts. | Problem 1. Interviews 1 (Emilio), 2 (Catherine), 3 (Cristian) and 6 (Laura & Mariana) — 5 of the 8 people interviewed. Journey Map 2 (Nico Alvarez). |
-| 2 | **Hiking altitude tracker** | *(Jeronimo Franco — confirm)* | A route tracker that shows progress in terms of elevation and remaining effort instead of linear distance, applicable to hiking and cycling. | Problem 2. Interview 4 (Ari Sabogal), situations 1–4: estimating remaining difficulty from elevation, adapting pace to upcoming steep sections. |
-| 3 | **Festival friend-finder** | *(Martin Riveira — confirm)* | A tool to locate members of a group inside a crowded event when mobile connectivity fails, offered as a shared platform rather than a per-event app. | Problem 3. Interview 5 (Gabriela Arrieta), situations 2 and 4: calls, WhatsApp and Instagram all failed; the fixed meeting point was not enough. |
-| 4 | **School-bus tracking** | *(Juliana Durán — confirm)* | Real-time location and estimated arrival of the school bus for parents, with notifications when the child boards and gets off; extensible to pet transport services. | Problem 4. Interview 7 (Alfonso Durán), situations 1–4: waiting without information, calling the transport company, needing restricted access for safety. |
-| 5 | **Campus parking availability** | *(add member)* | Real-time availability, queue length and estimated waiting time for the parking lots near the university. | Team member's own recurring experience; no interview was conducted for this idea. |
-| 6 | **Grade calculator** | *(add member)* | A calculator to project final grades and required scores per course. | Team member's own recurring experience; no interview was conducted for this idea. |
+| 1 | **Wishlist + price alerts** | Santiago Casasbuenas | A centralized app to save products from any store or social network into organized lists, keeping name, image, price, link and personal notes together, with price tracking and target-price alerts. | Problem 1. Interviews 1 (Emilio), 2 (Catherine), 3 (Cristian) and 6 (Laura & Mariana) — 5 of the 8 people interviewed. Journey Map 2 (Nico Alvarez). |
+| 2 | **Hiking altitude tracker** | Jeronimo Franco | A route tracker that shows progress in terms of elevation and remaining effort instead of linear distance, applicable to hiking and cycling. | Problem 2. Interview 4 (Ari Sabogal), situations 1–4: estimating remaining difficulty from elevation, adapting pace to upcoming steep sections. |
+| 3 | **Festival friend-finder** | Martin Riveira | A tool to locate members of a group inside a crowded event when mobile connectivity fails, offered as a shared platform rather than a per-event app. | Problem 3. Interview 5 (Gabriela Arrieta), situations 2 and 4: calls, WhatsApp and Instagram all failed; the fixed meeting point was not enough. |
+| 4 | **School-bus tracking** | Juliana Durán | Real-time location and estimated arrival of the school bus for parents, with notifications when the child boards and gets off; extensible to pet transport services. | Problem 4. Interview 7 (Alfonso Durán), situations 1–4: waiting without information, calling the transport company, needing restricted access for safety. |
+| 5 | **Campus parking availability** | Miguel Angel Velandia | Real-time availability, queue length and estimated waiting time for the parking lots near the university. | Team member's own recurring experience; no interview was conducted for this idea. |
+| 6 | **Grade calculator** | Juan Felipe Saenz | A calculator to project final grades and required scores per course. | Team member's own recurring experience; no interview was conducted for this idea. |
 
 Four of the six ideas map directly onto the four problems selected in MS2-O1 and were each backed by at least one interview. Ideas 5 and 6 came from the team's own recurring frustrations and had no user research behind them, which weighed against them in the convergence stage (Section 2).
 
