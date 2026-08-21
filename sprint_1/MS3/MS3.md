@@ -29,7 +29,7 @@
 | # | Persona | Link to Map | 
 |---|---------|--------------|
 | 1 | Emilio | [Emilio's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5) |
-| 2 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
+| 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) |
 | 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
 
 
@@ -83,9 +83,11 @@
 
 **Evidence:** [Full interview transcript](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS2/evidence/interview-1/transcript.md)
 
-### Empathy Map 2 — *(TBD)*
+### Empathy Map 2 — *Cristian*
+**Persona Description:** Cristian, 19 years old. Mainly shops online for video games and technology products. Browses online stores occasionally, around once or twice a month. Uses Steam wishlists for games and saves other product links in his personal WhatsApp chat. Compares products mainly by price and quality. Often waits for discounts before buying and prefers to keep his wishlists private. Values price alerts because he dislikes having to repeatedly check whether prices have changed.
 
-*(To be completed by the team.)*
+<img width="500" height="504" alt="image" src="https://github.com/user-attachments/assets/f9f07ad2-adf8-4dba-b7ac-1be542a5d027" />
+
 
 ### Empathy Map 3 — *(TBD)*
 
