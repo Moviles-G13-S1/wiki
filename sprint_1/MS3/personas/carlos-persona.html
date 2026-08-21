@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persona - Carlos</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #eef0f2;
+    font-family: Tahoma, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .canvas-wrap { max-width: 100%; overflow-x: auto; }
+  .canvas {
+    position: relative;
+    width: 1600px;
+    height: 1790px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  }
+  .box {
+    position: absolute;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 14px;
+  }
+  .section-bg { border-radius: 12px; position: absolute; }
+  .section-title { position: absolute; text-align: center; }
+  .section-title h1 { margin: 0 0 4px; font-weight: 700; }
+  .section-title p { margin: 0; font-size: 14px; color: #333; }
+
+  .bg-persona { left:73px; top:110px; width:1510px; height:330px; background:#B8FDFF; opacity:.35; border:1px solid #6c8ebf; }
+  .bg-goals { left:70px; top:458px; width:1520px; height:494px; background:#9EFFCF; opacity:.35; border:1px solid #6c8ebf; }
+  .bg-pain { left:70px; top:972px; width:1520px; height:420px; background:#FFBF87; opacity:.35; border:1px solid #d79b00; }
+  .bg-env { left:75px; top:1410px; width:1510px; height:330px; background:#D6D6D6; opacity:.35; border:1px solid #6c8ebf; }
+  .bg-basicinfo { left:383px; top:140px; width:610px; height:280px; background:#158EBA; opacity:.20; border:1px solid #6c8ebf; }
+  .bg-demo { left:1020px; top:140px; width:533px; height:282px; background:#158EBA; opacity:.20; border:1px solid #6c8ebf; }
+  .bg-tech { left:420px; top:1430px; width:610px; height:290px; background:#9C89B8; opacity:.25; border:1px solid #6c8ebf; }
+  .bg-devices { left:1060px; top:1430px; width:500px; height:290px; background:#9C89B8; opacity:.25; border:1px solid #6c8ebf; }
+  .stripe-needs { position:absolute; left:110px; top:577.5px; width:1460px; height:80px; background:#158EBA; opacity:.5; border-radius:10px; }
+  .stripe-desires { position:absolute; left:110px; top:668.5px; width:1460px; height:80px; background:#12AAB5; opacity:.5; border-radius:10px; }
+  .stripe-why { position:absolute; left:110px; top:768.5px; width:1460px; height:174px; background:#81E87D; opacity:.4; border-radius:10px; }
+
+  .photo { left:144px; top:220px; width:190px; height:190px; background:#23445D; padding:0; overflow:hidden; }
+  .photo img { width:100%; height:100%; display:block; object-fit:cover; object-position:center 38%; }
+  .name-box { left:598px; top:225px; width:203px; height:65px; background:#275DAD; font-size:22px; font-weight:bold; }
+  .age-box { left:438px; top:318px; width:209px; height:63px; background:#275DAD; font-size:18px; }
+  .role-box { left:747px; top:318px; width:209px; height:63px; background:#275DAD; font-size:18px; }
+  .demo-box1 { left:1080px; top:239px; width:176px; height:60px; background:#275DAD; }
+  .demo-box2 { left:1329px; top:239px; width:176px; height:60px; background:#275DAD; }
+  .demo-box3 { left:1061px; top:330px; width:215px; height:70px; background:#275DAD; }
+  .demo-box4 { left:1310px; top:328px; width:215px; height:72px; background:#275DAD; }
+
+  .bio-box { left:473px; top:468px; width:437px; height:80px; background:#23445D; font-size:18px; }
+  .quote-box { left:1113px; top:468px; width:360px; height:80px; background:#23445D; font-style:italic; }
+  .need-box1 { left:360px; top:678px; width:220px; height:60px; background:#23445D; font-size:15px; }
+  .need-box2 { left:634px; top:678px; width:253px; height:60px; background:#23445D; font-size:15px; }
+  .need-box3 { left:723px; top:593px; width:267px; height:60px; background:#23445D; font-size:15px; }
+  .des-box1 { left:1053px; top:678px; width:207px; height:60px; background:#23445D; font-size:15px; }
+  .des-box2 { left:1310px; top:588px; width:223px; height:60px; background:#23445D; font-size:15px; }
+  .why-box1 { left:407px; top:783px; width:480px; height:149px; background:#12AAB5; opacity:.85; color:#000; }
+  .why-box2 { left:1053px; top:783px; width:480px; height:149px; background:#12AAB5; opacity:.85; color:#000; }
+  .why-label { position:absolute; left:144px; top:772px; width:217px; height:170px; font-size:44px; font-weight:bold; color:#12AAB5; display:flex; align-items:center; justify-content:center; }
+
+  .pain-box1 { left:417px; top:993px; width:460px; height:78px; background:#F86459; opacity:.9; color:#000; }
+  .pain-box2 { left:417px; top:1130px; width:460px; height:77px; background:#F86459; opacity:.9; color:#000; }
+  .pain-box3 { left:1063px; top:1000px; width:460px; height:77px; background:#F86459; opacity:.9; color:#000; }
+  .pain-box4 { left:1063px; top:1132px; width:460px; height:69px; background:#F86459; opacity:.9; color:#000; }
+  .pain-why1 { left:417px; top:1241px; width:460px; height:110px; background:#5490DE; opacity:.9; color:#000; font-size:15px; }
+  .pain-why2 { left:1063px; top:1241px; width:460px; height:110px; background:#5490DE; opacity:.9; color:#000; font-size:15px; }
+
+  .tech-box1 { left:440px; top:1500px; width:290px; height:83px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box2 { left:768px; top:1516px; width:253px; height:66px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box3 { left:770px; top:1630px; width:250px; height:59px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box4 { left:460px; top:1618px; width:243px; height:82px; background:#60495A; opacity:.9; font-size:15px; }
+  .device-box1 { left:1110px; top:1505px; width:200px; height:155px; background:#60495A; opacity:.9; font-size:18px; flex-direction:column; }
+  .device-box2 { left:1350px; top:1505px; width:183px; height:155px; background:#60495A; opacity:.9; font-size:18px; flex-direction:column; }
+  .connectors { position:absolute; left:0; top:0; width:1600px; height:1790px; pointer-events:none; }
+</style>
+</head>
+<body>
+<main class="canvas-wrap">
+<div class="canvas">
+  <div class="section-bg bg-persona"></div>
+  <div class="section-title" style="left:91px; top:115px; width:292px;">
+    <h1 style="font-size:34px;">Persona</h1><p>Who is the persona?</p>
+  </div>
+  <div class="section-bg bg-basicinfo"></div>
+  <div class="section-title" style="left:383px; top:150px; width:610px;"><h1 style="font-size:22px;">Basic info</h1></div>
+  <div class="box photo">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;crop=faces&amp;w=500&amp;h=500&amp;q=85" alt="Stock portrait representing Carlos">
+  </div>
+  <div class="box name-box">Carlos, 29</div>
+  <div class="box age-box">Full-time professional</div>
+  <div class="box role-box">Practical online shopper</div>
+
+  <div class="section-bg bg-demo"></div>
+  <div class="section-title" style="left:1020px; top:150px; width:533px;"><h1 style="font-size:22px;">Demographics</h1></div>
+  <div class="box demo-box1">Based in Bogota, Colombia</div>
+  <div class="box demo-box2">Buys electronics, home products &amp; gifts</div>
+  <div class="box demo-box3">Researches purchases carefully before spending</div>
+  <div class="box demo-box4">Saves items in tabs, bookmarks &amp; screenshots</div>
+
+  <div class="section-bg bg-goals"></div>
+  <div class="section-title" style="left:87px; top:457px; width:330px;">
+    <h1 style="font-size:30px;">Persona Goals</h1><p>What does the persona want? (Desires, motivations, etc.)</p>
+  </div>
+  <div class="box bio-box">"I want a durable, reliable product at a fair price."</div>
+  <div class="box quote-box">"I wish I could see all my options in one place."</div>
+
+  <div class="stripe-needs"></div>
+  <div class="section-title" style="left:143px; top:572px; width:217px;"><h1 style="font-size:20px;">Needs &amp; Expectations</h1></div>
+  <div class="box need-box3">A simple way to compare prices, reviews and specifications</div>
+  <div class="box need-box1">Reliable price-change and availability information</div>
+  <div class="box need-box2">Easy access to warranties, shipping and return policies</div>
+
+  <div class="stripe-desires"></div>
+  <div class="section-title" style="left:143px; top:667px; width:217px;"><h1 style="font-size:20px;">Desires &amp; Motivations</h1></div>
+  <div class="box des-box1">Long-term value over the lowest price</div>
+  <div class="box des-box2">Confidence that he made the right decision</div>
+
+  <div class="stripe-why"></div>
+  <div class="why-label">Why?</div>
+  <div class="box why-box1">Because Carlos has a limited monthly budget and wants to avoid wasting money on a product that will not last or meet his needs.</div>
+  <div class="box why-box2">Because comparing scattered information takes time, and he wants to make careful decisions without becoming overwhelmed.</div>
+
+  <div class="section-bg bg-pain"></div>
+  <div class="section-title" style="left:91px; top:971px; width:270px; height:420px; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="font-size:26px;">Persona Pain Points</h1><p>What difficulties does the persona have? What impediments?</p>
+  </div>
+  <div class="box pain-box1">Too many similar products and scattered comparison details</div>
+  <div class="box pain-box2">Conflicting reviews make it hard to judge reliability</div>
+  <div class="box pain-box3">Prices change while he waits for a better deal</div>
+  <div class="box pain-box4">Saved products become disorganized or are forgotten</div>
+  <div class="box pain-why1">This makes research feel slow and exhausting, so Carlos may postpone a useful purchase even after spending considerable time comparing it.</div>
+  <div class="box pain-why2">This creates anxiety about missing discounts or stock and makes him repeatedly revisit the same stores, tabs and screenshots.</div>
+
+  <div class="section-bg bg-env"></div>
+  <div class="section-title" style="left:91px; top:1430px; width:282px; height:220px; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="font-size:26px;">Persona Environment</h1><p>What technological devices does your persona use regularly? What is his technical ability?</p>
+  </div>
+  <div class="section-bg bg-tech"></div>
+  <div class="section-title" style="left:430px; top:1440px; width:250px;"><h1 style="font-size:20px;">Technical ability</h1></div>
+  <div class="box tech-box1">Comfortable researching products across stores and apps</div>
+  <div class="box tech-box2">Reads reviews and watches comparison videos</div>
+  <div class="box tech-box4">Uses bookmarks, screenshots and open browser tabs</div>
+  <div class="box tech-box3">Prefers clear, trustworthy and simple tools</div>
+
+  <div class="section-bg bg-devices"></div>
+  <div class="section-title" style="left:1019px; top:1444px; width:250px;"><h1 style="font-size:20px;">Devices</h1></div>
+  <div class="box device-box1">Smartphone</div>
+  <div class="box device-box2">Laptop</div>
+
+  <svg class="connectors" viewBox="0 0 1600 1790" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"></path></marker></defs>
+    <g fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#arrow)">
+      <polyline points="691.5,548 691.5,610 470,610 470,678"></polyline>
+      <polyline points="691.5,548 691.5,570 856.5,570 856.5,593"></polyline>
+      <polyline points="1293,548 1293,610 1156.5,610 1156.5,678"></polyline>
+      <polyline points="1293,548 1293,560 1421.5,560 1421.5,588"></polyline>
+      <polyline points="580,708 634,708"></polyline>
+      <polyline points="470,738 470,783"></polyline>
+      <polyline points="840,657.5 950,657.5 950,761.5 750,761.5 750,783"></polyline>
+      <polyline points="1156.5,738 1156.5,783"></polyline>
+      <polyline points="1421.5,648 1421.5,783"></polyline>
+      <polyline points="630,932 630,993"></polyline>
+      <polyline points="664,932 664,980 900,980 900,1168.5 877,1168.5"></polyline>
+      <polyline points="1263,932 1263,1000"></polyline>
+      <polyline points="1323,932 1323,985 1030,985 1030,1166.5 1063,1166.5"></polyline>
+      <polyline points="887,857 955,857 955,1296 1063,1296"></polyline>
+      <polyline points="1053,857 985,857 985,1296 877,1296"></polyline>
+      <polyline points="585,1583 585,1618"></polyline>
+    </g>
+  </svg>
+</div>
+</main>
+</body>
+</html>
