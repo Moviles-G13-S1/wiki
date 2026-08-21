@@ -48,7 +48,7 @@
 
 
 ### Empathy Map 3 — *Violeta*
-**Persona Description:**
+**Persona Description:** Violeta, 25 years old. Has a full-time job and enjoys fashion and shopping. Frequently browses online stores and social media to discover new products. Often finds things she likes but does not buy them immediately. Saves products across screenshots, shopping carts, open tabs, and social media. Likes comparing different options and prices before making a purchase. Wants to find good deals and make smarter purchasing decisions.
 
 <img width="588" height="715" alt="image" src="https://github.com/user-attachments/assets/7866cf7b-40c0-4271-a5b6-bc9b312666b5" />
 
@@ -86,9 +86,15 @@ Andrea is a 29-year-old administrator and frequent online shopper who enjoys fin
 
 ## 5. Solution Description
 
-> Provide a description of the solution for the selected problem. Explain in a general way how it would be solved.
+Our proposed solution is WhyNot, a mobile application designed to help users save, organize, compare, and keep track of products they are interested in buying. The solution addresses a common problem identified during our research: people frequently discover products across different online stores and social media platforms but are not always ready to purchase them immediately. As a result, products often end up scattered across screenshots, browser tabs, shopping carts, saved posts, notes, and wishlists from different platforms, making them difficult to find and compare later.
 
-*(To be completed by the team.)*
+WhyNot provides users with one centralized place for everything they may want to buy. When users find a product they like, they can save it with relevant information such as its name, image, price, store, link, and category. Products can then be organized into personalized wishlists, allowing users to easily return to them and compare different alternatives instead of having to remember where each product was originally found.
+
+The application also helps users decide when to buy, not only what to buy. WhyNot can track the prices of saved products and notify users when an item decreases in price, goes on sale, or reaches a target price previously selected by the user. This reduces the need to repeatedly visit different websites to check for discounts and can help users make more informed purchasing decisions.
+
+The solution is designed around the different behaviors and needs identified in our user personas, including Emilio, Cristian, and Violeta. While they have different shopping habits and priorities, they share difficulties related to keeping track of products, comparing alternatives, remembering items they previously discovered, or knowing when it is a good moment to make a purchase. WhyNot brings these activities together while still allowing each user to organize and use the application according to their own shopping habits.
+
+Overall, WhyNot aims to make the process between discovering a product and deciding to purchase it more organized, convenient, and informed. Rather than functioning as another online store, it acts as a personal shopping companion that connects products from different platforms and helps users manage the things they are considering buying.
 
 ---
 
