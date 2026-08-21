@@ -10,15 +10,15 @@
 > Describe the newly performed brainstorming process, and all the solutions that came from it, including how smart features can be included. Detail the procedure followed to derive the mentioned solutions. The solutions should come from the situations, journey maps, and interviews detailed in the MS2 report. Include evidence (e.g., screenshots) of this task.
 
 ### 1.1 Methodology
-
+ 
 The ideation followed the Brainstorming rules discussed in class — no idea is rejected during generation, no criticism until the divergence phase is closed, quantity over quality in the first pass.
-
+ 
 **Generation — collaborative board.** The team worked on a shared Miro board where each of the six members contributed one candidate application, written as a sticky note under their own name. Assigning one idea per member was a deliberate choice: it guarantees that every member's perspective is represented in the final set, and it prevents the outcome from being dominated by whoever is most vocal or most invested in a particular domain. The result is a set of six ideas from six people, each traceable to the member who proposed it.
-
-Each idea had to be grounded in the MS2 material — the four selected problems, the seven interviews, the 28 What–How–Why situations and the two journey maps — rather than invented from scratch. Section 1.3 records that link explicitly.
-
-**Selection — asynchronous vote.** Once every idea was on the board, the team deliberately postponed the decision instead of choosing in the heat of the session. The list was taken to the team's group chat and each member voted, which gave everyone time to weigh the ideas against the interview evidence rather than against whoever argued loudest. The vote is documented in Section 2.
-
+ 
+Each idea came from the member's own experience or from something they had observed in people around them. The user research came afterwards, not before: the vote narrowed the six ideas down, the course brief allowed only four problem statements to be carried into MS2-O1, and the seven interviews were then conducted to test whether the pain each of those four assumed was real. More interviews were deliberately assigned to the leading idea than to the others, so that the option the team was most likely to build would be the best understood. Section 1.3 records, for every idea, what that research ended up showing.
+ 
+**Selection — asynchronous vote.** Once every idea was on the board, the team deliberately postponed the decision instead of choosing in the heat of the session. The list was taken to the team's group chat the following day, where each member approved every idea they considered viable. Voting a day later, in writing, gave everyone time to weigh the ideas on their own rather than against whoever argued loudest in the session. The vote is documented in Section 2.
+ 
 Separating generation from selection is the core of the divergence–convergence discipline: mixing them causes ideas to be judged before they are fully formulated.
 
 ### 1.2 Session description
@@ -33,22 +33,23 @@ Separating generation from selection is the core of the divergence–convergence
 | Board | [Miro Link](https://miro.com/app/board/uXjVHv5hGls=/?share_link_id=243210882480) |
 | Selection | Asynchronous vote in the team's WhatsApp group chat |
 | Vote date | 11-08-2026 |
-| Rules | One idea per member; no idea discarded during generation; no evaluation until the round closed; every idea had to point back to MS2 material |
+| Rules | One idea per member; no idea discarded during generation; no evaluation until the round closed |
 
 ### 1.3 Solutions generated
-
+ 
 Six ideas from six members, one each:
-
-| # | Solution idea | Proposed by | Description | MS2 evidence it comes from |
-|---|---------------|-------------|-------------|-----------------------------|
+ 
+| # | Solution idea | Proposed by | Description | What the MS2 research showed about it |
+|---|---------------|-------------|-------------|----------------------------------------|
 | 1 | **Wishlist + price alerts** | Santiago Casasbuenas | A centralized app to save products from any store or social network into organized lists, keeping name, image, price, link and personal notes together, with price tracking and target-price alerts. | Problem 1. Interviews 1 (Emilio), 2 (Catherine), 3 (Cristian) and 6 (Laura & Mariana) — 5 of the 8 people interviewed. Journey Map 2 (Nico Alvarez). |
 | 2 | **Hiking altitude tracker** | Jeronimo Franco | A route tracker that shows progress in terms of elevation and remaining effort instead of linear distance, applicable to hiking and cycling. | Problem 2. Interview 4 (Ari Sabogal), situations 1–4: estimating remaining difficulty from elevation, adapting pace to upcoming steep sections. |
 | 3 | **Festival friend-finder** | Martin Riveira | A tool to locate members of a group inside a crowded event when mobile connectivity fails, offered as a shared platform rather than a per-event app. | Problem 3. Interview 5 (Gabriela Arrieta), situations 2 and 4: calls, WhatsApp and Instagram all failed; the fixed meeting point was not enough. |
 | 4 | **School-bus tracking** | Juliana Durán | Real-time location and estimated arrival of the school bus for parents, with notifications when the child boards and gets off; extensible to pet transport services. | Problem 4. Interview 7 (Alfonso Durán), situations 1–4: waiting without information, calling the transport company, needing restricted access for safety. |
-| 5 | **Campus parking availability** | Miguel Angel Velandia | Real-time availability, queue length and estimated waiting time for the parking lots near the university. | Team member's own recurring experience; no interview was conducted for this idea. |
-| 6 | **Grade calculator** | Juan Felipe Saenz | A calculator to project final grades and required scores per course. | Team member's own recurring experience; no interview was conducted for this idea. |
+| 5 | **Campus parking availability** | Miguel Angel Velandia | Real-time availability, queue length and estimated waiting time for the parking lots near the university. | Not carried into MS2-O1: the course brief allowed only four problem statements, and this idea did not make the cut. It was never tested with a user. |
+| 6 | **Grade calculator** | Juan Felipe Sáenz | A calculator to project final grades and required scores per course. | Not carried into MS2-O1: the course brief allowed only four problem statements, and this idea did not make the cut. It was never tested with a user. |
+ 
+Only four problem statements could be carried into MS2-O1, so the four best-supported ideas went forward and were each taken to at least one interview. Ideas 5 and 6 were left out of that selection and were never tested with a prospective user, so they rest on the team's own assumptions alone.
 
-Four of the six ideas map directly onto the four problems selected in MS2-O1 and were each backed by at least one interview. Ideas 5 and 6 came from the team's own recurring frustrations and had no user research behind them, which weighed against them in the convergence stage (Section 2).
 
 ### 1.4 Feature set derived from the MS2 evidence
 
@@ -83,8 +84,9 @@ The course requires the solution to include intelligent behaviour rather than pl
 | **Eventual connectivity handling** | Local cache of the wishlist so items can be saved and consulted offline, syncing when the connection returns. | Course requirement; also observed in Int. 5, where connectivity failed exactly when it was needed. |
 
 ### 1.6 Evidence
-
+Brainstorm: \
 <img width="622" height="375" alt="image" src="https://github.com/user-attachments/assets/70a0eaf2-72a9-4837-a485-b17bd16e74a2" />
+
 
 ---
 
@@ -93,28 +95,43 @@ The course requires the solution to include intelligent behaviour rather than pl
 > Explain the decision process based on what you have learned to select one idea (i.e., convergence and divergence strategies). Include the process used to select the idea for the semester, making it clear that a technique taught in class was used.
 
 ### 2.1 Divergence
+ 
+The divergence phase deliberately kept the space open for as long as possible, and the narrowing happened in stages rather than in one decision:
+ 
+1. **Six candidate solutions** were generated on the Miro board, one proposed by each member (Section 1.3).
+2. **Four problem statements** were carried into MS2-O1 — the maximum the course brief allowed — covering unrelated domains: online shopping, hiking, large events and school transport.
+3. **Seven interviews with eight participants** were conducted across those four problems, so that none of them was discarded before hearing a real user. Four of the seven were assigned to the leading idea, on the reasoning that the option most likely to be built deserved the deepest understanding.
+4. **Twenty-eight situations** were derived using the **What–How–Why** technique, one set of four per interview, to move from what people said to why they behave that way.
+5. **Two journey maps** were built for the most promising domain, exposing the moments of highest friction.
+Concentrating the research on the leading idea carries an obvious risk of confirmation bias. The team accepted it deliberately, on the grounds that the alternative — spreading seven interviews evenly and understanding none of the four problems well — would have been worse for a one-semester project. The interviews were still run with open questions about current behaviour rather than about the proposed solution, and they did surface objections to the wishlist idea (Section 2.3).
 
-The divergence phase deliberately kept the problem space open for as long as possible:
-
-1. **Four problem statements** were selected in MS2-O1 covering unrelated domains: online shopping, hiking, large events and school transport.
-2. **Seven interviews with eight participants** were conducted, distributed across all four problems, so that no problem was discarded before hearing a real user.
-3. **Twenty-eight situations** were derived using the **What–How–Why** technique, one set of four per interview, to move from what people said to why they behave that way.
-4. **Two journey maps** were built for the most promising domain, exposing the moments of highest friction.
-5. **Six candidate solutions** came out of Round 1 of the brainstorming session (Section 1.3).
 
 ### 2.2 Convergence
-
+ 
 Two techniques taught in class were applied in sequence.
+ 
+**Step 1 — Vote in the team chat (approval voting).** The consolidated list of six ideas was posted as a poll in the group chat, where each member could approve every idea they considered viable, not just one. Approval voting was chosen because it makes every member's preference visible with equal weight, avoids the loudest-voice effect of an open discussion, and shows not only the winner but how much support each alternative retained. Holding it the day after the board session rather than during it also gave everyone time to consider the ideas individually before committing.
+ 
+This vote came before the user research, not after it. Its purpose was not to settle the semester's project but to rank the field: it decided which ideas were worth the cost of interviewing, and how the seven interviews should be distributed. The evidence gathered afterwards is what confirmed the result (Section 2.3).
+ 
+| Idea | Approvals (out of 6) |
+|------|----------------------|
+| **Wishlist + price alerts** | **6 — unanimous** |
+| Festival friend-finder | 5 |
+| Hiking altitude tracker | 4 |
+| Grade calculator | 2 |
+| School-bus tracking | 2 |
+| Campus parking availability | 0 |
+ 
+The wishlist was the only idea approved by the entire team, and campus parking was the only one with no support at all. The four ideas that cleared the bar — wishlist, festival friend-finder, hiking and school-bus tracking — became the four problem statements carried into MS2-O1.
 
-**Step 1 — Vote in the team chat (dot voting).** The consolidated list of six ideas was posted in the group chat and each member voted for the option they considered strongest. Dot voting was chosen because it makes every member's preference visible with equal weight, avoids the loudest-voice effect of an open discussion, and — by happening after the class session rather than during it — gave everyone time to re-read the interview evidence before committing. The vote converged on the wishlist idea.
-
-*(Add here: how many votes each idea received, and the screenshot of the vote in the chat.)*
+Votes: \
+<img width="660" height="401" alt="image" src="https://github.com/user-attachments/assets/9baa0a1a-8415-46a2-be2f-ca1596b712b0" />
 
 **Step 2 — Impact vs. Effort matrix.** A vote records *what* the team preferred but not *why*, so the result was validated against a 2×2 Impact vs. Effort matrix. Each member scored every idea from 1 to 5 on both axes and the team discussed the outliers until reaching a consensus score. This step also served as a check on the vote: had the matrix contradicted it, the team would have reopened the discussion.
-
+ 
 - **Impact** = strength of the evidence gathered in MS2 (how many interviewees reported the pain, and how severe it was) plus the value the solution would add over the user's current workaround.
 - **Effort** = technical complexity, availability of the data the solution depends on, external dependencies, and whether the scope fits four sprints.
-
 | Idea | Impact (1–5) | Effort (1–5) | Quadrant | Reasoning |
 |------|--------------|--------------|----------|-----------|
 | Wishlist + price alerts | 5 | 2.5 | **Quick win** | Reported by 5 of the 8 interviewees, all with fragile workarounds. No external dependency: data comes from public product pages and from the user. Room for real smart features. |
@@ -128,12 +145,12 @@ Two techniques taught in class were applied in sequence.
 
 
 ### 2.3 Idea selected for the semester
-
+ 
 **WhyNot — a centralized wishlist with price tracking and target-price alerts.**
-
+ 
 The decision rests on four arguments:
-
-1. **Evidence.** Problem 1 was the only one covered by more than one interview: five of the eight participants described the same pain with independent workarounds (Amazon wishlist, Instagram saved posts, screenshots, browser tabs, self-messaging on WhatsApp, Steam wishlist). The convergence therefore follows the data, not the team's preference.
+ 
+1. **Evidence.** The vote pointed at the wishlist, and the research that followed did not contradict it: five of the eight participants described the same pain with independent workarounds (Amazon wishlist, Instagram saved posts, screenshots, browser tabs, self-messaging on WhatsApp, Steam wishlist), and it was the only problem for which several unrelated people reported the same friction. Had the interviews come back flat, the team would have gone back to the second-ranked idea.
 2. **Feasibility within four sprints.** It is the only high-impact idea with no external dependency — no institutional agreement, no hardware, no connectivity guarantees in hostile environments.
 3. **Room for intelligence.** The problem naturally supports the smart features listed in Section 1.5, whereas the grade calculator (the other low-effort option) does not.
 4. **Prior validation.** A low-fidelity prototype was already built and presented in MS2, confirming that the main flow is understandable.
