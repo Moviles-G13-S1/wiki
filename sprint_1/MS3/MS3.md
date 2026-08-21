@@ -29,7 +29,7 @@
 | # | Persona | Link to Map | Done By |
 |---|---------|--------------|--------|
 | 1 | Emilio | [Emilio's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5) | Santiago Casasbuenas |
-| 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) | *(add team member)* |
+| 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) | Juan Felipe Sáenz |
 | 3 | Carlos | [Carlos's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787316143105/f09ac0679078f12322e66ae8967fd6cb4f49960c?sender=udb71de2dc78dff2ddb853584) | Jeronimo Franco |
 
 
