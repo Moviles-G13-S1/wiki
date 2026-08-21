@@ -47,9 +47,11 @@
 <img width="500" height="504" alt="image" src="https://github.com/user-attachments/assets/f9f07ad2-adf8-4dba-b7ac-1be542a5d027" />
 
 
-### Empathy Map 3 — *(TBD)*
+### Empathy Map 3 — *Violeta*
+**Persona Description:**
 
-*(To be completed by the team.)*
+<img width="588" height="715" alt="image" src="https://github.com/user-attachments/assets/7866cf7b-40c0-4271-a5b6-bc9b312666b5" />
+
 
 ### Empathy Map 4 — *(TBD)*
 
