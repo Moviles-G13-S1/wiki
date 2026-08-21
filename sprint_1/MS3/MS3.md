@@ -26,11 +26,11 @@
 
 > Teams of 6 must submit **at least 5 empathy maps**, one per prospective user. Each empathy map should answer the Thinks / Sees / Feels / Does categories in relation to the interview evidence gathered in MS2.
 
-| # | Persona | Link to Map | 
-|---|---------|--------------|
-| 1 | Emilio | [Emilio's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5) |
-| 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) |
-| 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
+| # | Persona | Link to Map | Done By |
+|---|---------|--------------|--------|
+| 1 | Emilio | [Emilio's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5) | Santiago Casasbuenas |
+| 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) | *(add team member)* |
+| 3 | *(TBD)* | *(add description once created)* | *(add team member)* |
 
 
 ### Empathy Map 1 - Emilio
