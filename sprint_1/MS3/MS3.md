@@ -30,7 +30,7 @@
 |---|---------|--------------|--------|
 | 1 | Emilio | [Emilio's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787240133659/a180902d884db9882945da525c3f2607154be4f5) | Santiago Casasbuenas |
 | 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) | *(add team member)* |
-| 3 | *(TBD)* | *(add description once created)* | *(add team member)* |
+| 3 | Carlos | [Carlos's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787316143105/f09ac0679078f12322e66ae8967fd6cb4f49960c?sender=udb71de2dc78dff2ddb853584) | Jeronimo Franco |
 
 
 ### Empathy Map 1 - Emilio
@@ -53,9 +53,11 @@
 <img width="588" height="715" alt="image" src="https://github.com/user-attachments/assets/7866cf7b-40c0-4271-a5b6-bc9b312666b5" />
 
 
-### Empathy Map 4 — *(TBD)*
+### Empathy Map 4 — *Carlos* 
+**Persona Description:**
+Carlos is a 29-year-old practical online shopper who carefully researches electronics, household products, and gifts before buying. He compares prices, reviews, quality, shipping, and warranties across multiple stores, often saving products in tabs, bookmarks, or screenshots while waiting for a better deal. Although too many options can overwhelm him, he feels confident when he finds a durable, reliable product at a fair price.
+<img width="6347" height="4766" alt="Carlos - Empathy map_2026-08-21_12-57-53" src="https://github.com/user-attachments/assets/33cb65b6-b9a0-42f2-996c-ead8d37ee174" />
 
-*(To be completed by the team.)*
 
 ### Empathy Map 5 — *(TBD)*
 
