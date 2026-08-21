@@ -69,7 +69,7 @@
 
 | # | Persona | Description | Source (repo) | Live Preview |
 |---|---------|--------------|----------------|--------------|
-| 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) |
+| 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) |
 | 2 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
 | 3 | *(TBD)* | *(add description once created)* | *(add path once created)* | *(add link once created)* |
 
