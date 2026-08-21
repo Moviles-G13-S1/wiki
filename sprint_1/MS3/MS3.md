@@ -5,12 +5,86 @@
 **Members:** Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira 202321727, Jeronimo Franco 202222204, Juan Felipe Saenz 202311148, Miguel Angel Velandia 202312487.
 
 ---
-
 ## 1. Brainstorming Process & New Solutions
 
 > Describe the newly performed brainstorming process, and all the solutions that came from it, including how smart features can be included. Detail the procedure followed to derive the mentioned solutions. The solutions should come from the situations, journey maps, and interviews detailed in the MS2 report. Include evidence (e.g., screenshots) of this task.
 
-*(To be completed by the team.)*
+### 1.1 Methodology
+
+The ideation followed the Brainstorming rules discussed in class — no idea is rejected during generation, no criticism until the divergence phase is closed, quantity over quality in the first pass.
+
+**Generation — collaborative board.** The team worked on a shared Miro board where each of the six members contributed one candidate application, written as a sticky note under their own name. Assigning one idea per member was a deliberate choice: it guarantees that every member's perspective is represented in the final set, and it prevents the outcome from being dominated by whoever is most vocal or most invested in a particular domain. The result is a set of six ideas from six people, each traceable to the member who proposed it.
+
+Each idea had to be grounded in the MS2 material — the four selected problems, the seven interviews, the 28 What–How–Why situations and the two journey maps — rather than invented from scratch. Section 1.3 records that link explicitly.
+
+**Selection — asynchronous vote.** Once every idea was on the board, the team deliberately postponed the decision instead of choosing in the heat of the session. The list was taken to the team's group chat and each member voted, which gave everyone time to weigh the ideas against the interview evidence rather than against whoever argued loudest. The vote is documented in Section 2.
+
+Separating generation from selection is the core of the divergence–convergence discipline: mixing them causes ideas to be judged before they are fully formulated.
+
+### 1.2 Session description
+
+| Item | Detail |
+|------|--------|
+| Format | Collaborative brainstorming on a shared Miro board |
+| Date | *(add date)* |
+| Duration | *(add — approx. XX minutes)* |
+| Participants | All six team members, one idea each |
+| Facilitator | *(add member — who set up the board and closed the round)* |
+| Board | *(add Miro link, view permission)* |
+| Selection | Asynchronous vote in the team's WhatsApp group chat |
+| Vote date | *(add date)* |
+| Rules | One idea per member; no idea discarded during generation; no evaluation until the round closed; every idea had to point back to MS2 material |
+
+### 1.3 Solutions generated
+
+Six ideas from six members, one each:
+
+| # | Solution idea | Proposed by | Description | MS2 evidence it comes from |
+|---|---------------|-------------|-------------|-----------------------------|
+| 1 | **Wishlist + price alerts** | *(add member)* | A centralized app to save products from any store or social network into organized lists, keeping name, image, price, link and personal notes together, with price tracking and target-price alerts. | Problem 1. Interviews 1 (Emilio), 2 (Catherine), 3 (Cristian) and 6 (Laura & Mariana) — 5 of the 8 people interviewed. Journey Map 2 (Nico Alvarez). |
+| 2 | **Hiking altitude tracker** | *(Jeronimo Franco — confirm)* | A route tracker that shows progress in terms of elevation and remaining effort instead of linear distance, applicable to hiking and cycling. | Problem 2. Interview 4 (Ari Sabogal), situations 1–4: estimating remaining difficulty from elevation, adapting pace to upcoming steep sections. |
+| 3 | **Festival friend-finder** | *(Martin Riveira — confirm)* | A tool to locate members of a group inside a crowded event when mobile connectivity fails, offered as a shared platform rather than a per-event app. | Problem 3. Interview 5 (Gabriela Arrieta), situations 2 and 4: calls, WhatsApp and Instagram all failed; the fixed meeting point was not enough. |
+| 4 | **School-bus tracking** | *(Juliana Durán — confirm)* | Real-time location and estimated arrival of the school bus for parents, with notifications when the child boards and gets off; extensible to pet transport services. | Problem 4. Interview 7 (Alfonso Durán), situations 1–4: waiting without information, calling the transport company, needing restricted access for safety. |
+| 5 | **Campus parking availability** | *(add member)* | Real-time availability, queue length and estimated waiting time for the parking lots near the university. | Team member's own recurring experience; no interview was conducted for this idea. |
+| 6 | **Grade calculator** | *(add member)* | A calculator to project final grades and required scores per course. | Team member's own recurring experience; no interview was conducted for this idea. |
+
+Four of the six ideas map directly onto the four problems selected in MS2-O1 and were each backed by at least one interview. Ideas 5 and 6 came from the team's own recurring frustrations and had no user research behind them, which weighed against them in the convergence stage (Section 2).
+
+### 1.4 Feature set derived from the MS2 evidence
+
+Once the wishlist idea was selected, the team went back over the 28 What–How–Why situations and the two journey maps and asked, for each one, "what would have removed this friction?". This is not a second brainstorming session but an evidence-mapping exercise: every feature below is traceable to a specific situation, so the scope of the application is justified by user research rather than by preference.
+
+| # | Feature idea | Situation it answers |
+|---|--------------|----------------------|
+| 1 | Save a product from any app through the system share sheet, without copying links manually | Int. 6, S4 — Mariana wants to export a product directly from Instagram instead of copying link, image and information by hand |
+| 2 | Automatic capture of name, image, price and store when a link is pasted | Int. 3, S1 — Cristian pastes bare URLs into his own WhatsApp chat and cannot tell what a link is until he opens it |
+| 3 | Target-price alert ("notify me when it drops below X") | Int. 3, S2 — he checks links manually every one or two weeks and misses offers; Int. 1, S3 — Emilio outsources price tracking to retargeted ads |
+| 4 | Multiple lists by category (clothes, tech, gifts, travel) | Int. 1, S4 and Int. 2, S4 — validated as useful, but with an explicit warning about clutter |
+| 5 | Per-item privacy instead of per-list privacy | Int. 2, S4 — Catherine wants to choose which individual items can be shared; Int. 3, S3 — Cristian rejects any social sharing entirely |
+| 6 | Personal note field recording *why* the item was wanted | Int. 3, S4 — he wants to validate whether the desire persists after a few days and control impulse buying |
+| 7 | Image-first grid view of saved items | Int. 6, S4 — Laura remembers products by seeing them; Int. 2, S3 — Catherine shops visually |
+| 8 | Price comparison across stores, sorted from lowest to highest | Int. 2, S3 — Catherine explicitly asked for images, sources and prices ordered by price |
+| 9 | Price history chart per product | Int. 3, S2 — deciding whether the current price is actually a good deal |
+| 10 | Minimal, low-noise interface with no feed and no unnecessary features | Int. 1, S4 — Emilio fears the app becomes a graveyard of unused entries; Int. 2, S4 — Catherine insists on simplicity |
+| 11 | Duplicate detection when the same product is saved twice from different sources | Int. 6, S1 — products end up scattered across screenshots, saved posts and tabs |
+| 12 | Reminder of stale items ("you saved this 30 days ago — still interested?") | Int. 1, S2 — items he judged "not that important" simply fade from memory |
+
+### 1.5 Smart features
+
+The course requires the solution to include intelligent behaviour rather than plain CRUD. The team identified where machine learning, sensors and context can be applied, always tied to a real friction found in the interviews:
+
+| Smart feature | How it works | Why it matters (evidence) |
+|---------------|--------------|---------------------------|
+| **Product recognition from a screenshot** | On-device OCR plus image recognition extracts the product name and store from a screenshot in the gallery and turns it into a structured entry. | Catherine and Laura both save products as screenshots (Int. 2 S2; Int. 6 S1). This meets users where they already are instead of asking them to change habit. |
+| **Automatic categorization** | A text classifier assigns a saved product to a list (clothes / tech / gifts / travel) from its title and store. | Feature 4 was validated but users doubt they will maintain lists manually (Int. 1 S4). Automating it removes the maintenance cost. |
+| **Best-time-to-buy prediction** | A model over the collected price history estimates whether the current price is near its historical minimum and suggests a target price. | Cristian tracks prices manually and still misses drops (Int. 3 S2); Emilio has no method at all (Int. 1 S3). |
+| **Purchase-intent scoring** | The app ranks saved items by the likelihood the user still wants them, using recency, revisits, price movement and the personal note. | Directly answers Emilio's objection that lists fill up and are never acted on (Int. 1 S4). |
+| **Context-aware notifications** | Alerts are batched and delivered when the user is likely to act (connectivity available, not in class hours), instead of firing on every price change. | Both Emilio and Catherine describe being overwhelmed by information (Int. 1 S4; Int. 2 S4). |
+| **Eventual connectivity handling** | Local cache of the wishlist so items can be saved and consulted offline, syncing when the connection returns. | Course requirement; also observed in Int. 5, where connectivity failed exactly when it was needed. |
+
+### 1.6 Evidence
+
+<img width="622" height="375" alt="image" src="https://github.com/user-attachments/assets/70a0eaf2-72a9-4837-a485-b17bd16e74a2" />
 
 ---
 
@@ -18,9 +92,56 @@
 
 > Explain the decision process based on what you have learned to select one idea (i.e., convergence and divergence strategies). Include the process used to select the idea for the semester, making it clear that a technique taught in class was used.
 
-*(To be completed by the team.)*
+### 2.1 Divergence
+
+The divergence phase deliberately kept the problem space open for as long as possible:
+
+1. **Four problem statements** were selected in MS2-O1 covering unrelated domains: online shopping, hiking, large events and school transport.
+2. **Seven interviews with eight participants** were conducted, distributed across all four problems, so that no problem was discarded before hearing a real user.
+3. **Twenty-eight situations** were derived using the **What–How–Why** technique, one set of four per interview, to move from what people said to why they behave that way.
+4. **Two journey maps** were built for the most promising domain, exposing the moments of highest friction.
+5. **Six candidate solutions** came out of Round 1 of the brainstorming session (Section 1.3).
+
+### 2.2 Convergence
+
+Two techniques taught in class were applied in sequence.
+
+**Step 1 — Vote in the team chat (dot voting).** The consolidated list of six ideas was posted in the group chat and each member voted for the option they considered strongest. Dot voting was chosen because it makes every member's preference visible with equal weight, avoids the loudest-voice effect of an open discussion, and — by happening after the class session rather than during it — gave everyone time to re-read the interview evidence before committing. The vote converged on the wishlist idea.
+
+*(Add here: how many votes each idea received, and the screenshot of the vote in the chat.)*
+
+**Step 2 — Impact vs. Effort matrix.** A vote records *what* the team preferred but not *why*, so the result was validated against a 2×2 Impact vs. Effort matrix. Each member scored every idea from 1 to 5 on both axes and the team discussed the outliers until reaching a consensus score. This step also served as a check on the vote: had the matrix contradicted it, the team would have reopened the discussion.
+
+- **Impact** = strength of the evidence gathered in MS2 (how many interviewees reported the pain, and how severe it was) plus the value the solution would add over the user's current workaround.
+- **Effort** = technical complexity, availability of the data the solution depends on, external dependencies, and whether the scope fits four sprints.
+
+| Idea | Impact (1–5) | Effort (1–5) | Quadrant | Reasoning |
+|------|--------------|--------------|----------|-----------|
+| Wishlist + price alerts | 5 | 2.5 | **Quick win** | Reported by 5 of the 8 interviewees, all with fragile workarounds. No external dependency: data comes from public product pages and from the user. Room for real smart features. |
+| School-bus tracking | 4.3 | 4.4 | Major project | Strong emotional impact, but requires an agreement with a school or transport company, hardware on the vehicle, and handling location data of minors. |
+| Hiking altitude tracker | 4 | 3.5 | Major project | Clear unmet need, but depends on accurate elevation data, GPS in areas with no coverage, and ideally wearable integration. |
+| Festival friend-finder | 3.8 | 5 | Major project | The core requirement is to work *without* connectivity, which forces BLE/mesh or offline-first positioning — the highest technical risk of the set. |
+| Campus parking availability | 3 | 3.8 | Money pit | Depends on sensor or institutional data the team does not have access to; without it the app relies on unverifiable user reports. |
+| Grade calculator | 2 | 1.5 | Fill-in | Cheap to build, but no interview evidence, several existing alternatives, and almost no space for smart features. |
+
+<img width="1582" height="1082" alt="image" src="https://github.com/user-attachments/assets/8676b159-229c-49f3-b339-1538f5e4ad69" />
+
+
+### 2.3 Idea selected for the semester
+
+**WhyNot — a centralized wishlist with price tracking and target-price alerts.**
+
+The decision rests on four arguments:
+
+1. **Evidence.** Problem 1 was the only one covered by more than one interview: five of the eight participants described the same pain with independent workarounds (Amazon wishlist, Instagram saved posts, screenshots, browser tabs, self-messaging on WhatsApp, Steam wishlist). The convergence therefore follows the data, not the team's preference.
+2. **Feasibility within four sprints.** It is the only high-impact idea with no external dependency — no institutional agreement, no hardware, no connectivity guarantees in hostile environments.
+3. **Room for intelligence.** The problem naturally supports the smart features listed in Section 1.5, whereas the grade calculator (the other low-effort option) does not.
+4. **Prior validation.** A low-fidelity prototype was already built and presented in MS2, confirming that the main flow is understandable.
+
+The main risk identified during convergence is **adoption**: Emilio explicitly doubted he would use an organized wishlist, and Catherine warned that the app must not add friction. The team therefore treats "saving a product must take fewer steps than a screenshot" as a design constraint for the whole semester, and prioritizes the smart capture features (screenshot recognition, share-sheet import, automatic categorization) over social or secondary functionality.
 
 ---
+
 
 ## 3. Empathy Maps
 
