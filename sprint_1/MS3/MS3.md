@@ -132,6 +132,7 @@ Votes: \
  
 - **Impact** = strength of the evidence gathered in MS2 (how many interviewees reported the pain, and how severe it was) plus the value the solution would add over the user's current workaround.
 - **Effort** = technical complexity, availability of the data the solution depends on, external dependencies, and whether the scope fits four sprints.
+  
 | Idea | Impact (1–5) | Effort (1–5) | Quadrant | Reasoning |
 |------|--------------|--------------|----------|-----------|
 | Wishlist + price alerts | 5 | 2.5 | **Quick win** | Reported by 5 of the 8 interviewees, all with fragile workarounds. No external dependency: data comes from public product pages and from the user. Room for real smart features. |
