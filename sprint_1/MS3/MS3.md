@@ -170,7 +170,7 @@ The main risk identified during convergence is **adoption**: Emilio explicitly d
 | 2 | Cristian | [Cristian´s Map](https://app.mural.co/t/empathy8461/m/empathy8461/1787101645013/fe0c5b0c2bf319c69dc822522b384f8d3086f41f?sender=ud3159237ac70835f8a485549) | Juan Felipe Sáenz |
 | 3 | Violeta | [Violetas's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787108433558/85f2e7cb0722de4687f1705bd265d63e663ca08a?sender=ua1041bd0f93ddc7c5a9d7309) | Juliana Durán |
 | 4 | Carlos | [Carlos's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787316143105/f09ac0679078f12322e66ae8967fd6cb4f49960c?sender=udb71de2dc78dff2ddb853584) | Jeronimo Franco |
-| 5 | Andrea | [Carlos's Map](https://app.mural.co/t/moviles6182/m/moviles6182/1787316143105/f09ac0679078f12322e66ae8967fd6cb4f49960c?sender=udb71de2dc78dff2ddb853584) | Martin Riveira |
+| 5 | Andrea | [Andrea's Map](https://app.mural.co/t/work48123/m/work48123/1787329701926/5a1e2da2761fbd10e5a2b9564538a675aedc4d20) | Martin Riveira |
 
 ### Empathy Map 1 - Emilio
 
@@ -213,7 +213,7 @@ Andrea is a 29-year-old administrator and frequent online shopper who enjoys fin
 |---|---------|--------------|----------------|--------------|----------|
 | 1 | Emilio | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) | Santiago Casasbuenas |
 | 2 | Carlos | Carlos is a practical, budget-conscious online shopper who carefully compares prices, reviews, and product quality before making confident purchasing decisions. | [carlos-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | Jeronimo Franco |
-| 3 | Andrea | Andrea is a independent young woman that already works and lives alone. She enjoys shopping online more than in person, and she enjoys saving money on new items she hadn't noticed before.| [andrea-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) 
+| 3 | Andrea | Andrea is a independent young woman that already works and lives alone. She enjoys shopping online more than in person, and she enjoys saving money on new items she hadn't noticed before.| [andrea-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) | Martin Riveira |
 
 **How to add a new persona:**
 1. Create the persona HTML file following the `MS3/resources/Persona Template.html` layout and commit it under `sprint_1/MS3/personas/`.
