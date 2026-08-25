@@ -24,12 +24,6 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 |---|---------|--------------|----------------|--------------|
 | 1 | Camila | Growth & Product Analyst on the WhyNot team. Unlike the app's end users, Camila doesn't shop through WhyNot, she uses its usage data to guide what the team builds next. She needs to know whether price-drop alerts actually lead to purchases, whether wishlist saves translate into real purchase intent, and which product categories drive the most engagement, but that data is currently scattered across logs and dashboards with no clear link between a notification and a resulting sale. Without that visibility, she risks prioritizing features based on guesswork instead of evidence — and she's the one who has to bring leadership a data-backed case for what WhyNot should improve next. | [camila-analytics-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/analytics_persona.html) | [View Live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS4/analytics_persona.html) |
 
-**How to add the analytics persona:**
-1. Create the persona HTML file following the `MS3/resources/Persona Template.html` layout and commit it under `sprint_1/MS4/personas/`.
-2. Copy its GitHub blob URL, e.g. `https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/personas/<file-name>.html`.
-3. Wrap it with the htmlpreview prefix to get the live preview link: `https://htmlpreview.github.io/?<paste the blob URL here>`.
-4. Add a row to the table above with the persona's role/name, a short description, the source link, and the wrapped preview link.
-
 ---
 
 ## 3. PAS Hypotheses (Problem–Alternative–Solution)
