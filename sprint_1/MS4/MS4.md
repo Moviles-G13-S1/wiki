@@ -57,26 +57,19 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 ---
 
 ## 5. Business Questions
-
-> Deliver **10 business questions**, distributed as:
-> - Type 1: 1 question
-> - Type 2: 4 questions
-> - Type 3: 3 questions
-> - Type 4: 1 question
-> - Type *: 1 question
-
 | # | Type | Question | Persona it matters to | Data source needed |
 |---|------|----------|------------------------|----------------------|
-| 1 | Type 1 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 2 | Type 2 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 3 | Type 2 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 4 | Type 2 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 5 | Type 2 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 6 | Type 3 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 7 | Type 3 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 8 | Type 3 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 9 | Type 4 | *(TBD)* | *(TBD)* | *(TBD)* |
-| 10 | Type * | *(TBD)* | *(TBD)* | *(TBD)* |
+| 1 | Type 1 | In which cities and geographic zones is app usage concentrated, and how does the amount of saved product vary across them?  | Camila | Approximate user location, city or zone, new app logins, # of active sessions, # of saved products. |
+| 2 | Type 2 | At what stage of product-saving process do users most commonly abandon it? | Camila | Timestamps and event logs which gather all the process information. |
+| 3 | Type 2 | Which method of saving a product allows users to complete the process in less time and with fewer errors? | Camila | Timestamps and event logs which gather all the process information.|
+| 4 | Type 2 | Which search paths allow users to find a product quicker?  | Camila | Events (Screen views, filters applied, search performed), 'not found' searches, Timestamps. |
+| 5 | Type 2 | What frequency and type of notification 'The price has changed' notification generate more useful app openings without incrementing notification deactivations?.  | Camila | Notifications sent, frequency, magnitude of the price change, # of app openings, # of notifications discards.  |
+| 6 | Type 3 | Which unsupported stores do users try to add most frequently, that should be priorized for next updates? | Camila | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
+| 7 | Type 3 | Which secondary features are used less regularly? and if new, with less user adoption? | Camila | First use register, regular use registers, time since last use.  |
+| 8 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Camila | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
+| 9 | Type 4 | Which combinations of store, category and price range concetrate the most amount of purchases and offer the best sales potential for partnerships? | Camila | Saved products by category, store and price; # of unique interested users; clicks to the store, purchases related with the app  |
+| 10 | Type * | Which discount notifications generate more related purchases and a higher user retention in the next 30 days segmented by store, category and % of discount? | Camila | Price history, notiification sent, rate of opened notification, product visit, quit click, confirmed purchase. |
+
 
 ---
 
