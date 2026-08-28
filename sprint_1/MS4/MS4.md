@@ -52,7 +52,7 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 
 > Submit the Context Canvas for the proposed solution. Use the template provided by the course (Chapter 3 of the book).
 
-*(To be completed by the team — insert the filled-in Context Canvas image or embedded diagram here, following the same "source + live preview" pattern as the personas if built as an HTML template.)*
+<img width="1920" height="1080" alt="context_canvas pptx (1)" src="https://github.com/user-attachments/assets/639bed2e-9c33-442f-b3da-001e52b83e63" />
 
 ---
 
