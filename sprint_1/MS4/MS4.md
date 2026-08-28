@@ -76,7 +76,8 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 ## 6. VD Map
 
 > Provide a VD Map that displays all 10 business questions defined above. The data sources used must be obtainable through the designed solution or must be publicly available.
-<img width="2825" height="1415" alt="VD-map" src="https://github.com/user-attachments/assets/210bb096-4d23-466d-81ba-19a78d7ccab7" />
+<img width="2785" height="1436" alt="foto" src="https://github.com/user-attachments/assets/049a0591-754d-4365-990e-ea989cd315ed" />
+
 
 
 ---
