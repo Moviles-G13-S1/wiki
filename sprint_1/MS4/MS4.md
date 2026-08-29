@@ -48,7 +48,7 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 ---
 
 
-## 4. Context Canvas
+## 4. Context Canvas - Made By Miguel Velandia
 
 > Submit the Context Canvas for the proposed solution. Use the template provided by the course (Chapter 3 of the book).
 
