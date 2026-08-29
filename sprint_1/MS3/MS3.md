@@ -201,7 +201,9 @@ Carlos is a 29-year-old practical online shopper who carefully researches electr
 
 ### Empathy Map 5 — *_Andrea_*
 Andrea is a 29-year-old administrator and frequent online shopper who enjoys finding good deals and discovering new products that match her interests. She mainly shops online, often compares prices across different stores, and likes being notified about discounts before they disappear. Because she travels frequently and does not want to constantly check multiple websites or apps, she values simple, personalized alerts that bring relevant offers and new products directly to her. She enjoys the feeling of saving money, but feels frustrated when she misses a deal or finds out about it too late.
-<img width="818" height="742" alt="image" src="https://github.com/user-attachments/assets/588a1ca9-bcc0-4551-8781-f5a85b9473dc" />
+<img width="929" height="1128" alt="image" src="https://github.com/user-attachments/assets/4242fab2-4cb4-47df-a563-bea7ecff07ee" />
+
+
 
 
 ---
