@@ -43,7 +43,7 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 | 9 | Users do not always know whether a current price is actually a good deal. | They rely on memory, repeated manual checks, or external tools available only for certain product categories. | WhyNot stores price history and helps users evaluate whether the current price is low relative to previous prices. |
 | 10 | Users may lose interest in products over time but still keep them saved, creating clutter and making lists less useful. | They simply ignore old screenshots, links, tabs, carts, or wishlist entries until they are forgotten. | WhyNot can identify stale items and remind users to review whether they are still interested in them. |
 | 11 | Users may save the same or very similar product more than once from different sources, creating duplicated information. | They keep duplicate screenshots, tabs, links, or saved posts and manually recognize duplicates later. | WhyNot can detect duplicate or repeated product entries and help users consolidate them. |
-| 12 | Users have different privacy preferences and may not want all saved products or wishlists to be shared. | They keep their shopping information private in personal chats, screenshots, private wishlists, or individual accounts and avoid sharing lists. | WhyNot keeps wishlists private by default and allows users to control whether specific items are shared. |
+| 12 | Users have different privacy preferences and may not want all saved products or wishlists to be shared. | They keep their shopping information private in personal chats, screensho  ts, private wishlists, or individual accounts and avoid sharing lists. | WhyNot keeps wishlists private by default and allows users to control whether specific items are shared. |
 
 ---
 
@@ -57,19 +57,19 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 ---
 
 ## 5. Business Questions
-| # | Type | Question | Persona it matters to | Data source needed |
+| # | Type | Question | Why is it important?| Data source needed |
 |---|------|----------|------------------------|----------------------|
-| 1 | Type 1 | In which cities and geographic zones is app usage concentrated, and how does the amount of saved product vary across them?  | Camila | Approximate user location, city or zone, new app logins, # of active sessions, # of saved products. |
-| 2 | Type 2 | At what stage of product-saving process do users most commonly abandon it? | Camila | Timestamps and event logs which gather all the process information. |
-| 3 | Type 2 | Which method of saving a product allows users to complete the process in less time and with fewer errors? | Camila | Timestamps and event logs which gather all the process information.|
-| 4 | Type 2 | Which search paths allow users to find a product quicker?  | Camila | Events (Screen views, filters applied, search performed), 'not found' searches, Timestamps. |
-| 5 | Type 2 | What frequency and type of notification 'The price has changed' notification generate more useful app openings without incrementing notification deactivations?.  | Camila | Notifications sent, frequency, magnitude of the price change, # of app openings, # of notifications discards.  |
-| 6 | Type 3 | Which unsupported stores do users try to add most frequently, that should be priorized for next updates? | Camila | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
-| 7 | Type 3 | Which secondary features are used less regularly? and if new, with less user adoption? | Camila | First use register, regular use registers, time since last use.  |
-| 8 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Camila | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
-| 9 | Type 4 | Which combinations of store, category and price range concetrate the most amount of purchases and offer the best sales potential for partnerships? | Camila | Saved products by category, store and price; # of unique interested users; clicks to the store, purchases related with the app  |
-| 10 | Type * | Which discount notifications generate more related purchases and a higher user retention in the next 30 days segmented by store, category and % of discount? | Camila | Price history, notiification sent, rate of opened notification, product visit, quit click, confirmed purchase. |
-
+| 1 | Type 1 | How many errors does the app produce weekly?  | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
+| 2 | Type 2 | How much money do users have sabed by buying through the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
+| 3 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
+| 4 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
+| 5 | Type 2 |How many products does a user has saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
+| 6 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
+| 7 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
+| 8 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
+| 9 | Type 4 | Which category has the most amount of purchases per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Completed purchases with category, product, user, price, store, and purchase date. |
+| 10 | Type * |What are the users buying patterns? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
+  
 
 ---
 
