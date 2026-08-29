@@ -10,9 +10,9 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 
 > Write two short descriptions: one for the problem selected and one for the proposed solution.
 
-**Problem:** *(To be completed by the team — short description of the selected problem, consistent with the one carried forward from MS2/MS3.)*
+**Problem:** People frequently find products they are interested in across different online stores and social media platforms but are not ready to buy them immediately. As a result, these products become scattered across screenshots, browser tabs, shopping carts, saved posts, etc. making them difficult to find, organize, compare, and track over time. Users may also miss good purchasing opportunities because they have to manually check whether prices have changed. There is a clear lack of a central platform or system where users can easily manage their shopping prospects, and save as much money as possible. 
 
-**Solution:** *(To be completed by the team — short description of the proposed solution, consistent with MS3 §5.)*
+**Solution:** WhyNot is a mobile application that provides a centralized place where users can save and organize products from different stores and platforms. Each saved product can include information such as its name, image, price, store, link, and category. The app also tracks product prices and can notify users when an item drops in price, goes on sale, or reaches a target price, helping users compare alternatives and make more informed purchasing decisions without constantly checking multiple websites, saving the user time and frustration.
 
 ---
 
