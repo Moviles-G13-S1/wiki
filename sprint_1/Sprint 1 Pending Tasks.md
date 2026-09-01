@@ -199,17 +199,6 @@ The remaining Sprint work should provide clear evidence that GitHub was used to 
 
 ---
 
-### 10. Viva Voce Preparation — `[120 individual points]`
-
-Every team member should be prepared to justify the decisions made throughout the Sprint.
-
-- [ ] Review and justify the **Business Questions and VD Map**.
-- [ ] Review and justify the **Personas, Empathy Maps, PAS, and Context Canvas**.
-- [ ] Review and justify the **Functional and Quality Scenarios**.
-- [ ] Review how observations and Design Process artifacts were transformed into the final solution.
-- [ ] Ensure every member can answer questions about sections they did not personally create.
-
----
 
 ## Final Submission Check
 
