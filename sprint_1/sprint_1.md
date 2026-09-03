@@ -1,6 +1,5 @@
 # Sprint 1 — WhyNot
 
-**Course:** ISIS-3510 Construcción de Aplicaciones Móviles — Universidad de los Andes
 **Team:** #13
 **Members:** Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira 202321727, Jeronimo Franco 202222204, Juan Felipe Saenz 202311148, Miguel Angel Velandia 202312487.
 
