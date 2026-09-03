@@ -95,11 +95,81 @@ The current VD Map (embedded in [MS4.md](https://github.com/Moviles-G13-S1/wiki/
 
 ### 4. Functional Scenarios — `[5 individual points]` 
 
-**Completed.** 12 functional scenarios were written, grounded in Emilio, Carlos, and Andrea, each following the User Action / System Response / Execution Context framework.
-
-📄 [Functional & Quality Scenarios — WhyNot](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/Functional-Quality-Scenarios.md)
-
 Covers the main WhyNot functionalities (universal wishlist, price tracking & alerts, product comparison, personalized discovery) and stays consistent with the proposed solution — no further action needed here unless the solution description changes.
+
+#### **FS1 — Saving an item from any category**
+- **Persona:** Emilio
+- **User action:** While browsing a clothing site on his phone, Emilio taps "Save to WhyNot" on a pair of sneakers he's considering.
+- **System response:** WhyNot adds the item to his unified wishlist regardless of category, stores its current price and image, and confirms with a brief toast.
+- **Execution context:** Emilio is on mobile data, logged in, and this is the first time he's saved a clothing item — previously he only tracked books through Amazon's separate list.
+
+#### **FS2 — Returning directly to the product page**
+- **Persona:** Emilio
+- **User action:** A week later, Emilio opens WhyNot and taps the saved sneakers in his wishlist.
+- **System response:** WhyNot deep-links straight to the original store's product page, with no need to search again.
+- **Execution context:** Emilio is on home Wi-Fi; the item is still in stock and the price is unchanged.
+
+#### **FS3 — Checking regional availability before saving**
+- **Persona:** Emilio
+- **User action:** Emilio finds a product on a US-based retailer's site he hasn't used before and wants to know if it ships to Colombia before saving it.
+- **System response:** WhyNot flags shipping availability to Colombia directly on the save-confirmation screen, based on store metadata.
+- **Execution context:** Emilio is browsing an unfamiliar international store for the first time.
+
+#### **FS4 — Setting a target price**
+- **Persona:** Andrea
+- **User action:** Andrea saves a dress to her wishlist and sets a target price 20% below the current one.
+- **System response:** WhyNot stores the target and begins monitoring the item, ready to notify her once the price reaches or drops below it.
+- **Execution context:** Andrea sets this up on mobile data during a lunch break, ahead of a weekend trip.
+
+#### **FS5 — Receiving a price-drop notification**
+- **Persona:** Andrea
+- **User action:** Andrea receives a push notification: "Your saved dress just dropped to $85,000 (target reached)."
+- **System response:** WhyNot triggers the push and updates the item's status to "Deal available" in her wishlist.
+- **Execution context:** Andrea is traveling abroad, connected to hotel Wi-Fi, outside normal business hours.
+  
+#### **FS6 — Customizing notification preferences**
+- **Persona:** Andrea
+- **User action:** In Settings, Andrea disables "general promotions" but keeps "price-drop alerts for saved items" on.
+- **System response:** WhyNot updates her preferences immediately, stopping generic promo pushes while continuing price-drop alerts.
+- **Execution context:** Andrea does this after her first week using the app, having felt overwhelmed by irrelevant notifications.
+  
+#### **FS7 — Passive price recheck without opening the app daily**
+- **Persona:** Emilio
+- **User action:** Emilio opens the app once during the week; he never manually rechecks prices.
+- **System response:** WhyNot has already run a background price check that morning and shows a "price changed" badge on two saved items.
+- **Execution context:** Background app refresh is enabled; the check ran automatically before Emilio opened the app.
+
+#### **FS8 — Comparing two saved products side-by-side**
+- **Persona:** Carlos
+- **User action:** Carlos selects two saved blenders from his wishlist and taps "Compare."
+- **System response:** WhyNot displays a side-by-side view of price, rating, and key specs for both.
+- **Execution context:** Carlos is deciding between the two at night, using WhyNot's web/laptop view.
+
+#### **FS9 — Viewing warranty and return info on a saved product**
+- **Persona:** Carlos
+- **User action:** Carlos taps the "Details" tab on a saved laptop.
+- **System response:** WhyNot shows a consolidated summary of warranty length, shipping time, and return policy pulled from the retailer's page.
+- **Execution context:** Carlos is close to purchasing and wants to confirm the return policy before committing, on mobile.
+
+#### **FS10 — Reading an aggregated review summary while saving**
+- **Persona:** Carlos
+- **User action:** Carlos saves a new espresso machine and taps "Reviews."
+- **System response:** WhyNot pulls and displays review scores/summaries from the linked store, instead of requiring separate tabs.
+- **Execution context:** Carlos is in the early research phase with several browser tabs already open, looking for a faster way to gauge reliability.
+
+#### **FS11 — Discovering a relevant deal via the home feed**
+- **Persona:** Andrea
+- **User action:** Andrea opens the WhyNot home feed with no specific search intent.
+- **System response:** WhyNot surfaces a discount on a brand she follows, based on her stated interests and past saves.
+- **Execution context:** Andrea has already completed her interest profile; she's browsing casually.
+
+#### **FS12 — Following a brand for future alerts**
+- **Persona:** Andrea
+- **User action:** After saving an item, Andrea taps "Follow" on that brand's page inside WhyNot.
+- **System response:** WhyNot adds the brand to her followed list and includes its future promotions in her personalized feed and notifications.
+- **Execution context:** Andrea just discovered the brand through a saved item and wants ongoing updates without repeat manual searching.
+
+
 
 ---
 
