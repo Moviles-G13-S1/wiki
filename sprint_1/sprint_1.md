@@ -175,11 +175,81 @@ Covers the main WhyNot functionalities (universal wishlist, price tracking & ale
 
 ### 5. Quality Scenarios — `[5 individual points]` 
 
-**Completed.** 12 quality scenarios were written, each covering a distinct quality attribute (eventual connectivity, performance, resilience, notification load, internationalization, energy efficiency, security/privacy, accessibility, data consistency, GUI responsiveness, usability, scalability), in the same document as the functional scenarios above.
+12 quality scenarios were written, each covering a distinct quality attribute (eventual connectivity, performance, resilience, notification load, internationalization, energy efficiency, security/privacy, accessibility, data consistency, GUI responsiveness, usability, scalability), in the same document as the functional scenarios above.
 
-📄 [Functional & Quality Scenarios — WhyNot](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/Functional-Quality-Scenarios.md)
+Each scenario follows: **Scenario name → Quality attribute(s) → App status and context → Change in the context → System reaction.**
+ 
+#### **QS1 — Price sync interrupted mid-check**
+- **Quality attribute:** Eventual connectivity
+- **App status and context:** WhyNot is running a scheduled background price check across Emilio's 15 saved items.
+- **Change in context:** Emilio's phone loses connectivity mid-sync (e.g., entering the subway).
+- **System reaction:** WhyNot pauses the sync, queues the remaining checks, and resumes automatically once connectivity returns — without showing stale prices as if they were current.
+  
+#### **QS2 — Large wishlist load time**
+- **Quality attribute:** Performance
+- **App status and context:** Carlos has 150+ saved products across multiple categories.
+- **Change in context:** Carlos opens the wishlist screen and scrolls quickly through all items.
+- **System reaction:** WhyNot loads the list within 2 seconds using pagination/lazy-loading, without freezing the UI or dropping frames.
 
-Clearly differentiated from the functional scenarios above — no further action needed here.
+#### **QS3 — Comparison with missing product data**
+- **Quality attribute:** Resilience
+- **App status and context:** Carlos compares two products, one of which has incomplete specification data from the retailer's API.
+- **Change in context:** A spec field returns an error/null from the source.
+- **System reaction:** WhyNot displays "Information not available" for that field instead of crashing or showing a broken comparison view.
+
+#### **QS4 — Flash-sale notification spike**
+- **Quality attribute:** Usability / notification load management
+- **App status and context:** Andrea follows 20 brands and has price alerts on 30 items.
+- **Change in context:** A flash-sale event triggers 40 price-drop conditions within the same hour.
+- **System reaction:** WhyNot batches the alerts into a single grouped notification ("12 of your saved items just dropped in price") instead of sending 40 separate pushes.
+
+#### **QS5 — Notifications across time zones while traveling**
+- **Quality attribute:** Internationalization / context-awareness
+- **App status and context:** Andrea is traveling internationally; her phone's timezone has auto-updated.
+- **Change in context:** A price-drop alert triggers for a saved item.
+- **System reaction:** WhyNot delivers time-sensitive price-drop alerts immediately, but holds non-urgent grouped promos until outside her local 10pm–7am quiet hours.
+
+#### **QS6 — Background checks under low battery**
+- **Quality attribute:** Energy efficiency
+- **App status and context:** WhyNot runs periodic background price checks for all users.
+- **Change in context:** Emilio's battery drops below 20%.
+- **System reaction:** WhyNot reduces background price-check frequency (e.g., hourly → every 6 hours) to conserve battery, resuming normal frequency once charging or above threshold.
+
+#### **QS7 — Private wishlist protection**
+- **Quality attribute:** Security / privacy
+- **App status and context:** Emilio has marked his wishlist as private and disabled sharing.
+- **Change in context:** Another WhyNot user tries to view Emilio's profile/wishlist.
+- **System reaction:** WhyNot blocks visibility and returns "This wishlist is private," without exposing any item data.
+
+#### **QS8 — Accessible product comparison**
+- **Quality attribute:** Accessibility
+- **App status and context:** Carlos uses a screen reader due to low vision.
+- **Change in context:** Carlos navigates to the side-by-side comparison screen with VoiceOver/TalkBack active.
+- **System reaction:** WhyNot announces each product's key attributes in a logical reading order and labels all interactive elements, so Carlos can complete the comparison without visual cues.
+
+#### **QS9 — Cross-device data consistency**
+- **Quality attribute:** Data consistency
+- **App status and context:** Carlos has WhyNot open on both his laptop and phone at the same time.
+- **Change in context:** He updates a target price on his phone.
+- **System reaction:** WhyNot syncs the change to his laptop session within a few seconds, keeping both devices consistent.
+
+#### **QS10 — Readability in bright outdoor light**
+- **Quality attribute:** GUI responsiveness / usability
+- **App status and context:** Andrea opens WhyNot outdoors in bright sunlight to check a deal.
+- **Change in context:** The ambient light sensor detects high brightness.
+- **System reaction:** WhyNot increases contrast and suggests a high-contrast display mode so text and price info stay legible.
+
+#### **QS11 — Simplifying an overloaded spec view**
+- **Quality attribute:** Usability
+- **App status and context:** Emilio views a product's full spec sheet, which shows a large number of fields by default.
+- **Change in context:** Emilio taps to collapse it into an "essentials only" view.
+- **System reaction:** WhyNot immediately re-renders the screen showing only price, availability, and one key differentiator — no reload required.
+  
+#### **QS12 — Peak traffic during a sale event**
+- **Quality attribute:** Scalability
+- **App status and context:** A major regional sale event causes a spike in concurrent users checking prices.
+- **Change in context:** Concurrent price-check requests increase roughly 10x above normal load.
+- **System reaction:** WhyNot's backend auto-scales to handle the load, keeping price-check response times under an acceptable threshold (e.g., 3 seconds) without dropping requests.
 
 ---
 
