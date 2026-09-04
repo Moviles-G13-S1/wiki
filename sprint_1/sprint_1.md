@@ -53,39 +53,32 @@ Describe how WhyNot makes money, and the core value it delivers to users. Both s
 
 ---
 
-### 2. Business Questions — `[10 individual points]`
-
-The final report needs **14 business questions** (Type 1 ≥2, Type 2 ≥4, Type 3 ≥4, Type 4 ≥2, Type 5 ≥2). The current [MS4.md](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/MS4.md#5-business-questions) version has 10, so the table below carries those 10 over and adds open rows for what's missing. Whoever writes a new question, paste it directly into its row — include the question, why it matters, and the data source it needs, same as the existing rows.
-
-| # | Type | Question | Why is it important? | Data source needed |
+## 5. Business Questions
+| # | Type | Question | Why is it important?| Data source needed |
 |---|------|----------|------------------------|----------------------|
-| 1 | Type 1 | How many errors does the app produce weekly? | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
-| 2 | Type 2 | How much money do users save by buying through the app? | Quantifies the app's financial value to users and supports retention and marketing decisions. | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
-| 3 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy. | Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
-| 4 | Type 2 | How many clicks does it take a user to save a product? | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
-| 5 | Type 2 | How many products has a user saved? | Measures adoption and engagement with a core feature and supports user segmentation. | Product-save events, current saved-product records, user ID, product ID, and timestamp. |
-| 6 | Type 3 | How often do users manually add a product? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store. |
-| 7 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
-| 8 | Type 3 | Which types of automatically extracted product data are corrected more frequently? | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original extraction result, missing fields, manual changes before/after saving, origin store, extraction mistakes. |
-| 9 | Type 4 | Which category has the most purchases per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. | Completed purchases with category, product, user, price, store, and purchase date. |
-| 10 | Type * | What are the users' buying patterns? | Supports personalization, recommendations, forecasting, and retention initiatives. | Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval. *(Review: reclassify into Type 1–5, or keep as-is?)* |
-| 11 | Type 1 | *(Paste the missing Type 1 question here)* | | |
-| 12 | Type 3 | *(Paste the missing Type 3 question here)* | | |
-| 13 | Type 4 | *(Paste the missing Type 4 question here)* | | |
-| 14 | Type 5 | *(Paste a Type 5 question here)* | | |
-| 15 | Type 5 | *(Paste a second Type 5 question here)* | | |
-
-*(Once rows 11–15 are filled and row 10 is resolved, confirm the final total is 14 questions and check that every data source is realistically obtainable through WhyNot or is publicly available.)*
+| 1 | Type 1 | How many errors does the app produce weekly?  | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
+| 2 | Type 1 | What is the average loading time of the home screen? | Measures how optimized is the app | Timestamps and time record logs from the apps homescreen |
+| 3 | Type 2 | How much money have users saved on the products they marked as purchased in the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
+| 4 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
+| 5 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
+| 6 | Type 2 |How many products does a user has saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
+| 7 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
+| 8 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
+| 9 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
+| 10 | Type 3 | Which features are most used? | It gives us a really important insight about which feature is the most important for users.  | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
+| 11 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
+| 12 | Type 4 | What is the demographic profile of the average buyer per category? | This allows us to realize which type of users buy a specific type of product | Marked purchases with category, product, user, price, store, and purchase date. |
+| 13 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
+| 14 | Type * | Is there a relationship between the number of errors a user experiences and the number of products they save?  | Allows us to recognize the impact of the errors the app is having  | Error logs and Saved products per user |
+  
+  
 
 ---
 
-### 3. VD Map — `[10 individual points]`
+## 6. VD Map
 
-The current VD Map (embedded in [MS4.md](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/MS4.md#6-vd-map)) covers the 10 questions above. Once the table in section 2 is finalized at 14 questions, rebuild the map to include all of them and export it at a resolution where every node and label stays legible.
-
-**Updated VD Map**
-
-*(Paste the new VD Map image/embed here once ready, replacing the one in MS4.md.)*
+> Provide a VD Map that displays all 10 business questions defined above. The data sources used must be obtainable through the designed solution or must be publicly available.
+<img width="3162" height="1264" alt="vdmapsprint1 jpg" src="https://github.com/user-attachments/assets/47cff8df-68e2-472c-94b3-45e13ab831d4" />
 
 **Notes on relationships / data sources**
 
