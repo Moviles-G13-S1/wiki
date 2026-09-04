@@ -33,7 +33,17 @@ Two subteam app-analysis reports are tracked under [`app_reports/`](https://gith
 
 ## 2. Problem, Solution, Value Proposition and Revenue Model
 
-Describe how WhyNot makes money, and the core value it delivers to users. Both should stay consistent with the problem/solution statement already written in [MS4.md](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/MS4.md#1-problem--solution-description).
+**Problem:** 
+
+People frequently find products they are interested in across different online stores and social media platforms but are not ready to buy them immediately. As a result, these products become scattered across screenshots, browser tabs, shopping carts, saved posts, etc. making them difficult to find, organize, compare, and track over time. Users may also miss good purchasing opportunities because they have to manually check whether prices have changed. There is a clear lack of a central platform or system where users can easily manage their shopping prospects, and save as much money as possible. 
+
+**Solution:** 
+
+WhyNot is a mobile application that provides a centralized place where users can save and organize products from different stores and platforms. Each saved product can include information such as its name, image, price, store, link, and category. The app also tracks product prices and can notify users when an item drops in price, goes on sale, or reaches a target price, helping users compare alternatives and make more informed purchasing decisions without constantly checking multiple websites, saving the user time and frustration.
+
+**Value Proposition**
+
+WhyNot is the one place to save anything you're interested in buying — from any store — and get told the moment it's actually worth pulling the trigger. It replaces screenshots, open tabs, and forgotten carts with a list that watches prices for you, something a bookmark or a single store's wishlist can't do. It's why Emilio can keep everything in one place regardless of store or category, why Andrea gets pinged the second her target price hits, and why Carlos gets the price history he needs to know a deal is real.
 
 **Revenue Model**
 
@@ -41,10 +51,6 @@ Saving products and tracking prices stays free — that's the whole point of Why
 - **Affiliate commissions.** When a price alert leads a user to tap through and buy, WhyNot earns a small cut from the store's affiliate program (the same deep-link back to the store that FS2 already uses). No purchase, no revenue.
 - **WhyNot Plus.** A paid tier for people who want more: unlimited active price alerts, faster price checks, full price-history charts, and comparison across saved alternatives — mostly what Carlos and Andrea would pay for.
 - **Sponsored deals.** Stores can pay to surface a relevant sale to users tracking that category, clearly labeled and shown inside the normal deals feed instead of as separate ads.
-
-**Value Proposition**
-
-WhyNot is the one place to save anything you're interested in buying — from any store — and get told the moment it's actually worth pulling the trigger. It replaces screenshots, open tabs, and forgotten carts with a list that watches prices for you, something a bookmark or a single store's wishlist can't do. It's why Emilio can keep everything in one place regardless of store or category, why Andrea gets pinged the second her target price hits, and why Carlos gets the price history he needs to know a deal is real.
 
 **Consistency check**
 
@@ -78,11 +84,19 @@ Both tie back to the MS4 problem/solution: products get scattered with no way to
 
 ## 5. Personas
 
+### Personas
+
 | # | Persona | Image | Description | Source (repo) | Live Preview | Done By |
 |---|---------|-------|-------------|---------------|--------------|---------|
 | 1 | Emilio | <img src="personas/Emilio.jpeg" width="160"> | 23-year-old student at Universidad de los Andes; shops mainly for books and clothes, tracks items only via an Amazon wishlist | [emilio-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/emilio-persona.html) | [View live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS3/personas/emilio-persona.html) | Santiago Casasbuenas |
 | 2 | Carlos | <img src="personas/Carlos.jpeg" width="160"> | Carlos is a practical, budget-conscious online shopper who carefully compares prices, reviews, and product quality before making confident purchasing decisions. | [carlos-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/carlos-persona.html) | Jeronimo Franco |
 | 3 | Andrea | <img src="personas/Andrea.jpeg" width="160"> | Andrea is an independent young woman who already works and lives alone. She enjoys shopping online more than in person, and she enjoys saving money on new items she hadn't noticed before. | [andrea-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) | [View live](https://htmlpreview.github.io/?https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/personas/persona-andrea.html) | Martin Riveira |
+
+### Analytics Persona
+
+| # | Analytics Persona | Description | Source (repo) | Live Preview |
+|---|---------|--------------|----------------|--------------|
+| 1 | Camila | Growth & Product Analyst on the WhyNot team. Unlike the app's end users, Camila doesn't shop through WhyNot, she uses its usage data to guide what the team builds next. She needs to know whether price-drop alerts actually lead to purchases, whether wishlist saves translate into real purchase intent, and which product categories drive the most engagement, but that data is currently scattered across logs and dashboards with no clear link between a notification and a resulting sale. Without that visibility, she risks prioritizing features based on guesswork instead of evidence — and she's the one who has to bring leadership a data-backed case for what WhyNot should improve next. | [camila-analytics-persona.html](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/analytics_persona.html) | [View Live](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS4/analytics_persona.html) |
 
 ---
 
@@ -133,15 +147,19 @@ Andrea is a 29-year-old administrator and frequent online shopper who enjoys fin
 | # | Type | Question | Why is it important?| Data source needed |
 |---|------|----------|------------------------|----------------------|
 | 1 | Type 1 | How many errors does the app produce weekly?  | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
-| 2 | Type 2 | How much money have users saved on the products they marked as purchased in the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
-| 3 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
-| 4 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
-| 5 | Type 2 |How many products does a user has saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
-| 6 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
-| 7 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
-| 8 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
-| 9 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
-| 10 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
+| 2 | Type 1 | What is the average loading time of the home screen? | Measures how optimized is the app | Timestamps and time record logs from the apps homescreen |
+| 3 | Type 2 | How much money have users saved on the products they marked as purchased in the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
+| 4 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
+| 5 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
+| 6 | Type 2 |How many products does a user has saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
+| 7 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
+| 8 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
+| 9 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
+| 10 | Type 3 | Which method do users prefer for saving a product? (Automatically or manually)  | This allows us to realize if it is worth maintaining both features or if its unnecessary  | User logs for each time the a product is saved manually vs automatically |
+| 11 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
+| 12 | Type 4 | What is the demographic profile of the average buyer per category? | This allows us to realize which type of users buy a specific type of product | Marked purchases with category, product, user, price, store, and purchase date. |
+| 13 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
+| 14 | Type * | Is there a relationship between the number of errors a user experiences and the number of products they save?  | Allows us to recognize the impact of the errors the app is having  | Error logs and Saved products per user |
 
 ---
 
