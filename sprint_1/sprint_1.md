@@ -65,7 +65,7 @@ Describe how WhyNot makes money, and the core value it delivers to users. Both s
 | 7 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
 | 8 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
 | 9 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
-| 10 | Type 3 | Which features are most used? | It gives us a really important insight about which feature is the most important for users.  | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
+| 10 | Type 3 | Which method do users prefer for saving a product? (Automatically or manually)  | This allows us to realize if it is worth maintaining both features or if its unnecessary  | User logs for each time the a product is saved manually vs automatically |
 | 11 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
 | 12 | Type 4 | What is the demographic profile of the average buyer per category? | This allows us to realize which type of users buy a specific type of product | Marked purchases with category, product, user, price, store, and purchase date. |
 | 13 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
@@ -78,7 +78,7 @@ Describe how WhyNot makes money, and the core value it delivers to users. Both s
 ## 6. VD Map
 
 > Provide a VD Map that displays all 10 business questions defined above. The data sources used must be obtainable through the designed solution or must be publicly available.
-<img width="3162" height="1264" alt="vdmapsprint1 jpg" src="https://github.com/user-attachments/assets/47cff8df-68e2-472c-94b3-45e13ab831d4" />
+<img width="3152" height="1268" alt="upadartedvdmap jpg" src="https://github.com/user-attachments/assets/59925d69-898e-4352-a4e5-93a63c647212" />
 
 **Notes on relationships / data sources**
 
