@@ -41,15 +41,18 @@ Describe how WhyNot makes money, and the core value it delivers to users. Both s
 
 **Revenue Model**
 
-*(Paste here — e.g. affiliate commissions on tracked purchases, premium subscription tier, sponsored placements, etc. Explain how the mechanism actually works for WhyNot specifically.)*
+Saving products and tracking prices stays free — that's the whole point of WhyNot, and charging for it would kill adoption. Instead, money comes in around the moment a saved item actually becomes worth buying:
+- **Affiliate commissions.** When a price alert leads a user to tap through and buy, WhyNot earns a small cut from the store's affiliate program (the same deep-link back to the store that FS2 already uses). No purchase, no revenue.
+- **WhyNot Plus.** A paid tier for people who want more: unlimited active price alerts, faster price checks, full price-history charts, and comparison across saved alternatives — mostly what Carlos and Andrea would pay for.
+- **Sponsored deals.** Stores can pay to surface a relevant sale to users tracking that category, clearly labeled and shown inside the normal deals feed instead of as separate ads.
 
 **Value Proposition**
 
-*(Paste here — what unique value does WhyNot give users that alternatives don't, and to whom specifically.)*
+WhyNot is the one place to save anything you're interested in buying — from any store — and get told the moment it's actually worth pulling the trigger. It replaces screenshots, open tabs, and forgotten carts with a list that watches prices for you, something a bookmark or a single store's wishlist can't do. It's why Emilio can keep everything in one place regardless of store or category, why Andrea gets pinged the second her target price hits, and why Carlos gets the price history he needs to know a deal is real.
 
 **Consistency check**
 
-*(Note here how the above ties back to the selected problem and proposed solution — one or two sentences is enough.)*
+Both tie back to the MS4 problem/solution: products get scattered with no way to track their prices, and WhyNot's answer is a centralized wishlist that does the tracking. The revenue model just monetizes the purchase that solution already leads to, so users never pay for the core saving/tracking WhyNot promises them.
 
 ---
 
