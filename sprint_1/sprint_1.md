@@ -274,11 +274,18 @@ Current snapshot of the repo (`Moviles-G13-S1/wiki`) as of this check: **0 open 
 
 **Kanban / Project board link**
 
-*(Paste here once created.)*
+Sprint 1 project board: https://github.com/orgs/Moviles-G13-S1/projects/7
+
+MicroSprints project boards:
+
+- MS2: https://github.com/orgs/Moviles-G13-S1/projects/4
+- MS3: https://github.com/orgs/Moviles-G13-S1/projects/5
+- MS4: https://github.com/orgs/Moviles-G13-S1/projects/6
 
 **Milestone link**
 
-*(Paste here once created.)*
+https://github.com/Moviles-G13-S1/wiki/milestone/1
+
 
 **Notes on task assignment / ownership**
 
