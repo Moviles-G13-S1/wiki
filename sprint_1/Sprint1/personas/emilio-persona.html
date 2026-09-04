@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Persona — Emilio</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #eef0f2;
+    font-family: Tahoma, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .canvas-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .canvas {
+    position: relative;
+    width: 1600px;
+    height: 1790px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  }
+  .box {
+    position: absolute;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 14px;
+  }
+  .section-bg { border-radius: 12px; position: absolute; }
+  .section-title { position: absolute; text-align: center; }
+  .section-title h1 { margin: 0 0 4px 0; font-weight: 700; }
+  .section-title p { margin: 0; font-size: 14px; color: #333; }
+
+  /* Section backgrounds */
+  .bg-persona   { left:73px; top:110px; width:1510px; height:330px; background:#B8FDFF; opacity:.35; border:1px solid #6c8ebf; }
+  .bg-goals     { left:70px; top:458px; width:1520px; height:494px; background:#9EFFCF; opacity:.35; border:1px solid #6c8ebf; }
+  .bg-pain      { left:70px; top:972px; width:1520px; height:420px; background:#FFBF87; opacity:.35; border:1px solid #d79b00; }
+  .bg-env       { left:75px; top:1410px; width:1510px; height:330px; background:#D6D6D6; opacity:.35; border:1px solid #6c8ebf; }
+
+  .bg-basicinfo { left:383px; top:140px; width:610px; height:280px; background:#158EBA; opacity:.20; border:1px solid #6c8ebf; }
+  .bg-demo      { left:1020px; top:140px; width:533px; height:282px; background:#158EBA; opacity:.20; border:1px solid #6c8ebf; }
+  .bg-tech      { left:420px; top:1430px; width:610px; height:290px; background:#9C89B8; opacity:.25; border:1px solid #6c8ebf; }
+  .bg-devices   { left:1060px; top:1430px; width:500px; height:290px; background:#9C89B8; opacity:.25; border:1px solid #6c8ebf; }
+
+  .stripe-needs   { position:absolute; left:110px; top:577.5px; width:1460px; height:80px; background:#158EBA; opacity:.5; border-radius:10px; }
+  .stripe-desires { position:absolute; left:110px; top:668.5px; width:1460px; height:80px; background:#12AAB5; opacity:.5; border-radius:10px; }
+  .stripe-why     { position:absolute; left:110px; top:768.5px; width:1460px; height:174px; background:#81E87D; opacity:.4; border-radius:10px; }
+
+  /* Photo placeholder */
+  .photo {
+    left:144px; top:220px; width:190px; height:190px;
+    background:#23445D; color:#fff; font-size:60px; font-weight:bold;
+  }
+
+  /* Basic info boxes */
+  .name-box   { left:598px; top:225px; width:203px; height:65px; background:#275DAD; font-size:22px; font-weight:bold; }
+  .age-box    { left:438px; top:318px; width:209px; height:63px; background:#275DAD; font-size:18px; }
+  .role-box   { left:747px; top:318px; width:209px; height:63px; background:#275DAD; font-size:18px; }
+
+  /* Demographics boxes */
+  .demo-box1  { left:1080px; top:239px; width:176px; height:60px; background:#275DAD; font-size:16px; }
+  .demo-box2  { left:1329px; top:239px; width:176px; height:60px; background:#275DAD; font-size:16px; }
+  .demo-box3  { left:1061px; top:330px; width:215px; height:70px; background:#275DAD; font-size:16px; }
+  .demo-box4  { left:1310px; top:328px; width:215px; height:72px; background:#275DAD; font-size:16px; }
+
+  /* Goals title boxes */
+  .bio-box    { left:473px; top:468px; width:437px; height:80px; background:#23445D; font-size:18px; }
+  .quote-box  { left:1113px; top:468px; width:360px; height:80px; background:#23445D; font-size:16px; font-style:italic; }
+
+  /* Needs & Expectations bullets */
+  .need-box1  { left:360px; top:678px; width:220px; height:60px; background:#23445D; font-size:15px; }
+  .need-box2  { left:634px; top:678px; width:253px; height:60px; background:#23445D; font-size:15px; }
+  .need-box3  { left:723px; top:593px; width:267px; height:60px; background:#23445D; font-size:15px; }
+
+  /* Desires & Motivations bullets */
+  .des-box1   { left:1053px; top:678px; width:207px; height:60px; background:#23445D; font-size:15px; }
+  .des-box2   { left:1310px; top:588px; width:223px; height:60px; background:#23445D; font-size:15px; }
+
+  /* Why boxes */
+  .why-box1   { left:407px; top:783px; width:480px; height:149px; background:#12AAB5; opacity:.85; color:#000; font-size:16px; }
+  .why-box2   { left:1053px; top:783px; width:480px; height:149px; background:#12AAB5; opacity:.85; color:#000; font-size:16px; }
+  .why-label  { position:absolute; left:144px; top:772px; width:217px; height:170px; font-size:44px; font-weight:bold; color:#12AAB5; display:flex; align-items:center; justify-content:center; }
+
+  /* Pain point boxes */
+  .pain-box1  { left:417px; top:993px; width:460px; height:78px; background:#F86459; opacity:.9; color:#000; font-size:16px; }
+  .pain-box2  { left:417px; top:1130px; width:460px; height:77px; background:#F86459; opacity:.9; color:#000; font-size:16px; }
+  .pain-box3  { left:1063px; top:1000px; width:460px; height:77px; background:#F86459; opacity:.9; color:#000; font-size:16px; }
+  .pain-box4  { left:1063px; top:1132px; width:460px; height:69px; background:#F86459; opacity:.9; color:#000; font-size:16px; }
+
+  .pain-why1  { left:417px; top:1241px; width:460px; height:110px; background:#5490DE; opacity:.9; color:#000; font-size:15px; }
+  .pain-why2  { left:1063px; top:1241px; width:460px; height:110px; background:#5490DE; opacity:.9; color:#000; font-size:15px; }
+
+  /* Technical ability boxes */
+  .tech-box1  { left:440px; top:1500px; width:290px; height:83px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box2  { left:768px; top:1516px; width:253px; height:66px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box3  { left:770px; top:1630px; width:250px; height:59px; background:#60495A; opacity:.9; font-size:15px; }
+  .tech-box4  { left:460px; top:1618px; width:243px; height:82px; background:#60495A; opacity:.9; font-size:15px; }
+
+  /* Connector overlay */
+  .connectors { position:absolute; left:0; top:0; width:1600px; height:1790px; pointer-events:none; }
+
+  /* Devices boxes */
+  .device-box1 { left:1110px; top:1505px; width:200px; height:155px; background:#60495A; opacity:.9; font-size:18px; flex-direction:column; }
+  .device-box2 { left:1350px; top:1505px; width:183px; height:155px; background:#60495A; opacity:.9; font-size:18px; flex-direction:column; }
+</style>
+</head>
+<body>
+<div class="canvas-wrap">
+<div class="canvas">
+
+  <!-- Persona section -->
+  <div class="section-bg bg-persona"></div>
+  <div class="section-title" style="left:91px; top:115px; width:292px;">
+    <h1 style="font-size:34px;">Persona</h1>
+    <p>Who is the persona?</p>
+  </div>
+
+  <div class="section-bg bg-basicinfo"></div>
+  <div class="section-title" style="left:383px; top:150px; width:610px;">
+    <h1 style="font-size:22px;">Basic info</h1>
+  </div>
+  <div class="box photo">E</div>
+  <div class="box name-box">Emilio, 23</div>
+  <div class="box age-box">Student</div>
+  <div class="box role-box">Universidad de los Andes</div>
+
+  <div class="section-bg bg-demo"></div>
+  <div class="section-title" style="left:1020px; top:150px; width:533px;">
+    <h1 style="font-size:22px;">Demographics</h1>
+  </div>
+  <div class="box demo-box1">Based in Bogotá, Colombia</div>
+  <div class="box demo-box2">Buys mainly books &amp; clothes</div>
+  <div class="box demo-box3">Browses stores/social media ~once a week</div>
+  <div class="box demo-box4">Tracks items only via an Amazon wishlist (books)</div>
+
+  <!-- Goals section -->
+  <div class="section-bg bg-goals"></div>
+  <div class="section-title" style="left:87px; top:457px; width:330px;">
+    <h1 style="font-size:30px;">Persona Goals</h1>
+    <p>What does the persona want? (Desires, motivations, etc.)</p>
+  </div>
+  <div class="box bio-box">"I just want to buy what I need without extra steps or clutter."</div>
+  <div class="box quote-box">"I don't find it that practical to keep going back to lists."</div>
+
+  <div class="stripe-needs"></div>
+  <div class="section-title" style="left:143px; top:572px; width:217px;">
+    <h1 style="font-size:20px;">Needs &amp; Expectations</h1>
+  </div>
+  <div class="box need-box3">A quick way to check if an item is available in Colombia</div>
+  <div class="box need-box1">A place to keep track of clothes he wants (not just books)</div>
+  <div class="box need-box2">To be taken directly back to the product page</div>
+
+  <div class="stripe-desires"></div>
+  <div class="section-title" style="left:143px; top:667px; width:217px;">
+    <h1 style="font-size:20px;">Desires &amp; Motivations</h1>
+  </div>
+  <div class="box des-box1">Convenience over organization</div>
+  <div class="box des-box2">Keeping his wishlist private</div>
+
+  <div class="stripe-why"></div>
+
+  <div class="why-label">Why?</div>
+  <div class="box why-box1">Because comparing by price is his main decision factor, and he doesn't want to lose track of an item before he's ready to compare it.</div>
+  <div class="box why-box2">Because he only wants a tool that reduces effort — if it adds more steps than just closing a tab, he won't use it.</div>
+
+  <!-- Pain points section -->
+  <div class="section-bg bg-pain"></div>
+  <div class="section-title" style="left:91px; top:971px; width:270px; height:420px; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="font-size:26px;">Persona Pain Points</h1>
+    <p>What difficulties does the Persona have? What impediments?</p>
+  </div>
+  <div class="box pain-box1">Forgets about items he wanted to buy over time</div>
+  <div class="box pain-box2">Has no tracking system for clothes, only for books</div>
+  <div class="box pain-box3">Feels overwhelmed by too much product information</div>
+  <div class="box pain-box4">Only rechecks prices by chance, through repeated ads</div>
+
+  <div class="box pain-why1">This means items he genuinely wanted can slip away simply because "it wasn't that important" in the moment.</div>
+  <div class="box pain-why2">This makes price-tracking unreliable and entirely dependent on retargeting ads reappearing.</div>
+
+  <!-- Environment section -->
+  <div class="section-bg bg-env"></div>
+  <div class="section-title" style="left:91px; top:1430px; width:282px; height:220px; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="font-size:26px;">Persona Environment</h1>
+    <p>What technological devices does your persona use on a regular basis? What is their technical ability?</p>
+  </div>
+
+  <div class="section-bg bg-tech"></div>
+  <div class="section-title" style="left:430px; top:1440px; width:250px;">
+    <h1 style="font-size:20px;">Technical ability</h1>
+  </div>
+  <div class="box tech-box1">Comfortable using apps and wishlists (e.g. Amazon)</div>
+  <div class="box tech-box2">Prefers simple, functional tools</div>
+  <div class="box tech-box4">Compares mainly by price, not by features</div>
+  <div class="box tech-box3">Not interested in over-organizing his shopping</div>
+
+  <div class="section-bg bg-devices"></div>
+  <div class="section-title" style="left:1019px; top:1444px; width:250px;">
+    <h1 style="font-size:20px;">Devices</h1>
+  </div>
+  <div class="box device-box1">Smartphone</div>
+  <div class="box device-box2">Laptop</div>
+
+  <!-- Connector arrows, mirroring the original template's flow lines -->
+  <svg class="connectors" viewBox="0 0 1600 1790" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#333"></path>
+      </marker>
+    </defs>
+    <g fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#arrow)">
+      <!-- Basic info name -> needs bullets (clear of need-box3) -->
+      <polyline points="691.5,548 691.5,610 470,610 470,678"></polyline>
+      <polyline points="691.5,548 691.5,570 856.5,570 856.5,593"></polyline>
+      <!-- Quote box -> desires bullets (clear of des-box2) -->
+      <polyline points="1293,548 1293,610 1156.5,610 1156.5,678"></polyline>
+      <polyline points="1293,548 1293,560 1421.5,560 1421.5,588"></polyline>
+      <!-- needs bullet chain -->
+      <polyline points="580,708 634,708"></polyline>
+      <!-- needs -> why box 1 (straight, clear path) -->
+      <polyline points="470,738 470,783"></polyline>
+      <!-- needs stripe -> why box 1 (routed right of need-box2 to avoid crossing it) -->
+      <polyline points="840,657.5 950,657.5 950,761.5 750,761.5 750,783"></polyline>
+      <!-- desires bullets -> why box 2 (straight, clear paths) -->
+      <polyline points="1156.5,738 1156.5,783"></polyline>
+      <polyline points="1421.5,648 1421.5,783"></polyline>
+      <!-- why box 1 -> pain points (left column) -->
+      <polyline points="630,932 630,993"></polyline>
+      <!-- routed right of pain-box1 (877px edge) so it doesn't cross it -->
+      <polyline points="664,932 664,980 900,980 900,1168.5 877,1168.5"></polyline>
+      <!-- why box 2 -> pain points (right column) -->
+      <polyline points="1263,932 1263,1000"></polyline>
+      <!-- routed left of pain-box3 (1063px edge) so it doesn't cross it -->
+      <polyline points="1323,932 1323,985 1030,985 1030,1166.5 1063,1166.5"></polyline>
+      <!-- cross-channel: why box 1 -> pain-why2 (right blue box), offset from the mirrored channel below -->
+      <polyline points="887,857 955,857 955,1296 1063,1296"></polyline>
+      <!-- cross-channel: why box 2 -> pain-why1 (left blue box), offset so the two channels run in parallel -->
+      <polyline points="1053,857 985,857 985,1296 877,1296"></polyline>
+      <!-- tech ability internal connector -->
+      <polyline points="585,1583 585,1618"></polyline>
+    </g>
+  </svg>
+
+</div>
+</div>
+</body>
+</html>
