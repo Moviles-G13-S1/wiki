@@ -351,13 +351,3 @@ A 5–10 minute video covering the ethical considerations relevant to WhyNot and
 
 ---
 
-
-# Revisar. Artifact Quality — `[20 individual points]`
-
-A final pass over everything above before submission: proofreading, consistent terminology/headings/tables/image sizing, high-resolution images, and no placeholder text left behind. Also worth testing every link in this document and the linked pages — the persona table currently links via `htmlpreview.github.io`, which has been unreliable; consider switching to `raw.githack.com` (used throughout this document) instead.
-
-**Review notes**
-
-*(Paste anything found during the final proofreading pass here — broken links, inconsistent formatting, leftover placeholder text, etc.)*
-
----
