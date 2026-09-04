@@ -60,15 +60,15 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 | # | Type | Question | Why is it important?| Data source needed |
 |---|------|----------|------------------------|----------------------|
 | 1 | Type 1 | How many errors does the app produce weekly?  | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
-| 2 | Type 2 | How much money do users have sabed by buying through the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
+| 2 | Type 2 | How much money have users saved on the products they marked as purchased in the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
 | 3 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
 | 4 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
 | 5 | Type 2 |How many products does a user has saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
 | 6 | Type 3 | How often do users manually add a produt? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
 | 7 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
 | 8 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result fromm the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
-| 9 | Type 4 | Which category has the most amount of purchases per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Completed purchases with category, product, user, price, store, and purchase date. |
-| 10 | Type * |What are the users buying patterns? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
+| 9 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
+| 10 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
   
 
 ---
@@ -76,8 +76,7 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 ## 6. VD Map
 
 > Provide a VD Map that displays all 10 business questions defined above. The data sources used must be obtainable through the designed solution or must be publicly available.
-<img width="2785" height="1436" alt="foto" src="https://github.com/user-attachments/assets/049a0591-754d-4365-990e-ea989cd315ed" />
-
+<img width="2762" height="1448" alt="vdmapms4 jpg" src="https://github.com/user-attachments/assets/e0a33c29-5b4f-4eff-9631-e15293286ae4" />
 
 
 ---
