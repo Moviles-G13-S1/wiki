@@ -329,25 +329,12 @@ Each scenario follows: **Scenario name → Quality attribute(s) → App status a
 
 ---
 
+
 ### 11. Ethics Video
-
-A 5–10 minute video covering the ethical considerations relevant to WhyNot and this sprint.
-
-**Ethical considerations identified**
-
-*(Paste here — e.g. price-tracking data privacy, how affiliate revenue might bias recommendations, targeting/notification fatigue, etc.)*
-
-**Script / structure outline**
-
-*(Paste here.)*
-
-**Team participation**
-
-*(Note here who does what — on-camera, editing, script, etc.)*
 
 **Final video link**
 
-*(Paste the published link here once recorded and edited. Confirm duration is between 5–10 minutes before pasting.)*
+[View Ethics Video](https://drive.google.com/drive/folders/16jfNPEkWT6f_5JAgk_XzCJBKC5Dq-J3Y?usp=sharing)
 
 ---
 
