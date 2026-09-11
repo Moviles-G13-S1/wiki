@@ -48,22 +48,27 @@ MS6 (Week 6) goes deeper on the single solution the team selected — WhyNot —
 
 | Role | Colour | HEX | RGB | Where it is used |
 |------|--------|-----|-----|------------------|
-| Primary | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Secondary | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Accent | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Background | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Surface | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Text (primary) | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Text (secondary) | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Success / price drop | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Warning / error | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
+| Primary | White | #FEFEFD | 254, 254, 253 | Main application colour and dominant visual base across the interface |
+| Secondary | Beige | #EDE4D7 | 237, 228, 215 | Wishlist cards, product cards, image placeholders and highlighted content areas |
+| Accent | Black | #171513 | 23, 21, 19 | Main action elements, headings, important labels and high-emphasis controls |
+| Background | White | #FEFEFD | 254, 254, 253 | Main screen background throughout the application |
+| Surface | Light Cream | #F5F1E9 | 245, 241, 233 | Form sections, grouped content areas and secondary containers |
+| Text (primary) | Black | #171513 | 23, 21, 19 | Titles, headings, wishlist names, product names and important information |
+| Text (secondary) | Grey | #817D78 | 129, 125, 120 | Subtitles, descriptions, navigation labels, prices and secondary information |
+| Success / price drop | *(TBD)* | *(TBD)* | *(TBD)* | Price reductions, successful actions and positive status indicators |
+| Warning / error | *(TBD)* | *(TBD)* | *(TBD)* | Errors, warnings and invalid input states |
 
-**Rationale:** *(TBD — why these colours, and how they relate to WhyNot's identity and purpose: saving, organizing, and tracking products.)*
+**Rationale:**  
+The colour palette was designed to give WhyNot a clean, calm, and minimal visual identity. The dominant white background keeps the interface simple and helps users focus on their saved products without unnecessary visual distractions. Beige and cream tones are used for cards, product placeholders, and grouped content, creating a warm and organized appearance that supports the idea of collecting and managing personal wishlists. Dark tones are reserved for important text and high-emphasis elements, while grey is used for secondary information. Overall, the palette reinforces WhyNot's purpose of making product saving, organizing, and tracking feel simple, personal, and visually consistent.
 
-**Contrast and readability:** *(TBD — state the contrast ratios checked for text on background/surface and confirm they meet accessibility guidance.)*
+**Contrast and readability:**  
+Contrast was checked between the main text colours and the backgrounds used throughout the interface. Primary text (#171513) provides a contrast ratio of approximately **18.05:1** on the main white background (#FEFEFD), **16.17:1** on the light cream surface (#F5F1E9), and **14.46:1** on the beige surface (#EDE4D7), comfortably meeting WCAG accessibility recommendations for normal and large text. Secondary grey text (#817D78) provides approximately **4.05:1** contrast on white, so it is best suited for larger or secondary text rather than small essential content. Its contrast is lower on cream and beige surfaces, so primary dark text should be preferred in those areas when readability is important.
 
-*(Insert the palette image here.)*
+**Palette image:**
 
+<p>
+  <img width="80" height="323" alt="Colour palette" src="https://github.com/user-attachments/assets/4e2efbfd-2430-4b9c-8b9c-26eb358c7298" />
+</p>
 ---
 
 ### 2.2 Fonts
@@ -72,17 +77,19 @@ MS6 (Week 6) goes deeper on the single solution the team selected — WhyNot —
 
 | Use | Typeface | Weight | Size | Notes |
 |-----|----------|--------|------|-------|
-| Titles / H1 | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Subtitles / H2–H3 | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Body text | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Buttons / labels | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
-| Captions / metadata | *(TBD)* | *(TBD)* | *(TBD)* | *(TBD)* |
+| Titles / H1 | Poppins | Regular | 20 px | Used for main screen titles and section headings |
+| Subtitles / H2–H3 | Poppins | Light | 15 px | Used for subtitles, supporting headings and secondary information |
+| Body text | Frank Ruhl Libre | Regular | 15–20 px | Used for general content, names, product information and descriptive text |
+| Buttons / labels | Poppins | Light / Regular | 15 px | Used for buttons, navigation labels, form labels and interactive elements |
+| Captions / metadata | Poppins | Light | 15 px | Used for secondary information such as item counts, prices, hints and small descriptions |
 
-**Rationale:** *(TBD — why this typeface (or pairing), and how it supports legibility on mobile.)*
+**Rationale:**  
+The typography combines Poppins and Frank Ruhl Libre to create a balance between clarity and personality. Poppins is used for interface-oriented elements such as titles, subtitles, labels, and navigation because its clean geometric shapes are highly legible on mobile screens. Frank Ruhl Libre is used for selected body text and prominent content, adding a more distinctive and editorial character to the interface. Together, both typefaces support readability while giving WhyNot a minimal, elegant, and recognizable visual identity.
 
-**Consistency:** *(TBD — how the type scale is applied uniformly across screens.)*
+**Consistency:**  
+The type scale is applied consistently across all screens to maintain a clear visual hierarchy. Main titles use Poppins Regular at 20 px, while subtitles and secondary information use Poppins Light at 15 px. Frank Ruhl Libre is used mainly for body content and selected prominent text at 15 px or 20 px depending on its importance. The same font sizes and weights are reused for equivalent elements across screens, helping users quickly recognize headings, supporting information, labels, and content.
 
-*(Insert a type-specimen image showing each style.)*
+
 
 ---
 
