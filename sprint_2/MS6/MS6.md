@@ -124,6 +124,8 @@ The type scale is applied consistently across all screens to maintain a clear vi
 
 **Interactive prototype link for preview (ui version):** <https://www.figma.com/proto/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=30-367&p=f&t=se9HfCJDNc6lyavh-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A367>
 
+**Interactive prototype link for preview (ADMIN CONTROL PANEL):** <https://www.figma.com/proto/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=185-303&p=f&t=BnqfYMknqDN2eMat-0&scaling=scale-down&content-scaling=fixed&page-id=167%3A319&starting-point-node-id=185%3A303>
+
 **Main screens included:**
 ### User UI
 
