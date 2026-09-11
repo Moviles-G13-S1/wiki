@@ -162,19 +162,25 @@ The type scale is applied consistently across all screens to maintain a clear vi
 
 **Owner:** *(TBD)*
 
-**Main navigation pattern:** *(TBD — e.g. bottom navigation bar with N top-level destinations.)*
+## 2.5 Navigational Patterns
+
+**Owner:** TBD
+
+**Main navigation pattern:**  
+Bottom navigation bar with four top-level destinations: Home, Wishlists, Purchases, and Profile. More specific screens use hierarchical navigation from these main sections.
 
 **Navigation components used:**
 
 | Component | Used for | Screens involved |
-|-----------|----------|------------------|
-| *(TBD — e.g. bottom navigation bar)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. tabs)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. back navigation)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. cards / list items as entry points)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. FAB or modal sheet)* | *(TBD)* | *(TBD)* |
+| --- | --- | --- |
+| Bottom navigation bar | Moving between the main sections of the app | Home, Wishlists, Purchases, Profile |
+| Back navigation | Returning to the previous screen after entering a more specific section | Wishlist Detail, Product Detail, New Wishlist, Save Product, Edit Profile, Change Password |
+| Cards / list items as entry points | Opening wishlists, products, and other detailed information | Home, Wishlists, Wishlist Detail, Purchases |
+| Action buttons | Starting actions such as creating a wishlist, adding a product, editing information, or saving changes | Wishlists, Wishlist Detail, Product Detail, Profile |
+| Sidebar navigation | Moving between the different analytics views available to administrators | Administrator analytics screens |
 
-**Why this pattern fits WhyNot:** *(TBD — justify the choice against the app's core tasks and the platform conventions discussed in class.)*
+**Why this pattern fits WhyNot:**  
+WhyNot has a small number of main sections that users need to access frequently, so a bottom navigation bar keeps these destinations visible and easy to reach. More specific actions are placed inside their corresponding sections, which keeps the main navigation simple and avoids unnecessary options. The administrator interface uses a sidebar instead because administrators mainly move between different analytics views.
 
 **Navigation flow:** *(TBD — insert a flow diagram showing how users move between the main screens.)*
 
