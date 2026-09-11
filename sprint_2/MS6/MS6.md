@@ -182,7 +182,9 @@ Bottom navigation bar with four top-level destinations: Home, Wishlists, Purchas
 **Why this pattern fits WhyNot:**  
 WhyNot has a small number of main sections that users need to access frequently, so a bottom navigation bar keeps these destinations visible and easy to reach. More specific actions are placed inside their corresponding sections, which keeps the main navigation simple and avoids unnecessary options. The administrator interface uses a sidebar instead because administrators mainly move between different analytics views.
 
-**Navigation flow:** *(TBD — insert a flow diagram showing how users move between the main screens.)*
+**Navigation flow:**
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/ffa574d4-630e-49c5-9a64-b3fb3c52adfb" />
+
 
 ---
 
