@@ -117,24 +117,42 @@ The type scale is applied consistently across all screens to maintain a clear vi
 
 ### 2.4 UI Prototype
 
-**Owner:** *(TBD)*
+**Owner:** Juliana Duran (group 13)
 
-**Design tool used:** *(TBD)*
+**Design tool used:** figma
 
-**Interactive prototype link:** <https://why-not-wish-shop.lovable.app>
+**Interactive prototype link for editting:** <https://www.figma.com/design/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=0-1&t=qpzvDMk08xzDNPHs-1>
+**Interactive prototype link for preview (ui version):** <https://www.figma.com/proto/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=30-367&p=f&t=se9HfCJDNc6lyavh-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A367>
 
 **Main screens included:**
+### User UI
 
 | # | Screen | Purpose | Key interactions shown |
-|---|--------|---------|------------------------|
-| 1 | *(TBD — e.g. Onboarding / Login)* | *(TBD)* | *(TBD)* |
-| 2 | *(TBD — e.g. Wishlist home)* | *(TBD)* | *(TBD)* |
-| 3 | *(TBD — e.g. Save / add product)* | *(TBD)* | *(TBD)* |
-| 4 | *(TBD — e.g. Product detail & price history)* | *(TBD)* | *(TBD)* |
-| 5 | *(TBD — e.g. Notifications / price alerts)* | *(TBD)* | *(TBD)* |
-| 6 | *(TBD — e.g. Profile / settings)* | *(TBD)* | *(TBD)* |
+|---|---|---|---|
+| 1 | [Login](ui-prototype/user/Login.png) | Allows existing users to access their WhyNot account. | Enter email and password, log in, or navigate to account creation. |
+| 2 | [Create an Account](ui-prototype/user/CreateAccount.png) | Allows new users to register in WhyNot. | Enter personal information, password, and preferred category. |
+| 3 | [Home](ui-prototype/user/Home1.png) | Provides a personalized overview of the user's shopping activity. | Search products, access wishlists, view nearby items, and see recommendations. |
+| 4 | [My Wishlists](ui-prototype/user/MyWishlists.png) | Organizes saved products into different categories. | Browse existing wishlists and create a new wishlist. |
+| 5 | [New Wishlist](ui-prototype/user/NewWishlist.png) | Allows users to create a new wishlist. | Select a category, upload a picture, save, or cancel. |
+| 6 | [Wishlist Detail](ui-prototype/user/WishlistDetail.png) | Displays products saved within a specific wishlist. | Browse products, add items, and apply filters. |
+| 7 | [Save Product Automatically](ui-prototype/user/SaveProductAutomatically.png) | Allows users to save a product using its link. | Paste a product link, select a wishlist, and save the item. |
+| 8 | [Save Product Manually](ui-prototype/user/SaveProductManually.png) | Allows users to manually add a product. | Enter product information, upload an image, select a wishlist, and save. |
+| 9 | [Product Detail](ui-prototype/user/ProductDetail.png) | Displays detailed information about a saved product. | View prices, edit the item, and mark it as purchased. |
+| 10 | [Purchases](ui-prototype/user/Purchases.png) | Keeps a record of purchased products. | Browse and filter purchased products. |
+| 11 | [Profile](ui-prototype/user/Profile.png) | Displays the user's personal information and preferences. | View account information and access profile editing. |
+| 12 | [Edit Profile](ui-prototype/user/EditProfile.png) | Allows users to update their personal information. | Edit profile information and access password settings. |
+| 13 | [Change Password](ui-prototype/user/ChangePassword.png) | Allows users to update their password. | Enter the current and new password and save the changes. |
 
-*(Insert screenshots of each screen here. Images must be legible and high resolution.)*
+### Administrator UI
+
+| # | Screen | Purpose | Key interactions shown |
+|---|---|---|---|
+| 1 | [Saved Products per User](ui-prototype/admin/SavedProducts%users.png) | Shows the number of products saved by users. | Analyze saved-product activity per user. |
+| 2 | [Saved Products — Users](ui-prototype/admin/SavedProductsUsers.png) | Provides a detailed user-level view of saved products. | View and compare individual users. |
+| 3 | [Save Methods](ui-prototype/admin/SavedMethods.png) | Shows how users save products in WhyNot. | Compare the different product-saving methods. |
+| 4 | [Sidebar](ui-prototype/admin/Sidebar.png) | Displays the administrator navigation menu. | Navigate between the different analytics views. |
+| 5 | [Purchased Products](ui-prototype/admin/PurchasedProducts.png) | Shows information about purchased products. | Analyze purchasing activity and product data. |
+| 6 | [Demographic Profile](ui-prototype/admin/DemographicProfile.png) | Shows demographic information about WhyNot users. | Analyze demographic characteristics and distributions. |
 
 **How the prototype reflects the design system:** *(TBD — point to where the palette, typography, icons, and image style from sections 2.1–2.3 appear in the screens above.)*
 
