@@ -16,25 +16,22 @@ MS6 (Week 6) goes deeper on the single solution the team selected — WhyNot —
 
 ## 1. Value Proposition
 
-> Identify the value proposition of the solution. Consider aspects such as what makes the solution different from existing solutions.
->
-> Worth 0 points, but **mandatory**: failure to submit this component means the deliverable is not graded.
+**Problem addressed:**  
+Users often find products they are interested in across different stores and platforms, but they are not always ready to buy them immediately. These products usually end up spread across screenshots, saved posts, browser tabs, notes, and store-specific wishlists, making them harder to organize, compare, and find again.
 
-**Owner:** *(TBD)*
-
-**Problem addressed:** *(TBD — the need WhyNot responds to; can be adapted from the MS4 problem description.)*
-
-**Value delivered to users:** *(TBD — what the user gets that they don't have today.)*
+**Value delivered to users:**  
+WhyNot gives users one place to save and organize products from different sources. Users can create wishlists, keep relevant product information together, compare alternatives, and track price changes without having to constantly check multiple platforms.
 
 **Differentiation from existing solutions:**
 
 | Existing alternative | What it does today | What WhyNot does differently |
-|----------------------|--------------------|------------------------------|
-| *(TBD — e.g. store-specific wishlists)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. screenshots / saved posts)* | *(TBD)* | *(TBD)* |
-| *(TBD — e.g. browser bookmarks and tabs)* | *(TBD)* | *(TBD)* |
+| --- | --- | --- |
+| Store-specific wishlists | Let users save products, but usually only within one store or platform. | WhyNot allows users to organize products from different stores and platforms in the same place. |
+| Screenshots / saved posts | Help users remember products, but the information is unstructured and spread across different apps. | WhyNot stores products in an organized format with information such as image, price, store, and link. |
+| Browser bookmarks and tabs | Save product links, but provide little organization and can become difficult to manage. | WhyNot turns saved products into organized wishlist items that can also be compared and tracked. |
 
-**Main differentiating factor:** *(TBD — the one sentence that states why someone would choose WhyNot over the alternatives.)*
+**Main differentiating factor:**  
+WhyNot combines products from different stores and platforms into one organized space, adding wishlist management, product comparison, and price tracking instead of limiting the user to a single store.
 
 ---
 
