@@ -16,6 +16,8 @@ MS6 (Week 6) goes deeper on the single solution the team selected — WhyNot —
 
 ## 1. Value Proposition
 
+**Owner**: Martin Riveira
+
 **Problem addressed:**  
 Users often find products they are interested in across different stores and platforms, but they are not always ready to buy them immediately. These products usually end up spread across screenshots, saved posts, browser tabs, notes, and store-specific wishlists, making them harder to organize, compare, and find again.
 
