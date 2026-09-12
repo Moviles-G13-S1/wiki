@@ -43,7 +43,7 @@ WhyNot combines products from different stores and platforms into one organized 
 
 ### 2.1 Colour Palette
 
-**Owner:** *(TBD)*
+**Owner:** Juan Felipe Saenz
 
 | Role | Colour | HEX | RGB | Where it is used |
 |------|--------|-----|-----|------------------|
@@ -71,7 +71,7 @@ Contrast was checked between the main text colours and the backgrounds used thro
 
 ### 2.2 Fonts
 
-**Owner:** *(TBD)*
+**Owner:** Juan Felipe Saenz
 
 | Use | Typeface | Weight | Size | Notes |
 |-----|----------|--------|------|-------|
@@ -93,23 +93,20 @@ The type scale is applied consistently across all screens to maintain a clear vi
 
 ### 2.3 Icons and Images
 
-**Owner:** *(TBD)*
+**Owner:** Miguel Angel Velandia
 
-**Icon style:** *(TBD — e.g. outlined, filled, rounded; icon set or library used; stroke weight and grid size.)*
+**Icon style:** The current lo-fi prototype (why-not-wish-shop.lovable.app) doesn't use a traditional glyph/line icon set yet — content is represented through large, rounded content blocks (image placeholders) rather than small stroke icons. The rounded-rectangle shape is the closest thing to a recurring "icon" language right now, with a generous corner radius (roughly 16–20px) applied consistently to product cards, category cards, and the app icon itself. For the real Android/Kotlin build, the team should pick an actual icon library for functional UI icons (nav bar, buttons, alerts, etc.) that matches this soft, rounded, friendly tone — a filled or rounded-outline set (e.g., Material Symbols Rounded) would fit better than a sharp/thin-stroke set.
 
 | Icon | Meaning | Where it is used |
 |------|---------|------------------|
-| *(TBD)* | *(TBD)* | *(TBD)* |
-| *(TBD)* | *(TBD)* | *(TBD)* |
-| *(TBD)* | *(TBD)* | *(TBD)* |
-| *(TBD)* | *(TBD)* | *(TBD)* |
-| *(TBD)* | *(TBD)* | *(TBD)* |
+| <img width="597" height="727" alt="image" src="https://github.com/user-attachments/assets/c0ad74fe-43aa-4f27-9728-f78ff1d90bd6" /> | Represents a **producto** (product) — an item with a price that can be viewed, compared, and added to a wishlist or price-alert list | On the home/discovery screen, in the "Top picks for you" recommendations section, and anywhere individual products are listed (search results, wishlist contents, product detail cards) |
+| <img width="340" height="323" alt="image" src="https://github.com/user-attachments/assets/190075b0-f594-4e4a-a121-e9af4f6e110c" /> | Represents a **categoría** (category) — a grouping used to organize the user's wishlists by type (e.g., Beauty, Clothes, Tech) | On the "Your Wishlists" section of the home screen, and in the wishlist creation/selection flow where the user picks or assigns a category to a wishlist |
+| <img width="336" height="240" alt="image" src="https://github.com/user-attachments/assets/5320851f-567d-4a4f-b041-5a456b3b11e4" /> | The app's **logo/brand icon** for WhyNot, the wishlist + price-tracking alerts app | As the app icon on the device home screen and app drawer, on the splash/launch screen, and in the header/nav bar as branding across screens |
 
-**Image style:** *(TBD — how product images, empty states, and illustrations are treated: aspect ratios, corner radius, placeholders, image-first cards.)*
 
-**Visual consistency:** *(TBD — the rules that keep icons and imagery coherent across the app.)*
+**Image style:** Product and category images use an image-first, card-based layout: each item is a large rounded-rectangle block rather than a small thumbnail-plus-icon, so the picture itself carries most of the visual weight. Product cards ("Top picks for you") read as a landscape-ish block with the price as a small, understated label underneath; category cards ("Your Wishlists") are a slightly taller/portrait block with the category name centered below. In the current prototype, real photos haven't been dropped in yet — the placeholders are flat warm-neutral (cream/beige) blocks, which will be swapped for actual product/category photography before final delivery.
 
-*(Insert the icon sheet and image-style examples here — high resolution and legible.)*
+**Visual consistency:** The same soft, rounded-rectangle shape language ties together product cards, category cards, and the app icon, so the eye reads them as one family even though they hold different content. Backgrounds lean on a warm, neutral cream tone for content placeholders, set against a single brand accent color — the teal/mint used in the WhyNot logo — which should be reserved for brand moments (icon, key CTAs) rather than used everywhere, so it stays distinctive. Labels (prices, category names) stay small, left/center-aligned, and visually quiet so the image blocks remain the focal point of each card.
 
 ---
 
