@@ -54,8 +54,7 @@ WhyNot combines products from different stores and platforms into one organized 
 | Surface | Light Cream | #F5F1E9 | 245, 241, 233 | Form sections, grouped content areas and secondary containers |
 | Text (primary) | Black | #171513 | 23, 21, 19 | Titles, headings, wishlist names, product names and important information |
 | Text (secondary) | Grey | #817D78 | 129, 125, 120 | Subtitles, descriptions, navigation labels, prices and secondary information |
-| Success / price drop | *(TBD)* | *(TBD)* | *(TBD)* | Price reductions, successful actions and positive status indicators |
-| Warning / error | *(TBD)* | *(TBD)* | *(TBD)* | Errors, warnings and invalid input states |
+
 
 **Rationale:**  
 The colour palette was designed to give WhyNot a clean, calm, and minimal visual identity. The dominant white background keeps the interface simple and helps users focus on their saved products without unnecessary visual distractions. Beige and cream tones are used for cards, product placeholders, and grouped content, creating a warm and organized appearance that supports the idea of collecting and managing personal wishlists. Dark tones are reserved for important text and high-emphasis elements, while grey is used for secondary information. Overall, the palette reinforces WhyNot's purpose of making product saving, organizing, and tracking feel simple, personal, and visually consistent.
