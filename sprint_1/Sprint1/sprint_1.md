@@ -164,8 +164,9 @@ Andrea is a 29-year-old administrator and frequent online shopper who enjoys fin
 ---
 
 ## 8. VD Map
+<img width="2807" height="1424" alt="vd map" src="https://github.com/user-attachments/assets/ef64c617-1b79-4a51-9406-565855754f8a" />
 
-<img width="3152" height="1268" alt="upadartedvdmap jpg" src="https://github.com/user-attachments/assets/59925d69-898e-4352-a4e5-93a63c647212" />
+[vdmap.pdf](https://github.com/user-attachments/files/32204006/vdmap.pdf)
 
 ---
 
