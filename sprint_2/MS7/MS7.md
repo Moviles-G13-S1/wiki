@@ -23,7 +23,7 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 
 Native Prototype link Flutter: <https://github.com/Moviles-G13-S1/whynot-front-flutter.git>
 
-Native Prototype link Flutter: <https://github.com/Moviles-G13-S1/whynot-front-kotlin.git>
+Native Prototype link Kotlin: <https://github.com/Moviles-G13-S1/whynot-front-kotlin.git>
 
 ## References
 
