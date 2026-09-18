@@ -31,7 +31,10 @@ The WhyNot native prototype was developed using **Flutter**, with **iOS as the m
 
 With three team members, the MS7 requirement corresponds to **6 native views**.
 
+Native Prototype link: <https://github.com/Moviles-G13-S1/whynot-front-flutter.git>
+
 ### UI/UX Principles Applied
+
 
 *(TBD — Explain how the native Flutter implementation follows the UI/UX decisions previously defined by the team.)*
 
@@ -131,5 +134,9 @@ In addition to the six required views, the native prototype includes administrat
 
 ## References
 
-- Chapter 5: *A GUI is better than two thousand words* — [se4ma.gitbook.io/book/chapter5](https://se4ma.gitbook.io/book/chapter5)
-- WhyNot UI Prototype — *(TBD — add Figma link)*
+- Interactive figma prototype link for editting: <https://www.figma.com/design/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=0-1&t=qpzvDMk08xzDNPHs-1>
+
+- Interactive figma prototype link for preview (ui version): <https://www.figma.com/proto/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=30-367&p=f&t=se9HfCJDNc6lyavh-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A367>
+
+-Interactive figma prototype link for preview (ADMIN CONTROL PANEL): <https://www.figma.com/proto/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS?node-id=185-303&p=f&t=BnqfYMknqDN2eMat-0&scaling=scale-down&content-scaling=fixed&page-id=167%3A319&starting-point-node-id=185%3A303>
+
