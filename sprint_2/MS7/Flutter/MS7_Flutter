@@ -1,0 +1,135 @@
+# MS7 – Value Proposition & Native UI Prototype
+
+Team: #13  
+Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Jeronimo Franco 202222204.
+
+---
+
+MS7 (Week 7) focuses on going deeper into WhyNot's value proposition by explaining how its smart and context-aware features generate value for users, and on applying the UI/UX decisions previously defined by the team to the native Flutter prototype.
+
+---
+
+## 1. Value Proposition
+
+> (MS7-O1) Complement the value proposition of the solution by explaining how the smart features and CAS (Context-Aware System) features help generate value.
+
+### Smart Features
+
+*(TBD)*
+
+### Context-Aware Features
+
+*(TBD)*
+
+---
+
+## 2. Native UI Prototype
+
+> (MS7-O2) Apply the UI/UX aspects previously defined by the team to the native prototype. The prototype must show these concepts in `2 × X` views, where `X` is the number of team members.
+
+The WhyNot native prototype was developed using **Flutter**, with **iOS as the main target platform**.
+
+With three team members, the MS7 requirement corresponds to **6 native views**.
+
+### UI/UX Principles Applied
+
+*(TBD — Explain how the native Flutter implementation follows the UI/UX decisions previously defined by the team.)*
+
+- **Color palette:** *(TBD)*
+- **Typography:** *(TBD)*
+- **Icons:** *(TBD)*
+- **Images and illustrations:** *(TBD)*
+- **Visual hierarchy:** *(TBD)*
+- **Consistency:** *(TBD)*
+- **Navigation patterns:** *(TBD)*
+- **Other UI/UX principles:** *(TBD)*
+
+---
+
+### View 1 — Home
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Home View](images/home.png)
+
+---
+
+### View 2 — Wishlists
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Wishlists View](images/wishlists.png)
+
+---
+
+### View 3 — Wishlist Detail
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Wishlist Detail View](images/wishlist-detail.png)
+
+---
+
+### View 4 — New Product
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![New Product View](images/new-product.png)
+
+---
+
+### View 5 — Product Detail
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Product Detail View](images/product-detail.png)
+
+---
+
+### View 6 — Profile
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Profile View](images/profile.png)
+
+---
+
+## 3. Additional Native Views
+
+In addition to the six required views, the native prototype includes administrative views.
+
+### Admin View 1
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Admin View 1](images/admin-view-1.png)
+
+---
+
+### Admin View 2
+
+*(TBD — Explain how this native view applies the UI/UX principles defined by the team.)*
+
+![Admin View 2](images/admin-view-2.png)
+
+---
+
+## 4. Native Views Summary
+
+| # | View | User Type |
+|---|---|---|
+| 1 | Home | User |
+| 2 | Wishlists | User |
+| 3 | Wishlist Detail | User |
+| 4 | New Product | User |
+| 5 | Product Detail | User |
+| 6 | Profile | User |
+| Extra | Admin View 1 | Administrator |
+| Extra | Admin View 2 | Administrator |
+
+---
+
+## References
+
+- Chapter 5: *A GUI is better than two thousand words* — [se4ma.gitbook.io/book/chapter5](https://se4ma.gitbook.io/book/chapter5)
+- WhyNot UI Prototype — *(TBD — add Figma link)*
