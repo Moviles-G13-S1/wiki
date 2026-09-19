@@ -9,13 +9,23 @@ Members: Juliana Duran 202220671, Santiago Casasbuenas 202214932, Martin Riveira
 
 > (MS7-O1) Complement the value proposition of the solution by explaining how the smart features and CAS (Context-Aware System) features help generate value.
 
-### Smart Features
+### How Smart Features Generate Value
 
-*(TBD)*
+WhyNot's smart feature focuses on personalized recommendations based on demographic information provided by the user, such as age range, gender, or other relevant profile characteristics.
 
-### Context-Aware Features
+This information can be used to recommend products that may be more relevant to users with similar demographic profiles. Instead of only showing the products that the user has manually saved, WhyNot can help users discover additional items that could match their interests or needs.
 
-*(TBD)*
+This generates value because it reduces the effort required to search for new products and makes the experience more personalized. The recommendation system allows WhyNot to move beyond being only a storage tool and become a platform that actively helps users discover products that may be relevant to them.
+
+### How CAS Features Generate Value
+
+WhyNot's Context-Aware Service uses the user's location, with their permission, to adapt the experience according to where they are.
+
+For example, the application can use the user's current location to identify nearby stores related to the products or categories saved in their wishlists. If a user is interested in clothing, technology, or beauty products, WhyNot could show stores nearby where similar products may be available.
+
+This generates value by connecting the user's digital wishlist with their physical surroundings. Instead of manually searching for stores, users can quickly identify nearby options that may help them find the products they are interested in.
+
+Together, the smart recommendation feature and the location-based CAS feature allow WhyNot to provide a more personalized and context-aware experience, helping users not only organize products but also discover relevant items and nearby purchasing options.
 
 ---
 
