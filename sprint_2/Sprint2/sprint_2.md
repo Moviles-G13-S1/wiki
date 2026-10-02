@@ -27,9 +27,9 @@ The following Business Questions are implemented as part of the Sprint 2 analyti
 | BQ1 | How many products has a user saved? | Type 2 | Juan Felipe Saenz (Kotlin implementation) | Measures adoption and engagement with one of the core features of WhyNot and allows administrators to understand how actively users use their wishlists. | `products` collection grouped by `ownerId`; `AdminViewModel`, `FirebaseAdminRepository` and Admin Saved Products view. |
 | BQ2 | How many users save another product after their first one? | Type 2 / Type 3 | *TBD* | Helps identify whether users continue interacting with the application after their first save and provides an indication of repeated engagement. | `products` collection grouped by `ownerId`; repeat-save analysis. |
 | BQ3 | How many recommended products have been saved? | Type 3 | Juan Felipe Saenz | Measures whether the Smart Recommendation feature generates meaningful user actions instead of only displaying recommendations. | `get_recommendation` + `save_recommended_product`; recommendation events and `adminMetrics`. |
-| BQ4 | Which category has the highest number of products marked as purchased per month? | Type 4 | *TBD* | Helps identify which product categories generate the highest purchasing activity over time and supports category-level analysis. | Purchased `products`, using `purchasedAt` and `categoryId`; Admin Purchases view. |
+| BQ4 | Which category has the highest number of products marked as purchased per month? | Type 4 | Miguel Angel Velandia (Kotlin implementation) | Helps identify which product categories generate the highest purchasing activity over time and supports category-level analysis. | Purchased `products`, using `purchasedAt` and `categoryId`; `AdminInsightsViewModel`, `PurchasedProductsStats` and Admin Purchases view (`AdminPurchasesByCategoryScreen`). |
 | BQ5 | How many users have 0 products saved? | Type 2 / Type 3 | *TBD* | Identifies registered users who have not yet adopted the application's main product-saving functionality and can be used as an activation indicator. | `users` collection compared with product owners; Admin Saved Products / Zero Products metric. |
-| BQ6 | What is the demographic profile of the average buyer per category? | Type 4 | *TBD* | Helps characterize buyers by category using demographic information and purchasing activity, supporting a better understanding of the application's users. | Purchased products joined with user profiles; age, gender and city information. |
+| BQ6 | What is the demographic profile of the average buyer per category? | Type 4 | Miguel Angel Velandia (Kotlin implementation) | Helps characterize buyers by category using demographic information and purchasing activity, supporting a better understanding of the application's users. | Purchased products joined with user profiles; age, gender and city information; `AdminInsightsViewModel`, `DemographicProfileStats` and Admin Demographics view (`AdminDemographicProfileScreen`). |
 
 ### 2.1 Changes from Sprint 1 BQs
 
@@ -105,6 +105,30 @@ For BQ3, the backend-controlled flow preserves a `recommendationEventId` from th
 
 **Juan Felipe Saenz's contribution:** implemented the backend tracking required for BQ3, updated the backend data contract, extended the Smart Feature test script, created a production BQ3 validation script, and implemented the Kotlin recommendation repository/ViewModel integration that consumes `get_recommendation` and `save_recommended_product`.
 
+**Miguel Angel Velandia's contribution:** implemented BQ4 and BQ6 in the Kotlin administrator dashboard (`AdminInsightsViewModel`, `PurchasedProductsStats`, `DemographicProfileStats`, and the Purchases and Demographics views), and the client-side writes those metrics depend on: the one-way purchase that stamps `purchasedAt` with the server time (`markPurchased`) and the `cityId` stored at sign-up, which BQ6 groups by.
+
+### 3.2 BQ4 and BQ6 pipeline (Kotlin)
+
+```mermaid
+flowchart LR
+    U1[User marks a product as purchased] -->|markPurchased: purchased = true, purchasedAt = server time| P[(products)]
+    U2[User signs up] -->|createProfile: age, gender, cityId| US[(users)]
+
+    P -->|observeAllProducts - admin claim only| VM[AdminInsightsViewModel]
+    US -->|observeAllUsers - admin claim only| VM
+
+    VM -->|group purchased products by month and categoryId, ties kept| BQ4[BQ4 view - purchases by category per month]
+    VM -->|join buyers with profiles: median age, age groups, gender, top cities| BQ6[BQ6 view - buyer profile per category]
+```
+
+**Rationale.**
+
+- Both metrics are computed in memory from two real-time reads of `products` and `users`, which the Security Rules allow only to accounts carrying the `admin` custom claim. This needs no aggregation documents and no additional Cloud Function, and the views update on their own when a product is purchased or deleted.
+- `purchasedAt` is written only by the one-way saved-to-purchased transition, and the rules require it to equal the server time of the request. A purchase therefore cannot be dated by the device clock or moved between months by toggling it.
+- The shared index manifest is empty, so no query uses `orderBy`; grouping and sorting happen in the ViewModel. The 6, 12 and 24-month selector changes the window in memory without reading Firestore again.
+- Edge cases are reported instead of hidden: purchases made before `purchasedAt` existed are shown as undated, categories tied for the lead are shown as a tie, each buyer is counted once per category, and buyers whose profile predates the city catalog are grouped as "No city set".
+- Deleting a product removes it from both metrics, the same rule every product-based metric in the project follows.
+
 *Additional pipeline rationale required by the team:* *TBD*
 
 ---
@@ -172,14 +196,15 @@ For shared business behavior such as recommendations or nearby-store selection, 
 
 | Pattern / tactic | Where it is used | Rationale | Responsible member |
 |---|---|---|---|
-| Repository Pattern | Kotlin and Flutter data/domain layers | Separates domain contracts from Firebase implementations, improves testability and prevents screens from depending directly on Firebase SDK calls. | Juan Felipe Saenz (Kotlin Admin, Nearby, Recommendations and Speech repository contracts/implementations) / *TBD Flutter owner* |
+| Repository Pattern | Kotlin and Flutter data/domain layers | Separates domain contracts from Firebase implementations, improves testability and prevents screens from depending directly on Firebase SDK calls. | Miguel Angel Velandia (Kotlin Auth, User, Wishlist and Product repositories `33c05e5`; Location and first Recommendation repositories `7fe1f7a`; Speech repository contract and Android implementation `6557ebc`) / Juan Felipe Saenz (Kotlin Admin and Nearby store repositories `d6c091e`; Recommendation repository rewrite `c8ba47c`) / *TBD Flutter owner* |
 | Layered / MVC-inspired architecture | Flutter features | Separates presentation, application/controller, domain and data responsibilities. | *TBD* |
-| ViewModel-based presentation architecture | Kotlin features | Keeps UI state and application logic outside Compose screens and allows the UI to react to structured state. | Juan Felipe Saenz (Admin, Nearby, Recommendations, Profile and Speech ViewModels) / *TBD remaining Kotlin owners* |
-| Dependency Injection | `AppDependencies`, ViewModel factory and Flutter dependency scope | Centralizes the creation of repositories and makes it possible to replace real implementations with fakes during testing. | Juan Felipe Saenz (Kotlin `AppDependencies` and `WhyNotViewModelFactory`) / *TBD Flutter owner* |
-| Authentication and authorization tactic | Firebase Authentication, custom `admin` claim, route guards and Security Rules | Restricts administrative functionality and sensitive data to authorized users. | Juan Felipe Saenz (Kotlin admin-access flow) / *TBD backend and Flutter owners* |
+| Layered architecture (feature-first) | Kotlin features: `domain`, `data`, `application`, `ui` and `core/di` | Each feature keeps its models and repository contracts apart from the Firebase and Android implementations and from the screens, so the UI never imports the Firebase SDK and every layer can be replaced or faked independently. | Miguel Angel Velandia (set up the structure and its first features: authentication, profile, wishlists and products, `33c05e5`) / Juan Felipe Saenz (Admin, Nearby, Recommendations and Speech modules) / *TBD remaining Kotlin owners* |
+| ViewModel-based presentation architecture | Kotlin features | Keeps UI state and application logic outside Compose screens and allows the UI to react to structured state. | Miguel Angel Velandia (Auth, Profile, Wishlist, Product and Admin Insights ViewModels) / Juan Felipe Saenz (Admin, Nearby, Recommendations and Speech ViewModels; Profile screen integration) / *TBD remaining Kotlin owners* |
+| Dependency Injection | `AppDependencies`, ViewModel factory and Flutter dependency scope | Centralizes the creation of repositories and makes it possible to replace real implementations with fakes during testing. | Miguel Angel Velandia (created the Kotlin `AppDependencies` composition root and `WhyNotViewModelFactory`, `33c05e5`) / Juan Felipe Saenz (registered the Admin, Nearby, Recommendation, Profile and Speech dependencies) / *TBD Flutter owner* |
+| Authentication and authorization tactic | Firebase Authentication, custom `admin` claim, route guards and Security Rules | Restricts administrative functionality and sensitive data to authorized users. | Juan Felipe Saenz (Kotlin admin-access flow) / Miguel Angel Velandia (Kotlin Firebase Authentication integration and `admin` claim reading in `AuthRepository`) / *TBD backend and Flutter owners* |
 | Idempotency tactic | Recommendation-save flow | Prevents the same recommendation event from being counted more than once in BQ3. | *TBD* |
-| Privacy / data minimization tactic | Nearby Store functionality | Device coordinates are used as transient input and are not stored in the user's profile. | *TBD* |
-| Additional design pattern | *TBD* | *TBD* | *TBD* |
+| Privacy / data minimization tactic | Nearby Store functionality and voice input | Device coordinates are used as transient input and are not stored in the user's profile; coarse location is enough to pick the nearest store. Voice input keeps no audio: only the transcribed text reaches the app. | Miguel Angel Velandia (`AndroidLocationRepository`, `AndroidSpeechRecognitionRepository`) |
+| Observer Pattern | Kotlin repositories, ViewModels and Compose screens: Firestore snapshot listeners wrapped in `callbackFlow`, exposed as `StateFlow` and collected by the screens | Screens react to data changes instead of re-reading: marking a purchase updates the lists and the admin metrics automatically, and each Firestore listener is removed when nothing observes it. | Miguel Angel Velandia |
 
 ### 4.4 Architecture rationale
 
@@ -195,6 +220,26 @@ For the Nearby feature, implemented the application/domain integration and the F
 
 The Repository Pattern is the clearest design pattern associated with this contribution: ViewModels depend on domain interfaces instead of Firebase classes directly. `AppDependencies` and `WhyNotViewModelFactory` provide the concrete implementations at the application boundary. This makes it possible to replace production repositories with fake implementations during automated tests.
 
+### 4.6 Miguel Angel Velandia – Architectural Contribution
+
+Connected the Kotlin client to the shared backend and set up the feature-first layered structure the Kotlin app follows: `domain` (models and repository contracts), `data` (Firebase and Android implementations), `application` (ViewModels) and `core/di` (composition root) — commit `33c05e5`. In that structure he created `AppDependencies` and `WhyNotViewModelFactory`, and the Firebase implementations of the Auth, User, Wishlist and Product repositories. He later added the device and callable repositories: `AndroidLocationRepository` and the first `FirebaseRecommendationRepository` (`7fe1f7a`), and `AndroidSpeechRecognitionRepository` (`6557ebc`).
+
+**Design pattern – Observer.**
+
+```mermaid
+flowchart LR
+    FS[(Cloud Firestore)] -->|addSnapshotListener| R[Repository - callbackFlow]
+    R -->|Flow| VM[ViewModel - StateFlow]
+    VM -->|collectAsStateWithLifecycle| UI[Compose screen]
+    UI -->|intent: createProduct, markPurchased| VM
+    VM -->|suspend write| R
+    R -->|write| FS
+```
+
+*Rationale.* Repositories expose Firestore data as `Flow`s instead of one-shot reads, ViewModels turn them into a `StateFlow`, and screens only observe that state and emit intents. A write anywhere reaches every observer: marking a product as purchased updates the wishlist, the Purchases view and the BQ4 metric without any manual refresh. Collection is lifecycle-aware, and `awaitClose` removes each snapshot listener when its collector stops, so screens that are not visible do not keep Firestore listeners open. The UI never calls the Firebase SDK directly.
+
+*Device repositories.* Location and voice input follow the same contracts but talk to the device. Neither repository requests runtime permissions, because that needs an Activity; they throw typed errors (`LocationPermissionDeniedException`, `SpeechPermissionDeniedException`) that the screen turns into a request. `SpeechRecognizer` runs on the main thread and is released exactly once on result, error or cancellation, so leaving the screen switches the microphone off.
+
 * others members Additional rationale for course-specific architectural decisions:* *TBD*
 
 ---
@@ -205,30 +250,30 @@ The Sprint 2 implementation includes the following functionality across the two 
 
 | Functionality | Kotlin / Android | Flutter / iOS | Backend / service involved | Responsible member(s) |
 |---|---|---|---|---|
-| User authentication | Implemented | Implemented | Firebase Authentication | Juan Felipe Saenz (Kotlin authentication/profile UI and admin-access integration) / *TBD Flutter owner* |
-| User profile | Implemented | Implemented | Firestore `users` | Juan Felipe Saenz (Kotlin profile screens, ViewModel integration and password flow) / *TBD Flutter owner* |
-| Wishlist management | Implemented | Implemented | Firestore `wishlists` | *TBD* |
-| Manual product creation and management | Implemented | Implemented | Firestore `products` | *TBD* |
-| Mark product as purchased | Implemented | Implemented | Firestore `products`, `purchased`, `purchasedAt` | *TBD* |
-| Admin analytics | Implemented | Implemented / final BQ mapping *TBD* | Firestore + `adminMetrics` | Juan Felipe Saenz (Kotlin BQ1 and BQ3 implementation) / *TBD remaining owners* |
-| Sensor functionality: device location | Implemented | Implemented | Device location services | *TBD* |
-| Context-Aware feature: Nearby Stores | Implemented | Implemented | `get_nearest_store` Cloud Function | Juan Felipe Saenz (Kotlin repository/ViewModel integration) / *TBD device-location, backend and Flutter owners* |
-| Smart feature: demographic recommendation | Implemented | Implemented | `get_recommendation` Cloud Function | Juan Felipe Saenz (Kotlin recommendation repository/ViewModel integration and BQ3 backend tracking) / *TBD remaining owners* |
-| Save a recommended product | Implemented | Implemented | `save_recommended_product` Cloud Function | Juan Felipe Saenz (backend BQ3 flow and Kotlin client integration) / *TBD Flutter owner* |
-| Type 2 BQ functionality | Implemented | Implemented / evidence *TBD* | Firestore analytics | Juan Felipe Saenz (Kotlin BQ1 implementation) / *TBD remaining owners* |
-| External/backend-connected functionality different from authentication | Implemented | Implemented | Firebase callable Cloud Functions | Juan Felipe Saenz (Kotlin recommendation and Nearby callable repositories; BQ3 backend integration) / *TBD remaining owners* |
-| Voice input / speech recognition | Implemented in Kotlin | *TBD* | Android `SpeechRecognizer` | Juan Felipe Saenz (speech repository, Android implementation, ViewModel, error states and tests) / *TBD final UI owner and Flutter status* |
+| User authentication | Implemented | Implemented | Firebase Authentication | Juan Felipe Saenz (Kotlin authentication/profile UI and admin-access integration) / Miguel Angel Velandia (Kotlin Firebase Authentication integration: sign-in, and sign-up creating the account and its profile with `cityId`) / *TBD Flutter owner* |
+| User profile | Implemented | Implemented | Firestore `users` | Juan Felipe Saenz (Kotlin profile screens, ViewModel integration and password flow) / Miguel Angel Velandia (`FirebaseUserRepository`, `ProfileViewModel` and city catalog) / *TBD Flutter owner* |
+| Wishlist management | Implemented | Implemented | Firestore `wishlists` | Miguel Angel Velandia (Kotlin Wishlists, New Wishlist and Wishlist Detail views; `FirebaseWishlistRepository`, `WishlistViewModel`) / *TBD Flutter owner* |
+| Manual product creation and management | Implemented | Implemented | Firestore `products` | Miguel Angel Velandia (Kotlin Why Not?, New Product and Product Detail views; `FirebaseProductRepository`, `ProductViewModel`) / *TBD Flutter owner* |
+| Mark product as purchased | Implemented | Implemented | Firestore `products`, `purchased`, `purchasedAt` | Miguel Angel Velandia (Kotlin one-way `markPurchased` with server `purchasedAt`) / *TBD Flutter owner* |
+| Admin analytics | Implemented | Implemented / final BQ mapping *TBD* | Firestore + `adminMetrics` | Juan Felipe Saenz (Kotlin BQ1 and BQ3 implementation) / Miguel Angel Velandia (Kotlin BQ4 and BQ6 implementation) / *TBD remaining owners* |
+| Sensor functionality: device location | Implemented | Implemented | Device location services | Miguel Angel Velandia (Kotlin `AndroidLocationRepository` and location permissions) / *TBD Flutter owner* |
+| Context-Aware feature: Nearby Stores | Implemented | Implemented | `get_nearest_store` Cloud Function | Juan Felipe Saenz (Kotlin repository/ViewModel integration) / Miguel Angel Velandia (Kotlin device location and dependency wiring) / *TBD backend and Flutter owners* |
+| Smart feature: demographic recommendation | Implemented | Implemented | `get_recommendation` Cloud Function | Juan Felipe Saenz (Kotlin recommendation repository/ViewModel integration and BQ3 backend tracking) / Miguel Angel Velandia (first Kotlin `FirebaseRecommendationRepository` for `get_recommendation` and `save_recommended_product`, dependency wiring) / *TBD remaining owners* |
+| Save a recommended product | Implemented | Implemented | `save_recommended_product` Cloud Function | Juan Felipe Saenz (backend BQ3 flow and Kotlin client integration) / Miguel Angel Velandia (first Kotlin client call to `save_recommended_product`) / *TBD Flutter owner* |
+| Type 2 BQ functionality | Implemented | Implemented / evidence *TBD* | Firestore analytics | Juan Felipe Saenz (Kotlin BQ1 implementation) / Miguel Angel Velandia (`Product` and `UserProfile` models and the repositories that write the documents BQ1, BQ2 and BQ5 count; admin panel navigation) / *TBD remaining owners* |
+| External/backend-connected functionality different from authentication | Implemented | Implemented | Firebase callable Cloud Functions | Juan Felipe Saenz (Kotlin Nearby callable repository and recommendation repository rewrite; BQ3 backend integration) / Miguel Angel Velandia (Kotlin Firestore integration of users, wishlists, products and categories; first recommendation callable repository) / *TBD remaining owners* |
+| Voice input / speech recognition | Implemented in Kotlin | *TBD* | Android `SpeechRecognizer` | Miguel Angel Velandia (speech repository contract, Android `SpeechRecognizer` implementation, `RECORD_AUDIO` permission and voice input in New Product) / Juan Felipe Saenz (`SpeechViewModel`, error states and tests) / Martin Riveira (`VoiceInputButton` and permission request) / *TBD Flutter status* |
 
 ## 5.1 Minimum Sprint functionality mapping
 
 | Sprint requirement | WhyNot implementation | Evidence |
 |---|---|---|
-| Uses at least one phone sensor | Device location used by Nearby Stores | *TBD – add file/PR/demo link* |
-| Answers Type 2 BQs | BQ1 / BQ2 / BQ5 analytics | BQ1 Kotlin implementation by Juan Felipe: `AdminViewModel.kt`, `FirebaseAdminRepository.kt`, `AdminSavedProductsScreen.kt`; direct commit `d6c091e`. Additional BQ2/BQ5 evidence: *TBD*. |
-| Context aware | Nearby Stores adapts results using the user's current location | Juan Felipe implemented the Kotlin `NearbyStoreViewModel`, domain contracts and `FirebaseNearbyStoreRepository` that calls `get_nearest_store` (`d6c091e`). Device-location implementation/demo evidence: *TBD*. |
-| Smart feature | Product recommendation based on demographic similarity | Juan Felipe implemented the Kotlin recommendation ViewModel/contracts (`d6c091e`), real `FirebaseRecommendationRepository` (`c8ba47c`) and BQ3 backend recommendation-save tracking (`02d8006`). |
-| User authentication | Email/password registration and login using Firebase Authentication | Juan Felipe authored Login/Register/Profile UI (`9ef345f`), Kotlin admin-access integration (`95d2ba3`) and real profile/password integration (`c8ba47c`). |
-| External service / backend connection | Recommendations and Nearby Stores call Firebase Cloud Functions | Juan Felipe authored `FirebaseNearbyStoreRepository` (`d6c091e`), `FirebaseRecommendationRepository` (`c8ba47c`) and the backend BQ3 recommendation-save flow (`02d8006`). |
+| Uses at least one phone sensor | Device location used by Nearby Stores | Location: Miguel's `AndroidLocationRepository` (`7fe1f7a`, PR #13). Microphone (voice input in New Product): Miguel `6557ebc` (PR #15) and `9e0521e` (PR #18), Juan Felipe `c8ba47c`, Martin `cf24c67` (PR #17). Demo link: *TBD*. |
+| Answers Type 2 BQs | BQ1 / BQ2 / BQ5 analytics | BQ1 Kotlin implementation by Juan Felipe: `AdminViewModel.kt`, `FirebaseAdminRepository.kt`, `AdminSavedProductsScreen.kt`; direct commit `d6c091e`. Miguel created the `Product` and `UserProfile` domain models that `AdminRepository` returns, and the repositories that write the documents these metrics count: each product's `ownerId`, which BQ1 and BQ2 group by, and the profile created at sign-up, which BQ5 compares against product owners (`33c05e5`); he also extended the shared admin navigation in `AdminComponents.kt` and `AdminSavedProductsScreen.kt` (`7fe1f7a`). Additional BQ2/BQ5 evidence: *TBD*. |
+| Context aware | Nearby Stores adapts results using the user's current location | Juan Felipe implemented the Kotlin `NearbyStoreViewModel`, domain contracts and `FirebaseNearbyStoreRepository` that calls `get_nearest_store` (`d6c091e`). Device-location implementation: Miguel's `AndroidLocationRepository` (`7fe1f7a`); demo evidence: *TBD*. |
+| Smart feature | Product recommendation based on demographic similarity | Juan Felipe implemented the Kotlin recommendation ViewModel/contracts (`d6c091e`), rewrote `FirebaseRecommendationRepository` (`c8ba47c`) and implemented BQ3 backend recommendation-save tracking (`02d8006`). Miguel created the first `FirebaseRecommendationRepository` and wired it into the app (`7fe1f7a`). |
+| User authentication | Email/password registration and login using Firebase Authentication | Juan Felipe authored Login/Register/Profile UI (`9ef345f`), Kotlin admin-access integration (`95d2ba3`) and real profile/password integration (`c8ba47c`). Miguel connected sign-in and sign-up to Firebase Authentication and Firestore profiles (`33c05e5`, `6eb38ce`). |
+| External service / backend connection | Recommendations and Nearby Stores call Firebase Cloud Functions | Juan Felipe authored `FirebaseNearbyStoreRepository` (`d6c091e`), rewrote `FirebaseRecommendationRepository` (`c8ba47c`) and authored the backend BQ3 recommendation-save flow (`02d8006`). Miguel connected the app to Firestore (`33c05e5`) and created the first recommendation callable repository (`7fe1f7a`). |
 
 
 
@@ -243,7 +288,7 @@ Each member must be able to present, justify and explain at least one view imple
 | Martin Riveira | *TBD* | *TBD* | *TBD* |
 | Jeronimo Franco | *TBD* | *TBD* | *TBD* |
 | Juan Felipe Saenz | Kotlin / Android | Login, Register, Profile, Edit Profile, Change Password | Direct commit `9ef345f` (`ui/screens/auth/LoginScreen.kt`, `RegisterScreen.kt`, `ui/screens/profile/ProfileScreen.kt`, `EditProfileScreen.kt`, `ChangePasswordScreen.kt`); profile/password integration refined in `c8ba47c`. |
-| Miguel Angel Velandia | *TBD* | *TBD* | *TBD* |
+| Miguel Angel Velandia | Kotlin / Android | Wishlists, New Wishlist, Wishlist Detail, Why Not? (add by link), New Product (with voice input), Product Detail; Admin Purchases (BQ4) and Admin Demographics (BQ6) | `7ec6870` and `75a64ee` (screens, shared components and routes), `33c05e5` (connected to Firebase), `7fe1f7a` (BQ4 and BQ6 views), `9e0521e` (voice input in New Product) |
 
 ---
 
@@ -258,7 +303,7 @@ This table should be completed before the oral exam so that every team member ca
 | Martin Riveira | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
 | Jeronimo Franco | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
 | Juan Felipe Saenz | BQ3 – Recommended products saved (also implemented BQ1 in Kotlin) | Login, Register, Profile, Edit Profile, Change Password | BQ3 recommendation-save analytics; Kotlin Smart Recommendation integration; authentication/profile; Nearby repository/ViewModel integration; speech-recognition architecture | Kotlin layered architecture using repository contracts, ViewModels and dependency injection | Repository Pattern | Direct commits: Kotlin `9ef345f`, `d6c091e`, `8fc6180`, `95d2ba3`, `c8ba47c`; Backend `02d8006`, `db1312b` |
-| Miguel Angel Velandia | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
+| Miguel Angel Velandia | BQ4 – Purchases by category per month; BQ6 – Buyer demographic profile per category | Wishlists, Wishlist Detail, New Product (voice input), Product Detail; Admin Purchases and Demographics | Firebase integration of the Kotlin app (authentication, profiles, wishlists, products, one-way purchase); data models and data that BQ1, BQ2 and BQ5 count; device location for Nearby Stores; first recommendation callable repository; voice input (speech repository and New Product UI); BQ4 and BQ6 analytics | Kotlin feature-first layered architecture and composition root (`AppDependencies`, `WhyNotViewModelFactory`) | Observer Pattern | Kotlin `7ec6870`, `75a64ee`, `4c80578`, `33c05e5`, `6eb38ce`, `7fe1f7a`, `6557ebc`, `9e0521e`; Docs `0b8a611`, `f2e93c3` |
 
 ---
 
@@ -289,7 +334,13 @@ The project uses GitHub repositories and collaboration mechanisms to coordinate 
 ## 9.2 Relevant implementation PRs already identified
 
 - Kotlin PR #14 – BQ2, BQ5, Nearby Stores and Recommendations.
-- Kotlin PR #13 – BQ4, BQ6 and related admin/location/recommendation integration.
+- Kotlin PR #4 – wishlists and products screens, shared components and routes (Miguel).
+- Kotlin PR #7 – status bar and dropdown fixes on the wishlists and products screens (Miguel).
+- Kotlin PR #8 – Kotlin app connected to the shared Firebase backend (Miguel).
+- Kotlin PR #9 – profile city and one-way purchase aligned with the updated Security Rules (Miguel).
+- Kotlin PR #13 – BQ4, BQ6 and related admin/location/recommendation integration (Miguel).
+- Kotlin PR #15 – speech recognition repository and tie handling in BQ4 (Miguel).
+- Kotlin PR #18 – voice input for product name and brand (Miguel).
 - Backend PR #7 – tracking saved recommended products for BQ3.
 - Backend PR #9 – nearest-store Cloud Function.
 - Flutter PR #10 – users with zero saved products in admin analytics.
@@ -320,6 +371,33 @@ Direct commit links:
 - https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/c8ba47c6130e3c49bb9a91ed3b9dc3a3274c6aad
 - https://github.com/Moviles-G13-S1/whynot-back/commit/02d8006c2264819f42532b784d118b33ee43433a
 - https://github.com/Moviles-G13-S1/whynot-back/commit/db1312b3b579a2b3f6c327161bda45d2e8347d49
+
+### 9.4 Miguel Angel Velandia – Direct Authored Commit Evidence
+
+The entries below are direct commits authored by Miguel Angel Velandia. Merge commits are excluded. Some of these files were later copied into or extended on other branches; `git log --full-history` shows the original commits, which plain `git log` can hide behind merges.
+
+- **`7ec6870` – `Add wishlists and products screens and their shared components`**: Wishlists, New Wishlist, Wishlist Detail, New Product and Product Detail screens; `ProductCard`, `WishlistCard`, `CategoryChip` and `ProductImage` components.
+- **`75a64ee` – `Add wishlists and products routes to the navigation graph`**: navigation for the wishlist and product flows, and the Why Not? (add by link) screen.
+- **`4c80578` – `Fix status bar overlap and dropdown colors on wishlists and products screens`**: UI fixes found while testing on a device.
+- **`33c05e5` – `Connect the app to the shared Firebase backend`**: layered structure (`domain`, `data`, `application`, `core/di`), `AppDependencies`, `WhyNotViewModelFactory`, Firebase Auth/User/Wishlist/Product repositories and their ViewModels.
+- **`6eb38ce` – `Fix profile city and one-way purchase against the updated rules`**: `cityId` at sign-up and the one-way `markPurchased` with server `purchasedAt`.
+- **`7fe1f7a` – `Add location and recommendation repositories and the purchases and demographics admin screens (BQ4 and BQ6)`**: `AndroidLocationRepository`, first `FirebaseRecommendationRepository`, `AdminInsightsViewModel`, BQ4 and BQ6 views, dependency wiring.
+- **`6557ebc` – `Add speech recognition repository and show ties in the purchases metric`**: speech repository contract, `AndroidSpeechRecognitionRepository`, `RECORD_AUDIO` permission, and tie handling in BQ4.
+- **`9e0521e` – `Add voice input for product name and brand`**: voice input in New Product, connecting the speech ViewModel and the microphone button.
+- **Docs `0b8a611` and `f2e93c3`**: Kotlin frontend documentation in `whynot-docs`.
+
+Direct commit links:
+
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/7ec68700b20d9f543b08751ce40877c50e693e92
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/75a64ee7ae469e0f23a5e715e9159aab18c898b0
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/4c805784086dad27fac74a112730302a6d4556b2
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/33c05e5071da693ed350ea8519a76860a1d38b9f
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/6eb38ce432718f33dcfb70573c1e18b3fe536a9b
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/7fe1f7a39c81fab1d1d412009cdc881e38cb2294
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/6557ebc9ef9b281f8cb85d0b71807fe1a2a78f32
+- https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/9e0521ecfb8a39a516f14cd2ef7fedfdd82ad236
+- https://github.com/Moviles-G13-S1/whynot-docs/commit/0b8a61118391e430e4ce23c4de3fff3c1449dfc3
+- https://github.com/Moviles-G13-S1/whynot-docs/commit/f2e93c3cb8fd34179431c6ec62b92b7d2f14bf07
 
 ---
 
