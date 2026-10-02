@@ -14,7 +14,6 @@
 | Kotlin frontend | Native Android application | https://github.com/Moviles-G13-S1/whynot-front-kotlin |
 | Flutter frontend | Flutter/iOS application | https://github.com/Moviles-G13-S1/whynot-front-flutter |
 | Backend | Shared Firebase backend, rules, Cloud Functions and scripts | https://github.com/Moviles-G13-S1/whynot-back |
-| Architecture documentation | Cross-repository architecture, data contracts and platform implementation notes | https://github.com/Moviles-G13-S1/whynot-docs |
 
 
 ---
@@ -27,7 +26,7 @@ The following Business Questions are implemented as part of the Sprint 2 analyti
 |---|---|---|---|---|---|
 | BQ1 | How many products has a user saved? | Type 2 | Juan Felipe Saenz (Kotlin) and Jeronimo Franco (Flutter) | Measures adoption and engagement with one of the core features of WhyNot and allows administrators to understand how actively users use their wishlists. | `products` grouped by `ownerId`. Kotlin: `AdminViewModel`, `FirebaseAdminRepository` and Admin Saved Products. Flutter: real-data aggregation in `76afa227`, displayed in the admin view originally created in `3b5f770`. |
 | BQ2 | How many users save another product after their first one? | Type 2 | Juliana Duran (documentation/presentation and Flutter product-save flow), Martin Riveira (Kotlin) and Jeronimo Franco (Flutter metric) | Measures repeated engagement by separating users who saved exactly one product from users who returned to save two or more. | `products` grouped by `ownerId`; Kotlin implementation in PR #14. Flutter aggregation in `76afa227`; the product flows that generate the underlying records were implemented in `d1ec7b6`, `6b8e178` and `83b7bd8`. |
-| BQ3 | How many recommended products have been saved? | Type 3 | Juan Felipe Saenz (backend and Kotlin) and Santiago Casasbuenas (Flutter administrator metric) | Measures whether the Smart Recommendation feature generates meaningful user actions instead of only displaying recommendations. | `get_recommendation` + `save_recommended_product`; recommendation events and `adminMetrics`. Backend commits `02d8006`, `db1312b`; Flutter aggregate repository/controller/view in `df09c88`. |
+| BQ3 | How many recommended products have been saved? | Type 3 | Juan Felipe Saenz (BQ3 backend and later Kotlin repository rewrite/integration), Miguel Angel Velandia (initial Kotlin recommendation callable repository) and Santiago Casasbuenas (Flutter administrator metric) | Measures whether the Smart Recommendation feature generates meaningful user actions instead of only displaying recommendations. | `get_recommendation` + `save_recommended_product`; recommendation events and `adminMetrics`. Backend commits `02d8006`, `db1312b`; Flutter aggregate repository/controller/view in `df09c88`. |
 | BQ4 | Which category has the highest number of products marked as purchased per month? | Type 4 | Miguel Angel Velandia (Kotlin) and Jeronimo Franco (Flutter) | Helps identify which product categories generate the highest purchasing activity over time and supports category-level analysis. | Purchased `products` using `purchasedAt` and `categoryId`. Kotlin: `AdminInsightsViewModel` and Admin Purchases. Flutter: real-time monthly/category grouping and 6/12/24-month view in `76afa227`. |
 | BQ5 | How many users have 0 products saved? | Type 2 | Martin Riveira (Kotlin) and Jeronimo Franco (Flutter) | Identifies registered users who have not yet adopted the application's main product-saving functionality and can be used as an activation indicator. | `users` compared with product owners. Kotlin implementation in PR #14. Flutter profile/product join and zero-product card in `061500f`, PR #10. |
 | BQ6 | What is the demographic profile of the average buyer per category? | Type 4 | Miguel Angel Velandia (Kotlin) and Jeronimo Franco (Flutter) | Helps characterize buyers by category using demographic information and purchasing activity, supporting a better understanding of the application's users. | Purchased products joined with user profiles, category and city catalogs. Kotlin: `AdminInsightsViewModel` and Admin Demographics. Flutter: `DemographicSummary` and real-data view in `76afa227`, covered by `demographic_summary_test.dart`. |
@@ -111,7 +110,7 @@ Most BQs are calculated from Firestore data available to authenticated administr
 
 For BQ3, the backend-controlled flow preserves a `recommendationEventId` from the recommendation response and uses it when `save_recommended_product` is executed. This allows the system to distinguish a product saved from the Smart Recommendation feature from a normal manual product save and to update the BQ3 metric only through the recommendation-save flow.
 
-**Juan Felipe Saenz's contribution:** implemented the backend tracking required for BQ3, updated the backend data contract, extended the Smart Feature test script, created a production BQ3 validation script, and implemented the Kotlin recommendation repository/ViewModel integration that consumes `get_recommendation` and `save_recommended_product`.
+**Juan Felipe Saenz's contribution:** implemented the backend tracking required for BQ3, updated the backend data contract, extended the Smart Feature test script, created a production BQ3 validation script, implemented the Kotlin recommendation ViewModel/contracts, and later rewrote and integrated `FirebaseRecommendationRepository` to consume `get_recommendation` and `save_recommended_product`. The first Kotlin `FirebaseRecommendationRepository` had been created earlier by Miguel Angel Velandia in `7fe1f7a`.
 
 **Miguel Angel Velandia's contribution:** implemented BQ4 and BQ6 in the Kotlin administrator dashboard (`AdminInsightsViewModel`, `PurchasedProductsStats`, `DemographicProfileStats`, and the Purchases and Demographics views), and the client-side writes those metrics depend on: the one-way purchase that stamps `purchasedAt` with the server time (`markPurchased`) and the `cityId` stored at sign-up, which BQ6 groups by.
 
@@ -266,9 +265,9 @@ Repository contracts reduce coupling between the UI and Firebase. Authentication
 
 ### 4.5 Juan Felipe Saenz – Architectural Contribution
 
-Juan Felipe Saenz contributed directly to the Kotlin layered architecture. His authored commits introduced repository contracts, Firebase-backed repository implementations, ViewModels, UI state objects, dependency wiring and fake repositories for the Admin Analytics, Nearby Stores and Smart Recommendations modules. He later added the real `FirebaseRecommendationRepository`, the speech-recognition repository/ViewModel layer, and profile/password integration.
+Juan Felipe Saenz contributed directly to the Kotlin layered architecture. His authored commits introduced repository contracts, Firebase-backed implementations for Admin Analytics and Nearby Stores, ViewModels, UI state objects, dependency wiring and fake repositories for the Admin Analytics, Nearby Stores and Smart Recommendations modules. He later rewrote `FirebaseRecommendationRepository` (originally created by Miguel Angel Velandia in `7fe1f7a`), added `SpeechViewModel`, speech UI/error states and tests on top of Miguel's speech repository (`SpeechRecognitionRepository`, `AndroidSpeechRecognitionRepository` and `SpeechErrors`, originally created in `6557ebc`), added error handling around `startListening`, and integrated the profile and password flows.
 
-For the Nearby feature, implemented the application/domain integration and the Firebase callable repository used to request `get_nearest_store`; the real Android device-location implementation was completed separately. This distinction keeps the sensor-specific implementation independent from the context-aware business flow.
+For the Nearby feature, Juan Felipe implemented the application/domain integration and the Firebase callable repository used to request `get_nearest_store`; the real Android device-location implementation (`AndroidLocationRepository`) was completed by Miguel Angel Velandia in `7fe1f7a`. This distinction keeps the device-specific implementation independent from the context-aware business flow.
 
 The Repository Pattern is the clearest design pattern associated with this contribution: ViewModels depend on domain interfaces instead of Firebase classes directly. `AppDependencies` and `WhyNotViewModelFactory` provide the concrete implementations at the application boundary. This makes it possible to replace production repositories with fake implementations during automated tests.
 
@@ -363,7 +362,6 @@ The Sprint 2 implementation includes the following functionality across the two 
 | External service / backend connection | Recommendations and Nearby Stores call Firebase Cloud Functions | Kotlin: Juan Felipe and Miguel implemented the callable repositories and BQ3 backend flow. Flutter/backend: Juliana implemented both callable client features (`cc8d213`, PR #7); Jeronimo implemented `get_nearest_store` (backend PR #9); Santiago implemented the BQ3 aggregate client (`df09c88`) and split the functions into dedicated modules (`9972673`, backend PR #10). |
 
 
-
 # 6. Views Implemented by Each Member
 
 Each member must be able to present, justify and explain at least one view implemented in the application.
@@ -385,12 +383,12 @@ This table should be completed before the oral exam so that every team member ca
 
 | Member | BQ | View | Functionality | Architectural contribution | Design pattern | Evidence |
 |---|---|---|---|---|---|---|
-| Juliana Duran | BQ2 – Repeat product savers (documentation/presentation; product-save data flow) | New Product with voice input; Smart Recommendation and Nearby sections | Flutter Firebase integration; product flows; Smart and Context-Aware clients; microphone sensor | Applied the feature-first `presentation`/`application`/`domain`/`data` split to location, recommendations and speech; isolated device SDKs behind contracts | Repository + Adapter | Flutter `d1ec7b6`, `6b8e178`, `cc8d213`, `de9971c`; backend PR #3; docs `99d9b34` |
+| Juliana Duran | BQ2 – Repeat product savers (documentation/presentation; product-save data flow) | New Product with voice input; Smart Recommendation and Nearby sections | Flutter Firebase integration; product flows; Smart and Context-Aware clients; microphone sensor | Applied the feature-first `presentation`/`application`/`domain`/`data` split to location, recommendations and speech; isolated device SDKs behind contracts | Repository + Adapter | Flutter `d1ec7b6`, `6b8e178`, `cc8d213`, `de9971c`; backend PR #3 |
 | Santiago Casasbuenas | BQ3 – Recommended products saved (Flutter administrator metric) | Admin Saved Products and Recommended Products | Admin route security; BQ3 aggregate integration; Flutter architecture refactor; Firebase emulator support; backend function modularization | Introduced `AppDependencies`, `DependenciesScope`, controllers, repository contracts, Firebase implementations and fakes across core Flutter features | Repository + Dependency Injection | Flutter `3b5f770`, `1ca1414`, `83b7bd8`, `2b69aa8`, `df09c88`; backend `9972673` |
 | Martin Riveira | BQ2 – Repeat savers; BQ5 – Users with zero products (Kotlin) | Home, Purchases and main navigation; `VoiceInputButton` | Kotlin BQ2/BQ5, Nearby and Recommendation presentation integration; microphone interaction component | Contributed presentation/navigation components that consume ViewModel state and emit UI intents without calling Firebase directly | MVVM / ViewModel-based presentation | Kotlin `fc6e8d8` (PR #3), `e1ef7c7` (PR #14), `cf24c67` (PR #17) |
 | Jeronimo Franco | BQ1, BQ4, BQ5 and BQ6 – Flutter real-data implementation | Login, Create Account, Home, Profile and connected administrator analytics | Initial Flutter app/views/tests; Firestore-backed admin analytics and city profiles; BQ5; profile fixes; iOS location permission; nearest-store backend | Connected reactive product/profile streams and shared catalogs to existing presentation components while preserving controller/repository boundaries | Observer / reactive presentation | Flutter `7400207`–`97d79e0`, `76afa227`, `061500f`, `01222cc`, `3a7640e`; backend `beeea06` |
-| Juan Felipe Saenz | BQ3 – Recommended products saved (also implemented BQ1 in Kotlin) | Login, Register, Profile, Edit Profile, Change Password | BQ3 recommendation-save analytics; Kotlin Smart Recommendation integration; authentication/profile; Nearby repository/ViewModel integration; speech-recognition architecture | Kotlin layered architecture using repository contracts, ViewModels and dependency injection | Repository Pattern | Direct commits: Kotlin `9ef345f`, `d6c091e`, `8fc6180`, `95d2ba3`, `c8ba47c`; Backend `02d8006`, `db1312b` |
-| Miguel Angel Velandia | BQ4 – Purchases by category per month; BQ6 – Buyer demographic profile per category | Wishlists, Wishlist Detail, New Product (voice input), Product Detail; Admin Purchases and Demographics | Firebase integration of the Kotlin app (authentication, profiles, wishlists, products, one-way purchase); data models and data that BQ1, BQ2 and BQ5 count; device location for Nearby Stores; first recommendation callable repository; voice input (speech repository and New Product UI); BQ4 and BQ6 analytics | Kotlin feature-first layered architecture and composition root (`AppDependencies`, `WhyNotViewModelFactory`) | Observer Pattern | Kotlin `7ec6870`, `75a64ee`, `4c80578`, `33c05e5`, `6eb38ce`, `7fe1f7a`, `6557ebc`, `9e0521e`; Docs `0b8a611`, `f2e93c3` |
+| Juan Felipe Saenz | BQ3 – Recommended products saved (also implemented BQ1 in Kotlin) | Login, Register, Profile, Edit Profile, Change Password | BQ3 recommendation-save analytics; Kotlin Smart Recommendation ViewModel/contracts and later repository rewrite/integration; authentication/profile; Nearby repository/ViewModel integration; `SpeechViewModel`, speech states/tests and error-handling extension on top of Miguel's speech repository | Kotlin layered architecture using repository contracts, ViewModels and dependency injection | Repository Pattern | Direct commits: Kotlin `9ef345f`, `d6c091e`, `8fc6180`, `95d2ba3`, `c8ba47c`; Backend `02d8006`, `db1312b` |
+| Miguel Angel Velandia | BQ4 – Purchases by category per month; BQ6 – Buyer demographic profile per category | Wishlists, Wishlist Detail, New Product (voice input), Product Detail; Admin Purchases and Demographics | Firebase integration of the Kotlin app (authentication, profiles, wishlists, products, one-way purchase); data models and data that BQ1, BQ2 and BQ5 count; device location for Nearby Stores; first recommendation callable repository; voice input (speech repository and New Product UI); BQ4 and BQ6 analytics | Kotlin feature-first layered architecture and composition root (`AppDependencies`, `WhyNotViewModelFactory`) | Observer Pattern | Kotlin `7ec6870`, `75a64ee`, `4c80578`, `33c05e5`, `6eb38ce`, `7fe1f7a`, `6557ebc`, `9e0521e` |
 
 ---
 
@@ -455,7 +453,7 @@ The entries below are direct commits authored and committed by `jfsaenz`. Merge 
 - **`d6c091e` – `feat: add nearby recommendations and admin analytics`**: BQ1/BQ3 admin foundation, Nearby repository/ViewModel/domain integration, Recommendation repository contracts/ViewModel/domain integration, DI/ViewModel wiring and admin screens.
 - **`8fc6180` – `test: add coverage and improve admin navigation`**: tests and fakes for Admin Analytics, Nearby Stores and Recommendations, plus admin navigation improvements.
 - **`95d2ba3` – `feat: add admin access flow`**: Kotlin administrator-access flow through authentication, navigation and Profile.
-- **`c8ba47c` – `Conecta perfil, cambio de contraseña, estados de voz y saludo del usuario`**: real profile/password integration, `FirebaseRecommendationRepository`, speech-recognition repository/ViewModel/error handling and related tests.
+- **`c8ba47c` – `Conecta perfil, cambio de contraseña, estados de voz y saludo del usuario`**: real profile/password integration, rewrite of `FirebaseRecommendationRepository` (originally created by Miguel in `7fe1f7a`), `SpeechViewModel` with error states, error handling around `startListening` in the speech repository, and related tests. The speech repository contracts/Android implementation originated in Miguel's `6557ebc`.
 - **Backend `02d8006` – `feat: track saved recommended products for BQ3`**: BQ3 backend tracking, data-contract updates and Smart Feature test-script extension.
 - **Backend `db1312b` – `error`**: additional BQ3 backend adjustments and `test-production-bq3/index.mjs` production validation script.
 
@@ -482,7 +480,6 @@ The entries below are direct commits authored by Miguel Angel Velandia. Merge co
 - **`7fe1f7a` – `Add location and recommendation repositories and the purchases and demographics admin screens (BQ4 and BQ6)`**: `AndroidLocationRepository`, first `FirebaseRecommendationRepository`, `AdminInsightsViewModel`, BQ4 and BQ6 views, dependency wiring.
 - **`6557ebc` – `Add speech recognition repository and show ties in the purchases metric`**: speech repository contract, `AndroidSpeechRecognitionRepository`, `RECORD_AUDIO` permission, and tie handling in BQ4.
 - **`9e0521e` – `Add voice input for product name and brand`**: voice input in New Product, connecting the speech ViewModel and the microphone button.
-- **Docs `0b8a611` and `f2e93c3`**: Kotlin frontend documentation in `whynot-docs`.
 
 Direct commit links:
 
@@ -494,8 +491,6 @@ Direct commit links:
 - https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/7fe1f7a39c81fab1d1d412009cdc881e38cb2294
 - https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/6557ebc9ef9b281f8cb85d0b71807fe1a2a78f32
 - https://github.com/Moviles-G13-S1/whynot-front-kotlin/commit/9e0521ecfb8a39a516f14cd2ef7fedfdd82ad236
-- https://github.com/Moviles-G13-S1/whynot-docs/commit/0b8a61118391e430e4ce23c4de3fff3c1449dfc3
-- https://github.com/Moviles-G13-S1/whynot-docs/commit/f2e93c3cb8fd34179431c6ec62b92b7d2f14bf07
 
 ### 9.5 Flutter Team – Direct Authored Commit Evidence
 
@@ -510,7 +505,6 @@ are not used as proof of implementation authorship.
 - **`6b8e178` – `firebase integration`**: connected the Flutter UI to the shared Firebase project and production configuration.
 - **`cc8d213` – `done front features`**: layered Location, Nearby Store and Smart Recommendation repositories, controllers, models and Home sections, plus test fakes.
 - **`de9971c` – `add voice input for product fields`**: complete Speech feature, `speech_to_text`, iOS permissions and product name/brand integration.
-- **Docs `99d9b34`**: updated the Flutter architecture and feature documentation, including sensor rationale and validation status.
 
 **Santiago Casasbuenas**
 
@@ -686,6 +680,5 @@ Juan Felipe directly extended `scripts/test-smart-features/index.mjs` while impl
 - Kotlin frontend: https://github.com/Moviles-G13-S1/whynot-front-kotlin
 - Flutter frontend: https://github.com/Moviles-G13-S1/whynot-front-flutter
 - Backend: https://github.com/Moviles-G13-S1/whynot-back
-- Architecture documentation: https://github.com/Moviles-G13-S1/whynot-docs
 - Figma prototype: https://www.figma.com/design/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS
 - Ethics video: *TBD*
