@@ -642,39 +642,10 @@ Juan Felipe directly extended `scripts/test-smart-features/index.mjs` while impl
   but formal GitHub reviews, a Sprint 2 milestone and a verifiable Project
   board link are not present in the inspected repository metadata.
 
----
-
-# 11. Final Submission Checklist
-
-- [x] All 6 BQs are listed with type, rationale and responsible member.
-- [x] BQ changes from Sprint 1 are explained where necessary.
-- [x] Analytics Pipeline diagrams are included for the shared system, Kotlin BQ4/BQ6 and Flutter.
-- [x] Analytics Pipeline rationale is complete.
-- [x] Overall architecture diagram is included.
-- [x] Component interaction is explained.
-- [x] Design patterns and architectural tactics are listed.
-- [x] Every pattern/tactic has a responsible member.
-- [x] Every architecture diagram has a rationale.
-- [x] Implemented features are listed for both platforms, including the current Flutter recommendation-save limitation.
-- [x] Every functionality has responsible member(s).
-- [x] Every member has at least one view to present.
-- [x] Every member has a BQ to explain.
-- [x] Every member has an architectural contribution and design pattern to explain.
-- [ ] Sensor functionality is demonstrated.
-- [ ] Type 2 BQ functionality is demonstrated.
-- [ ] Context-Aware feature is demonstrated.
-- [ ] Smart feature is demonstrated.
-- [ ] Authentication is demonstrated.
-- [ ] A non-authentication feature connected to the backend is demonstrated.
-- [ ] Ethics video link is included.
-- [ ] Issues and PR evidence are included; the Sprint 2 milestone and Project/Kanban link are still missing.
-- [ ] PR reviews/approvals are visible as collaboration evidence.
-- [ ] Flutter analysis/tests are recorded; final Kotlin/backend runs and device/build captures are still pending.
-- [ ] All remaining `TBD` fields have been reviewed before submission.
 
 ---
 
-# 12. References
+# 11. References
 
 - WhyNot Wiki: https://github.com/Moviles-G13-S1/wiki
 - Kotlin frontend: https://github.com/Moviles-G13-S1/whynot-front-kotlin
