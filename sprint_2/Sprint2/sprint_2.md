@@ -394,11 +394,8 @@ This table should be completed before the oral exam so that every team member ca
 
 # 8. Ethics Video
 
-**Required duration:** approximately 6 minutes.  
-**Video link:** *TBD*  
-**Slides / supporting material:** *TBD*  
+**Video link:**  [View Ethics Video](https://drive.google.com/drive/folders/1XO1X8qy_tpqSTpmzRJ_AC9DCxUyb8K5v?usp=sharing)   
 
-The video should discuss ethical considerations associated with the functionality implemented during this sprint, especially topics related to user data, demographic recommendations, location, authentication, administrator access and analytics.
 
 ---
 
@@ -652,4 +649,4 @@ Juan Felipe directly extended `scripts/test-smart-features/index.mjs` while impl
 - Flutter frontend: https://github.com/Moviles-G13-S1/whynot-front-flutter
 - Backend: https://github.com/Moviles-G13-S1/whynot-back
 - Figma prototype: https://www.figma.com/design/GKjDHU7klmjGONACLHfg0O/WhyNot-IOS
-- Ethics video: *TBD*
+- Ethics video:  [View Ethics Video](https://drive.google.com/drive/folders/1XO1X8qy_tpqSTpmzRJ_AC9DCxUyb8K5v?usp=sharing)   
