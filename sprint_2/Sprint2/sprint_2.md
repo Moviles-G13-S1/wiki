@@ -408,8 +408,7 @@ The project uses GitHub repositories and collaboration mechanisms to coordinate 
 ## 9.1 Required evidence
 
 - **Issues used to assign and track Flutter work:** [#60 – create features base for Flutter](https://github.com/Moviles-G13-S1/wiki/issues/60), [#61 – create features logic on back](https://github.com/Moviles-G13-S1/wiki/issues/61), [#62 – refactor Flutter to the layered/MVC-inspired structure](https://github.com/Moviles-G13-S1/wiki/issues/62), [#63 – support Firebase production and emulators](https://github.com/Moviles-G13-S1/wiki/issues/63), [#65](https://github.com/Moviles-G13-S1/wiki/issues/65) and [#66](https://github.com/Moviles-G13-S1/wiki/issues/66) – connect/refactor administrator data, and [#71 – Create Profile fixes](https://github.com/Moviles-G13-S1/wiki/issues/71).
-- **GitHub Project / Kanban board:** no verifiable Sprint 2 Project link is currently recorded in the repositories or this page. Add the existing team board URL before submission if one was used.
-- **Sprint 2 milestone:** no Sprint 2 GitHub milestone currently exists. The only repository milestone found is Sprint 1; this remains a collaboration-evidence gap.
+- **GitHub Project / Kanban board:** [GitHub Project Sprint 2](https://github.com/orgs/Moviles-G13-S1/projects/8)
 - **Pull Requests:** representative Kotlin, Flutter and backend PRs are listed in Section 9.2, with direct commit evidence in Sections 9.3–9.5.
 - **Pull Request reviews / approvals:** the merged implementation PRs inspected for this report contain no formal GitHub review records. Merge commits prove integration but must not be presented as review approvals.
 - **Descriptive commits:** examples include Flutter `83b7bd8` (`Refactor wishlist feature and improve code structure`), `df09c88` (`refactor: connect recommended products admin metric`) and backend `9972673` (`refactor: split Firebase function modules`). Some older commits have generic messages; direct file/commit evidence is included below to compensate.
@@ -637,9 +636,7 @@ Juan Felipe directly extended `scripts/test-smart-features/index.mjs` while impl
 - **Device evidence:** Flutter voice input passes static analysis and the full
   automated suite, but iOS microphone permission and recognition still require
   a physical-device capture. Nearby Stores also needs a device/location demo.
-- **Collaboration evidence:** implementation PRs exist for all contributors,
-  but formal GitHub reviews, a Sprint 2 milestone and a verifiable Project
-  board link are not present in the inspected repository metadata.
+
 
 
 ---
