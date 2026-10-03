@@ -334,6 +334,8 @@ is inserted into the selected field; WhyNot does not persist microphone audio.
 
 The Sprint 2 implementation includes the following functionality across the two mobile platforms.
 
+**Flutter implementation status:** The current Flutter/iOS implementation includes the Context-Aware Nearby Stores feature, the demographic Smart Recommendation feature, and microphone-based voice input. Nearby Stores and Smart Recommendation are connected to the shared Firebase backend through the callable Cloud Functions `get_nearest_store` and `get_recommendation`, while voice input uses `speech_to_text`. Product purchases follow a one-way transition from saved to purchased and store `purchasedAt`; the application does not provide an "unmark as purchased" operation. The only recommendation-specific difference between the two clients is that Flutter currently displays recommendations and the BQ3 administrator aggregate but does not invoke `save_recommended_product`; the complete recommendation-save/BQ3 write flow is currently demonstrated by the Kotlin client.
+
 | Functionality | Kotlin / Android | Flutter / iOS | Backend / service involved | Responsible member(s) |
 |---|---|---|---|---|
 | User authentication | Implemented | Implemented | Firebase Authentication | Kotlin: Juan Felipe Saenz (authentication/profile UI and admin-access integration) and Miguel Angel Velandia (Firebase Authentication integration and sign-up with `cityId`). Flutter: Jeronimo Franco (initial Login and Create Account views), Juliana Duran (Firebase integration), and Santiago Casasbuenas (`AuthController`, repository boundary and admin route guard), commits `50c7be4`, `4276d98`, `6b8e178`, `1ca1414` and `83b7bd8`. |
