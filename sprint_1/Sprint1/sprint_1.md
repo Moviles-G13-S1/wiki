@@ -22,7 +22,7 @@ Converged on WhyNot as the selected solution. Includes the brainstorming/decisio
 [Deliverable checklist](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS3/MS3_Deliverable_Checklist.md)
 
 ### [MS4 — Integrating Analytics](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/MS4.md)
-Added the analytics layer to the design: the problem/solution statement, an analytics persona (Camila, Growth & Product Analyst), 12+ PAS hypotheses, a Context Canvas, an initial set of 10 business questions, and a first VD Map.
+Added the analytics layer to the design: the problem/solution statement, an analytics persona (Camila, Growth & Product Analyst), 12+ PAS hypotheses, a Context Canvas, a set of 6 business questions, and a first VD Map.
 [Camila — analytics persona](https://raw.githack.com/Moviles-G13-S1/wiki/main/sprint_1/MS4/analytics_persona.html)
 [Deliverable checklist](https://github.com/Moviles-G13-S1/wiki/blob/main/sprint_1/MS4/MS4_Deliverable_Checklist.md)
 
@@ -144,22 +144,14 @@ Andrea is a 29-year-old administrator and frequent online shopper who enjoys fin
 
 ## 7. Business Questions
 
-| # | Type | Question | Why is it important?| Data source needed |
-|---|------|----------|------------------------|----------------------|
-| 1 | Type 1 | How many errors does the app produce weekly?  | Measures application stability, reveals trends, and helps prioritize fixes. | Error-monitoring logs grouped by week, error type, app version, device, and environment. |
-| 2 | Type 1 | What is the average loading time of the home screen? | Measures how optimized is the app | Timestamps and time record logs from the apps homescreen |
-| 3 | Type 2 | How much money have users saved on the products they marked as purchased in the app? | Quantifies the app’s financial value to users and supports retention and marketing decisions.  | Purchase price, reference price, discounts, completed purchases, currency, and user ID. |
-| 4 | Type 2 | Which type of notification is most clicked? | Identifies the messages that generate the most engagement and informs the notification strategy |Notification type, delivery status, impressions, clicks, user ID, and timestamp. |
-| 5 | Type 2 | How many clicks does it take a user to save a product?  | Detects friction in a core user journey and highlights opportunities to simplify it. | Clickstream or funnel events from scan/search to successful save, including abandoned attempts. |
-| 6 | Type 2 |How many products has a user saved? | Measures adoption and engagement with a core feature and supports user segmentation. |  Product-save events, current saved-product records, user ID, product ID, and timestamp. |
-| 7 | Type 3 | How often do users manually add a product? | Reveals gaps in automatic recognition, catalog coverage, and store support. | Unrecognized domains, failed attempts to save, manually registered stores, # of users per store.    |
-| 8 | Type 3 | Which features are less used? | Helps identify low-value, hard-to-find, or poorly designed features and guides product investment. | Feature usage events, feature exposure, sessions, unique users, completion rates, and timestamps. |
-| 9 | Type 3 | Which types of automatically extracted data from the products are corrected more frequently?  | Identifies unreliable extraction fields and helps prioritize model or rule improvements. | Original result from the extraction, missing fields, manual changes before and after saving, origin store, extraction mistakes |
-| 10 | Type 3 | Which method do users prefer for saving a product? (Automatically or manually)  | This allows us to realize if it is worth maintaining both features or if its unnecessary  | User logs for each time the a product is saved manually vs automatically |
-| 11 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows demand by category and informs partnerships, promotions, and catalog priorities. |  Marked purchases with category, product, user, price, store, and purchase date. |
-| 12 | Type 4 | What is the demographic profile of the average buyer per category? | This allows us to realize which type of users buy a specific type of product | Marked purchases with category, product, user, price, store, and purchase date. |
-| 13 | Type * |What are the buying patterns of users based on products they have marked as purchased? | Supports personalization, recommendations, forecasting, and retention initiatives. |  Purchase history by user, product, category, store, price, quantity, timestamp, and repeat-purchase interval  |
-| 14 | Type * | Is there a relationship between the number of errors a user experiences and the number of products they save?  | Allows us to recognize the impact of the errors the app is having  | Error logs and Saved products per user |
+| # | Type | Question | Why is it important? | Data source needed |
+|---|------|----------|----------------------|--------------------|
+| 1 | Type 2 | How many products has a user saved? | Measures adoption and engagement with one of WhyNot's core features and supports user segmentation based on saving activity. | Current `products` records grouped by `ownerId`, including user ID, product ID, wishlist/category information, and timestamps. |
+| 2 | Type 2 | How many users save another product after their first one? | Measures repeated engagement by identifying whether users continue using the core saving functionality after their first saved product. | `products` grouped by `ownerId`, allowing the system to distinguish users with exactly one saved product from users with two or more. |
+| 3 | Type 3 | How many recommended products have been saved? | Measures whether the Smart Recommendation feature generates meaningful user actions instead of only displaying recommendations. | Recommendation events, the product shown by the recommendation feature, recommendation-save events, and the backend-maintained recommended-product-save metric. |
+| 4 | Type 4 | Which category has the highest number of products marked as purchased per month? | Shows purchasing activity by category over time and helps identify which categories generate the highest number of marked purchases. | Purchased `products` with `categoryId`, `purchased`, `purchasedAt`, product ID, and user ID. |
+| 5 | Type 2 | How many users have 0 products saved? | Identifies registered users who have not yet adopted the application's main product-saving functionality and provides an activation/adoption indicator. | `users` compared against product owners in `products`, using user IDs and product ownership information. |
+| 6 | Type 4 | What is the demographic profile of the average buyer per category? | Helps characterize buyers by product category and understand how purchasing activity differs across demographic groups. | Purchased products joined with user-profile data such as age, gender, city, and preferred category, together with product `categoryId`. |
 
 ---
 
@@ -338,4 +330,3 @@ Each scenario follows: **Scenario name → Quality attribute(s) → App status a
 [View Ethics Video](https://drive.google.com/drive/folders/16jfNPEkWT6f_5JAgk_XzCJBKC5Dq-J3Y?usp=sharing)
 
 ---
-
