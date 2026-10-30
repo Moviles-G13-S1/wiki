@@ -1,6 +1,7 @@
 # Sprint 3 – App Implementation and Definition
 ISIS-3510 Construcción de Aplicaciones Móviles · Team 13 – WhyNot
 Corrections to the Sprint 2 deliverable are documented in [Sprint 2 – Corrections](../sprint_2/Sprint2/correcciones_sprint_2.md). The original Sprint 2 page is unchanged.
+
 Teams: Android (Kotlin) is Juan Felipe Sáenz, Miguel Velandia and Martín Riveira. iOS (Flutter) is Juliana Durán, Santiago Casasbuenas and Jerónimo Franco.
 ---
 ## 1. Sprint 2 features and changes
@@ -24,6 +25,7 @@ All Sprint 2 features are part of this delivery. The changes made since the Spri
 | B | Connection lost during product creation | The typed values are kept as a local draft. The draft is not shown as a saved product. The user can retry when the connection returns. |
 | C | Smart or context-aware service unavailable | A specific error is shown, a previously cached result is shown when there is one, and a retry action is offered. |
 | D | Connection restored | Stale information is refreshed, the pending operations that are explicitly supported are processed, and the confirmed result is shown. |
+
 ```mermaid
 flowchart TD
     
@@ -49,8 +51,10 @@ MSG --> REC
     
 REC --> REF[Refresh stale data and ask the user to retry the blocked action]
 ```
+
 Rationale. Firestore offers offline persistence, but it only covers reads and queued writes of documents. It does not keep a form draft, does not protect the Cloud Function calls (recommendations, nearby stores) and does not tell the user what is happening. For that reason each functionality defines its own behavior and message instead of relying only on the built-in persistence. Local drafts are never described as synchronized Firestore products.
 ### 2.2 Strategy per functionality
+
 Android (Kotlin)
 | Functionality | Owner | Offline behavior |
 |---|---|---|
@@ -60,6 +64,7 @@ Android (Kotlin)
 | Create product, product detail and purchases | Miguel | The New Product form is kept as a draft. Wishlists, products and purchases are available offline, and the pending states are shown. |
 | Home | Martín | TODO(Martín): offline states of Home and navigation. |
 | Nearby stores | Martín | TODO(Martín): Nearby Store errors and retry. |
+
 iOS (Flutter)
 | Functionality | Owner | Offline behavior |
 |---|---|---|
@@ -69,6 +74,7 @@ iOS (Flutter)
 | Login and registration | Jerónimo | Authentication error states for the cases without internet. |
 | Home | Jerónimo | Home shows what is available and the state of each section. |
 | Profile | Jerónimo | Profile recovery after a failed load or update. |
+
 Note. On iOS the wishlist and product detail screens rely on Firestore persistence and do not have their own offline message.
 ### 2.3 Evidence
 
@@ -125,24 +131,14 @@ Why. A product form is long, and losing it because of a lost connection or a res
 Android (Kotlin), Martín. The app already uses coroutines: `callbackFlow` and `StateFlow` for Firestore data, suspend functions in the repositories and an application scope with `SupervisorJob` in `AppDependencies`. TODO(Martín): the strategy planned for Home (`async` / `await` for independent operations and `Dispatchers.IO`) is not implemented yet.
 iOS (Flutter), Jerónimo. Home and Profile load their independent sections without waiting for each other: each section is a `LiveSection` that subscribes to its own data and keeps its own loading, success and error state with its own retry. The profile photo is resolved without blocking the first profile result. The interface stays responsive while each section loads.
 Why. A slow request in one section should not delay the rest of the screen.
+
 ### 3.6 Caching
-Android (Kotlin), Juan Felipe.
-- 
-`RecommendationCache` is an Android `LruCache` per authenticated user (uid): at most 5 entries and a time to live of 30 minutes. It counts hits, misses, expirations and evictions, and writes them to Logcat with the tag `WhyNotCache`.
-- 
-`RecommendationController` reads the cache first. Without internet, or if the backend fails, it shows the last recommendation marked as stale with a Retry action, and it refreshes when the connection returns.
-- 
-The cache is invalidated when a recommendation is saved and when the profile is edited, and it is cleared on sign out.
-- 
+Android (Kotlin), Juan Felipe. `RecommendationCache` is an Android `LruCache` per authenticated user (uid): at most 5 entries and a time to live of 30 minutes. It counts hits, misses, expirations and evictions, and writes them to Logcat with the tag `WhyNotCache`. `RecommendationController` reads the cache first. Without internet, or if the backend fails, it shows the last recommendation marked as stale with a Retry action, and it refreshes when the connection returns. The cache is invalidated when a recommendation is saved and when the profile is edited, and it is cleared on sign out.
 Coil 3.2.0 loads images with a global memory cache (25% of the available memory) and a disk cache (50 MB). A custom User-Agent was needed because some image hosts blocked the default one.
-iOS (Flutter), Santiago.
-- 
-A per-user LRU cache of recommendation results with a maximum capacity and an expiration time, plus a cache of the catalog snapshot and of the five recently opened products.
-- 
-Entries are invalidated when the saved categories change.
-- 
-`cached_network_image` caches product images, and the profile photo has its own cache.
+
+iOS (Flutter), Santiago.A per-user LRU cache of recommendation results with a maximum capacity and an expiration time, plus a cache of the catalog snapshot and of the five recently opened products. Entries are invalidated when the saved categories change. `cached_network_image` caches product images, and the profile photo has its own cache.
 Why. The recommendation is a Cloud Function call with a visible delay, and the same user often opens Home several times in a session. The cache avoids repeating the call and gives something to show when there is no internet.
+
 ---
 ## 4. Application sharing
 | Task | Responsible |
