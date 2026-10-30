@@ -168,3 +168,11 @@ iOS (Flutter)
 | Juliana | Local storage | Santiago's caching and Jerónimo's concurrency |
 | Santiago | Caching | Juliana's local storage and Jerónimo's concurrency |
 | Jerónimo | Concurrency | Juliana's local storage and Santiago's caching |
+
+---
+
+## 6. Collaboration and repository evidence
+
+- **GitHub Project / Kanban board:** [Sprint 3](https://github.com/orgs/Moviles-G13-S1/projects/12), with the columns Todo, In Progress and Done. Closed issues move to Done automatically.
+- **Milestones:** `Sprint 3` in [Kotlin](https://github.com/Moviles-G13-S1/whynot-front-kotlin/milestone/1), [Flutter](https://github.com/Moviles-G13-S1/whynot-front-flutter/milestone/1) and the [wiki](https://github.com/Moviles-G13-S1/wiki/milestone/2).
+- **Issues:** one issue per member for each strategy, business question and pending task, assigned to its owner and linked to the pull request or commit that implements it.
