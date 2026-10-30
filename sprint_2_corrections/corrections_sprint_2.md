@@ -90,25 +90,15 @@ EV --> CALC
     
 CALC -->|processed JSON| ADMIN
 ```
-Rationale.
-- 
-One calculation per BQ. In the original Sprint 2 page each app computed
-  
-the BQs itself, so the same question could get different answers on Kotlin
-  
-and Flutter. Now each BQ is one tested Python module behind
-  
-`get_admin_analytics`, and both apps only write raw facts.
-- 
-Security at the backend. The callable rejects any caller whose ID token
-  
-does not carry `admin: true`, so mobile clients never need permission to list
-  
-every user or product.
-- 
-Lighter apps. The mobile apps no longer download whole collections to
-  
-compute metrics.
+
+Rationale:
+
+One calculation per BQ. In the original Sprint 2 page each app computed the BQs itself, so the same question could get different answers on Kotlin and Flutter. Now each BQ is one tested Python module behind `get_admin_analytics`, and both apps only write raw facts.
+
+Security at the backend. The callable rejects any caller whose ID token does not carry `admin: true`, so mobile clients never need permission to list every user or product. 
+
+Lighter apps. The mobile apps no longer download whole collections to compute metrics.
+
 Android (Kotlin)
 | Member | Pipeline contribution |
 |---|---|
@@ -170,9 +160,11 @@ D["app/AppDependencies + DependenciesScope"] -.builds.-> C
     
 D -.builds.-> I
 ```
+
 Rationale. The same boundaries as Kotlin: widgets render and emit intents,
 controllers own state and rules, infrastructure owns the SDKs. Reorganized
 into MVC by Santiago Casasbuenas (`21b2b28`).
+
 ---
 
 ## 5. Design Patterns (one per member)
