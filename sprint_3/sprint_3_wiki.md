@@ -176,3 +176,7 @@ iOS (Flutter)
 - **GitHub Project / Kanban board:** [Sprint 3](https://github.com/orgs/Moviles-G13-S1/projects/12), with the columns Todo, In Progress and Done. Closed issues move to Done automatically.
 - **Milestones:** `Sprint 3` in [Kotlin](https://github.com/Moviles-G13-S1/whynot-front-kotlin/milestone/1), [Flutter](https://github.com/Moviles-G13-S1/whynot-front-flutter/milestone/1) and the [wiki](https://github.com/Moviles-G13-S1/wiki/milestone/2).
 - **Issues:** one issue per member for each strategy, business question and pending task, assigned to its owner and linked to the pull request or commit that implements it.
+
+## 7. Ethics Video
+https://drive.google.com/file/d/1zeBaLRjMYudhvaYfgp-n9A8KCU74r1NW/view?usp=drive_link
+
