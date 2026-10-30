@@ -2,7 +2,7 @@
 Course: ISIS-3510 – Construcción de Aplicaciones Móviles
 Team: 13 – WhyNot
 This page records the corrections to the Sprint 2 deliverable. The original
-[Sprint 2 page](.sprint_2/Sprint2/sprint_2.md) is left unchanged, as required by the course
+[Sprint 2 page](./sprint_2/Sprint2/sprint_2.md) is left unchanged, as required by the course
 submission policy; every correction is documented here and referenced from the
 Sprint 3 page.
 ---
