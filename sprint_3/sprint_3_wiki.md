@@ -81,8 +81,8 @@ Android (Kotlin)
 | Profile | Juan Felipe | The profile is served from the Firestore cache with an offline notice. Saving the profile is blocked while offline and the typed values are kept. |
 | Smart recommendations | Juan Felipe | The last cached recommendation is shown as stale with a Retry action. It refreshes only when the connection returns. |
 | Create product, product detail and purchases | Miguel | The New Product form is kept as a draft. Wishlists, products and purchases are available offline, and the pending states are shown. |
-| Home | Martín | TODO(Martín): offline states of Home and navigation. |
-| Nearby stores | Martín | TODO(Martín): Nearby Store errors and retry. |
+| Home | Martín | Home shows a specific offline message and keeps navigation to available wishlists and other screens. When no wishlists are available offline, the empty state says so. Nearby and personalized recommendations load independently. Saving a recommendation from Home is blocked without internet before creating a wishlist. |
+| Nearby stores | Martín | No location/backend lookup starts while offline. The last available store is retained with an outdated notice and a Retry action. Without an available store, a specific offline message is shown. Home refreshes the smart sections when connectivity returns; Nearby still requires location permission. |
 
 iOS (Flutter)
 | Functionality | Owner | Offline behavior |
@@ -142,7 +142,7 @@ These questions are different from the Sprint 2 ones. Each one is calculated in 
 | Jerónimo | iOS | How many errors does the app produce weekly? | Type 1 | Weekly error counts show the technical health of the app. Backend metric `weekly_app_errors` and Admin Web view are done. The error events written by the app are in PR #33, still open. |
 | Santiago | iOS | What percentage of the recommendations shown on Home are opened in the detail view? | Type 3 | It tells whether the recommendation detail view is useful and easy to find. Backend metric `recommendation_home_opens`. |
 | Miguel | Android | How much money have users saved on the products they marked as purchased? | Type 2 | Users see the benefit of the app. The price paid is asked when marking a purchase. Backend metric `purchase_savings`. Details in [Miguel's BQ page](Miguel_money_saved_BQ.md). |
-| Martín | Android | How often do users add a product manually? | Type 3 | It shows how much manual entry is used compared with saving a recommendation. TODO(Martín): backend metric and Admin Web view. |
+| Martín | Android | How often do users add a product manually? | Type 3 | The backend metric `manual_product_usage` reports manual entry as a percentage of classified current saved products, compared with saved recommendations. Admin Web shows the percentage, both counts and unclassified records. It uses the shared existing classification rules and excludes deleted products. It measures the composition of current saved products, not historical action frequency. |
 | Juan Felipe | Android | What are the buying patterns of users based on the products they marked as purchased? | Type * (2 and 4) | Time to purchase and purchase hours help reminders (Type 2). Conversion, price and brands per category help stores and brands (Type 4). Backend metric `buying_patterns`. |
 ### 3.3 Technical strategy per member
 | Member | Platform | Primary strategy | Main functionality |
@@ -162,7 +162,7 @@ iOS (Flutter), Juliana. SQLite (`sqflite`) keeps the product draft: name, brand,
 Jerónimo's error events (BQ7) that cannot be sent are kept in a SQLite queue on iOS and sent later (PR #33, still open).
 Why. A product form is long, and losing it because of a lost connection or a restart is the main frustration of the create-product flow. A small local store solves it without changing the Firestore data.
 ### 3.5 Multithreading
-Android (Kotlin), Martín. The app already uses coroutines: `callbackFlow` and `StateFlow` for Firestore data, suspend functions in the repositories and an application scope with `SupervisorJob` in `AppDependencies`. TODO(Martín): the strategy planned for Home (`async` / `await` for independent operations and `Dispatchers.IO`) is not implemented yet.
+Android (Kotlin), Martín. In `view/screens/home/HomeRoute.kt`, `loadHome` starts the Nearby and recommendation operations as nested `async` coroutines inside `supervisorScope` and awaits their completion. Each operation calls its controller with `withContext(Dispatchers.IO)` and returns to the Main context provided by Compose to update its own loading, result and error state. The sections can display their results independently. Errors are handled within each operation and cancellation is rethrown. `HomeSmartSections.kt` runs this work in a `LaunchedEffect` keyed by location permission and connectivity; changing those keys or leaving the screen cancels the previous effect. On reconnection it requests a fresh recommendation and retries Nearby when location is allowed. Existing Firestore flows and the other members' repositories and cache remain in place.
 iOS (Flutter), Jerónimo. Home and Profile load their independent sections without waiting for each other: each section is a `LiveSection` that subscribes to its own data and keeps its own loading, success and error state with its own retry. The profile photo is resolved without blocking the first profile result. The interface stays responsive while each section loads.
 Why. A slow request in one section should not delay the rest of the screen.
 
