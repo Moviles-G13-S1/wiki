@@ -1,8 +1,9 @@
 # Sprint 3 – App Implementation and Definition
 ISIS-3510 Construcción de Aplicaciones Móviles · Team 13 – WhyNot
-Corrections to the Sprint 2 deliverable are documented in [Sprint 2 – Corrections](../sprint_2/Sprint2/correcciones_sprint_2.md). The original Sprint 2 page is unchanged.
+Corrections to the Sprint 2 deliverable are documented in [Sprint 2 – Corrections](../sprint_2_corrections/corrections_sprint_2.md). The original Sprint 2 page is unchanged.
 
 Teams: Android (Kotlin) is Juan Felipe Sáenz, Miguel Velandia and Martín Riveira. iOS (Flutter) is Juliana Durán, Santiago Casasbuenas and Jerónimo Franco.
+
 ---
 ## 1. Sprint 2 features and changes
 All Sprint 2 features are part of this delivery. The changes made since the Sprint 2 page are listed in the corrections page linked above: MVC architecture, backend analytics behind `get_admin_analytics`, geolocation as the only sensor, admin screens removed from both apps, password rules, and the Flutter Save This Product flow.
@@ -121,7 +122,9 @@ These questions are different from the Sprint 2 ones. Each one is calculated in 
 | Miguel | Android | Local storage | Products and wishlists |
 | Juan Felipe | Android | Caching | Recommendations and images |
 | Martín | Android | Concurrency | Home and navigation |
+
 Eventual connectivity is shared by all members, according to the functionalities in section 2.2.
+
 ### 3.4 Local storage
 Android (Kotlin), Miguel. Jetpack DataStore keeps the New Product form as a draft, associated with the current user. The draft is restored after restarting the app and is cleared when the product is saved. It is separate from the confirmed Firestore writes. Firestore persistent cache (50 MB) is configured in `AppDependencies` so wishlists, products and purchases can be read without internet.
 iOS (Flutter), Juliana. SQLite (`sqflite`) keeps the product draft: name, brand, price, image URL and product URL, one draft per wishlist and per authenticated user (`SqliteProductDraftStore`). The draft is restored when the user returns and cleared after the product is created. A draft does not count as a saved product.
@@ -136,7 +139,7 @@ Why. A slow request in one section should not delay the rest of the screen.
 Android (Kotlin), Juan Felipe. `RecommendationCache` is an Android `LruCache` per authenticated user (uid): at most 5 entries and a time to live of 30 minutes. It counts hits, misses, expirations and evictions, and writes them to Logcat with the tag `WhyNotCache`. `RecommendationController` reads the cache first. Without internet, or if the backend fails, it shows the last recommendation marked as stale with a Retry action, and it refreshes when the connection returns. The cache is invalidated when a recommendation is saved and when the profile is edited, and it is cleared on sign out.
 Coil 3.2.0 loads images with a global memory cache (25% of the available memory) and a disk cache (50 MB). A custom User-Agent was needed because some image hosts blocked the default one.
 
-iOS (Flutter), Santiago.A per-user LRU cache of recommendation results with a maximum capacity and an expiration time, plus a cache of the catalog snapshot and of the five recently opened products. Entries are invalidated when the saved categories change. `cached_network_image` caches product images, and the profile photo has its own cache.
+iOS (Flutter), Santiago. A per-user LRU cache of recommendation results with a maximum capacity and an expiration time, plus a cache of the catalog snapshot and of the five recently opened products. Entries are invalidated when the saved categories change. `cached_network_image` caches product images, and the profile photo has its own cache.
 Why. The recommendation is a Cloud Function call with a visible delay, and the same user often opens Home several times in a session. The cache avoids repeating the call and gives something to show when there is no internet.
 
 ---
