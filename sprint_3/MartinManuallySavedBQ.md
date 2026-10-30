@@ -39,11 +39,3 @@ Backend: 6 tests in `tests/test_manual_product_usage.py`, covering empty data, m
 Admin Web: 2 tests in `test/manual-product-usage-view.test.js`, covering the displayed backend percentage and the empty state. The dashboard suite passed all 33 tests, and the production build succeeded during validation.
 
 The backend deployment and dashboard verification were completed.
-
-<!-- Upload your dashboard screenshot, then replace the path below with its actual path. -->
-
-<img src="evidence/manual_product_usage_admin_web.png" width="760" alt="Admin Web Manual product usage view">
-
-<!-- Replace the placeholders below with your actual PR numbers and URLs. -->
-
-Related work: backend [PR #NUMBER](BACKEND_PR_URL) and Admin Web [PR #NUMBER](DASHBOARD_PR_URL).
