@@ -155,12 +155,14 @@ Why. The recommendation is a Cloud Function call with a visible delay, and the s
 ---
 ## 5. Who explains what
 Every member explains the strategies of the other members of the same platform.
+
 Android (Kotlin)
 | Member | Own strategy | Also explains |
 |---|---|---|
 | Miguel | Local storage | Juan Felipe's caching and Martín's concurrency |
 | Juan Felipe | Caching | Miguel's local storage and Martín's concurrency |
 | Martín | Concurrency | Miguel's local storage and Juan Felipe's caching |
+
 iOS (Flutter)
 | Member | Own strategy | Also explains |
 |---|---|---|
