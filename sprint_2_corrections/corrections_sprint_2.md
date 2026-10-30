@@ -105,6 +105,7 @@ Android (Kotlin)
 | Juan Felipe Sáenz | Shared `get_admin_analytics` endpoint and admin authorization; BQ6 module |
 | Miguel Velandia | BQ4 module; `purchasedAt` written by the one-way purchase |
 | Martín Riveira | BQ5 module |
+
 iOS (Flutter)
 | Member | Pipeline contribution |
 |---|---|
@@ -159,22 +160,29 @@ Rationale. The same boundaries as Kotlin: widgets render and emit intents,
 controllers own state and rules, infrastructure owns the SDKs. Reorganized
 into MVC by Santiago Casasbuenas (`21b2b28`).
 ---
+
 ## 5. Design Patterns (one per member)
+
 Android (Kotlin)
 | Member | Pattern | Participating classes | How it is used |
 |---|---|---|---|
 | Juan Felipe Sáenz | Repository + Factory (AppDependencies) | `RecommendationRepository`, `NearbyStoreRepository` and their `Firebase*` implementations; `AppDependencies.firebase()` | Controllers depend on interfaces; `AppDependencies` builds the Firebase implementations and injects them; tests inject fakes. |
 | Miguel Velandia | Observer + Adapter | `FirebaseProductRepository.observeProducts()` (`callbackFlow`), `StateFlow` in controllers; `AndroidLocationRepository` | Firestore snapshots push changes to every screen; Play Services location is adapted to `LocationRepository`. |
 | Martín Riveira | Facade | `ProfileUpdateFacade`, used by `ProfileController` | One `save(...)` call checks the session, validates every field and writes the update. |
+
 iOS (Flutter)
 | Member | Pattern | Participating classes | How it is used |
 |---|---|---|---|
 | Santiago Casasbuenas | Dependency Injection | `AppDependencies`, `DependenciesScope` | Repositories passed to controllers through constructors. |
 | Juliana Durán | Observer | `new_product_manual_screen.dart`: `addListener(_refresh)` on the product form fields | Every change in a field notifies the screen, which re-validates the form and redraws. |
 | Jerónimo Franco | Repository | Contracts in `lib/models/repositories` and implementations in `lib/infrastructure/repositories` | Screens and controllers use the contracts; Firestore access stays in the implementations. |
+
 ---
+
 ## 6. Functionalities
+
 ### 6.1 Sensor: why the microphone was removed
+
 The Sprint 2 page presented microphone voice input (product name and brand) as
 the sensor feature. The team replaced it with geolocation as the single
 sensor for both apps:
@@ -202,14 +210,23 @@ Removal commits: Kotlin `7a71779` (Miguel Velandia), Flutter `f87c6fc`
 | Authentication | Firebase Auth with password rules and live requirements checklist | Firebase Auth with improved validation messages | Password requirements added |
 | External services | `get_recommendation`, `get_nearest_store`, `save_recommended_product` | Same callables | — |
 | Admin analytics | Removed from the app; Admin Web | Removed from the app; Admin Web | Moved to the Admin Web |
+
 ---
+
 ## 7. Contributions by Area
+
 Every table is split by platform: Android (Kotlin) and iOS (Flutter).
+
 ### 7.1 Business Question
+
 See section 2: one BQ per member, with its platform.
+
 ### 7.2 Pipeline
+
 See section 3: each member explains the pipeline of their own BQ.
+
 ### 7.3 Architectural Pattern
+
 Android (Kotlin)
 | Member | Contribution |
 |---|---|
@@ -223,53 +240,67 @@ iOS (Flutter)
 | Juliana Durán | Product, recommendation and nearby flows on the controller/repository boundaries |
 | Jerónimo Franco | Authentication, profile and analytics integration |
 ### 7.4 Design Pattern
+
 See section 5: one pattern per member, split by platform.
 ### 7.5 GUI (views)
+
 Android (Kotlin)
 | Member | Views implemented |
 |---|---|
 | Juan Felipe Sáenz | Register, Login, Profile, Edit Profile and Change Password |
 | Miguel Velandia | New Product |
 | Martín Riveira | Home (wishlist previews, empty states, navigation to product flows) |
+
 iOS (Flutter)
+
 | Member | Views implemented |
 |---|---|
 | Santiago Casasbuenas | Edit Profile |
 | Juliana Durán | New Product (manual): input validation, wishlist selection, product saving and error feedback |
 | Jerónimo Franco | Login, Create Account, Home and Profile |
+
 ### 7.6 Feature
+
 Android (Kotlin)
 | Feature | Member | Implementation |
 |---|---|---|
 | Create Wishlist | Juan Felipe Sáenz | `WishlistController.createWishlist`: one wishlist per category, category must exist, picture link must be a web address, first wishlist recorded for onboarding |
 | Create Product | Miguel Velandia | Product form available only when the user has a wishlist; validation of name, brand, price and wishlist |
 | Edit Profile | Martín Riveira | `ProfileUpdateFacade`: session and owner checks, gender and age validation |
+
 iOS (Flutter)
+
 | Feature | Member | Implementation |
 |---|---|---|
 | Create Wishlist | Jerónimo Franco | `NewWishlistScreen` → `WishlistController` → `FirebaseWishlistRepository` |
 | Create Product | Juliana Durán | Product creation requires an existing wishlist |
 | Edit Profile | Santiago Casasbuenas | `EditProfileScreen` → `ProfileController` → `FirebaseUserRepository` |
+
 ### 7.7 Sensors (geolocation)
+
 Android (Kotlin)
 | Member | Contribution |
 |---|---|
 | Juan Felipe Sáenz | `NearbyStoreController` turns the device location into the nearby-store request |
 | Miguel Velandia | `AndroidLocationRepository`: device coordinates and typed errors |
 | Martín Riveira | Location permission, blocked-permission and location-off states |
+
 iOS (Flutter)
 | Member | Contribution |
 |---|---|
 | Juliana Durán | `GeolocatorLocationRepository` |
 | Jerónimo Franco | iOS location permission description |
 | Santiago Casasbuenas | Location error handling and recovery |
+
 ### 7.8 BQ Type 2
+
 Android (Kotlin)
 | Member | Front-end UX contribution |
 |---|---|
 | Juan Felipe Sáenz | Sign-up and first-wishlist onboarding events (`onboardingEvents`) and the `onboarding` funnel metric |
 | Miguel Velandia | Product-save attempt events (`productSaveEvents`) and the `save_attempts` metric |
 | Martín Riveira | Home empty-state and add-product navigation events (`uxEvents`) and the `home_activation` metric |
+
 iOS (Flutter)
 | Member | Front-end UX contribution |
 |---|---|
@@ -277,57 +308,69 @@ iOS (Flutter)
 | Santiago Casasbuenas | Wishlist interaction events and the `wishlist_interactions` metric |
 | Jerónimo Franco | Product-saving activity behind BQ1 |
 ### 7.9 Context-Aware Feature (Nearby Stores)
+
 Android (Kotlin)
 | Member | Contribution |
 |---|---|
 | Juan Felipe Sáenz | `NearbyStoreController` and `FirebaseNearbyStoreRepository` calling `get_nearest_store` |
 | Miguel Velandia | Device location and dependency wiring |
 | Martín Riveira | Nearby Store detail view with its UI states |
+
 iOS (Flutter)
 | Member | Contribution |
 |---|---|
 | Juliana Durán | Nearby section, controller and repository |
 | Jerónimo Franco | `get_nearest_store` Cloud Function (shared by both apps) and the Nearby Store detail view |
 | Santiago Casasbuenas | Nearby error and retry behavior |
+
 ### 7.10 Smart Feature (Personalized Recommendations)
+
 Android (Kotlin)
 | Member | Contribution |
 |---|---|
 | Juan Felipe Sáenz | `RecommendationController` and repository; BQ3 save tracking in the backend; duplicate prevention through `recommendationEventId` |
 | Miguel Velandia | First recommendation callable repository |
 | Martín Riveira | Save This Product button and Recommendation detail view |
+
 iOS (Flutter)
 | Member | Contribution |
 |---|---|
 | Juliana Durán | Recommendation section, controller and repository |
 | Santiago Casasbuenas | Save This Product with `save_recommended_product` |
 | Jerónimo Franco | Recommendation detail view and its UI states |
+
 ### 7.11 Authentication
+
 Android (Kotlin)
 | Member | Contribution |
 |---|---|
 | Juan Felipe Sáenz | Login, Register, Profile, Edit Profile and Change Password views; password rules with a live checklist |
 | Miguel Velandia | `FirebaseAuthRepository` and profile creation in Firestore |
 | Martín Riveira | Authentication error handling and expired-session messages |
+
 iOS (Flutter)
 | Member | Contribution |
 |---|---|
 | Juliana Durán | Firebase Authentication integration |
 | Santiago Casasbuenas | `AuthController`, repository boundary and route guards |
 | Jerónimo Franco | Login and Create Account views; improved password messages |
+
 ### 7.12 External Services
+
 Android (Kotlin)
 | Member | Front → Back integration |
 |---|---|
 | Juan Felipe Sáenz | Repositories calling `get_recommendation`, `get_nearest_store` and `save_recommended_product`; `get_admin_analytics` |
 | Miguel Velandia | Firebase repositories for authentication, profiles, wishlists and products |
 | Martín Riveira | Save This Product through the existing callable |
+
 iOS (Flutter)
 | Member | Front → Back integration |
 |---|---|
 | Juliana Durán | Callables for recommendations and nearby stores |
 | Santiago Casasbuenas | Backend function modules and the BQ3 aggregate |
 | Jerónimo Franco | `get_nearest_store`, shared by both apps |
+
 ---
 ## 8. References
 - 
