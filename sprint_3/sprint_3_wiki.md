@@ -1,3 +1,6 @@
+
+
+
 # Sprint 3 – App Implementation and Definition
 ISIS-3510 Construcción de Aplicaciones Móviles · Team 13 – WhyNot
 Corrections to the Sprint 2 deliverable are documented in [Sprint 2 – Corrections](../sprint_2_corrections/corrections_sprint_2.md). The original Sprint 2 page is unchanged.
@@ -5,6 +8,21 @@ Corrections to the Sprint 2 deliverable are documented in [Sprint 2 – Correcti
 Teams: Android (Kotlin) is Juan Felipe Sáenz, Miguel Velandia and Martín Riveira. iOS (Flutter) is Juliana Durán, Santiago Casasbuenas and Jerónimo Franco.
 
 ---
+
+## GitHub Repositories
+
+All repositories belong to **Moviles-G13-S1** and share the same Firebase backend and database.
+
+| Repository | Description | Link |
+|---|---|---|
+| Flutter Frontend (iOS) | Mobile application developed in Flutter | [whynot-front-flutter](https://github.com/Moviles-G13-S1/whynot-front-flutter) |
+| Kotlin Frontend (Android) | Native Android mobile application | [whynot-front-kotlin](https://github.com/Moviles-G13-S1/whynot-front-kotlin) |
+| Backend | Firebase Cloud Functions, Firestore and business logic | [whynot-back](https://github.com/Moviles-G13-S1/whynot-back) |
+| Admin Dashboard | Web analytics dashboard for business questions | [whynot-analytics-dashboard](https://github.com/Moviles-G13-S1/whynot-analytics-dashboard) |
+| Wiki | Sprint documentation, technical strategies and evidence | [wiki](https://github.com/Moviles-G13-S1/wiki) |
+
+---
+
 ## 1. Sprint 2 features and changes
 All Sprint 2 features are part of this delivery. The changes made since the Sprint 2 page are listed in the corrections page linked above: MVC architecture, backend analytics behind `get_admin_analytics`, geolocation as the only sensor, admin screens removed from both apps, password rules, and the Flutter Save This Product flow.
 | Sprint 2 improvement | Android (Kotlin) | iOS (Flutter) |
