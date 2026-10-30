@@ -1,10 +1,12 @@
+# Martín's Sprint 3 Business Question
+
 **Question:** How often do users add a product manually?
 
 This is **Type 3**, related to feature usage: it shows how much manual entry is used compared with saving recommendations, helping the team decide which saving flow to improve. The metric measures the share of currently saved products, rather than historical action frequency.
 
 ## Data contract
 
-- The metric uses the existing shared Firestore collections, `products` and `productEvents`. It does not introduce a new collection or require users to enter analytics data.
+- The metric uses the existing shared Firestore collections, `products` and `productEvents`. It does not introduce a new collection.
 - Classification follows the existing rules in `functions/analytics/core_saving_features.py`, also used by the core saving features metric.
 - Products whose document IDs do not start with `rec_` are classified as manually added.
 - A recommended product must match a `recommendation_shown` event with a valid `savedAt`, `userId`, `sourceProductId` and `savedProductId`. The saved product ID must match `rec_<SHA256(userId:sourceProductId)>`, and the product's `ownerId` must match the event's user.
@@ -36,5 +38,12 @@ Backend: 6 tests in `tests/test_manual_product_usage.py`, covering empty data, m
 
 Admin Web: 2 tests in `test/manual-product-usage-view.test.js`, covering the displayed backend percentage and the empty state. The dashboard suite passed all 33 tests, and the production build succeeded during validation.
 
-The backend deployment and dashboard verification were completed. The screenshot below should show the signed-in **Manual product usage** view with the percentage and counts returned by the backend.
+The backend deployment and dashboard verification were completed.
 
+<!-- Upload your dashboard screenshot, then replace the path below with its actual path. -->
+
+<img src="evidence/manual_product_usage_admin_web.png" width="760" alt="Admin Web Manual product usage view">
+
+<!-- Replace the placeholders below with your actual PR numbers and URLs. -->
+
+Related work: backend [PR #NUMBER](BACKEND_PR_URL) and Admin Web [PR #NUMBER](DASHBOARD_PR_URL).
