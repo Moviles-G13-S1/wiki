@@ -1,11 +1,16 @@
 # Sprint 2 – Corrections
+
 Course: ISIS-3510 – Construcción de Aplicaciones Móviles
+
 Team: 13 – WhyNot
+
 This page records the corrections to the Sprint 2 deliverable. The original
 [Sprint 2 page](../sprint_2/Sprint2/sprint_2.md) is left unchanged, as required by the course
 submission policy; every correction is documented here and referenced from the
 Sprint 3 page.
+
 ---
+
 ## 1. Summary of Corrections
 | Area | Sprint 2 page said | Corrected | Reason |
 |---|---|---|---|
@@ -19,7 +24,9 @@ Sprint 3 page.
 | Admin screens | Inside both mobile apps | Removed from both apps (Kotlin PR #25) | Analytics are read from the Admin Web |
 | Save This Product (Flutter) | Not implemented | Implemented (`save_recommended_product`) | Both clients now complete the BQ3 flow |
 | Password requirements | Only a minimum length | Explicit rules and messages on sign-up and password change | Feedback on authentication UX |
+
 ---
+
 ## 2. Business Questions
 One owner per BQ. The owner implemented the backend calculation and can explain
 it; earlier client-side work by other members is kept as supporting history in
@@ -35,8 +42,11 @@ the original page.
 
 
 The six questions are the same ones defined in Sprint 1; only ownership and the Type 2 rationales were corrected.
+
 ---
+
 ## 3. Analytics Pipeline
+
 ```mermaid
 flowchart LR
     
@@ -112,7 +122,9 @@ iOS (Flutter)
 | Santiago Casasbuenas | BQ3 metric and Admin Web views |
 | Juliana Durán | BQ2 calculation and documentation |
 | Jerónimo Franco | BQ1 aggregation over real product data in Flutter, now served by the backend `saved` metric |
+
 ---
+
 ## 4. Architecture (MVC)
 ### 4.1 Kotlin / Android
 ```mermaid
@@ -134,6 +146,7 @@ APP["app/AppDependencies — composition root"] -.builds.-> C
     
 APP -.builds.-> R
 ```
+
 Rationale. Screens never touch Firebase: each Route reads the controllers
 from `LocalAppDependencies` and passes plain values to its Screen. Controllers
 hold validation and business rules and depend only on repository interfaces,
@@ -141,6 +154,7 @@ so unit tests run them on fakes. `AppDependencies` is the single place that
 chooses the implementations. The refactor from ViewModels to controllers was
 done by Juan Felipe Sáenz (`656c4ce`, `1fae710`).
 ### 4.2 Flutter / iOS
+
 ```mermaid
 flowchart TB
     
@@ -183,21 +197,12 @@ iOS (Flutter)
 
 ### 6.1 Sensor: why the microphone was removed
 
-The Sprint 2 page presented microphone voice input (product name and brand) as
-the sensor feature. The team replaced it with geolocation as the single
-sensor for both apps:
-- 
-Voice input added little value to the product: users usually type or paste a
-  
-short product name, and recognition errors still had to be fixed by hand.
-- 
-Geolocation was already required by the context-aware feature (Nearby
-  
-Stores), so one sensor now supports a real user goal on both platforms.
-- 
+The Sprint 2 page presented microphone voice input (product name and brand) as the sensor feature. The team replaced it with geolocation as the single sensor for both apps:
+Voice input added little value to the product: users usually type or paste a short product name, and recognition errors still had to be fixed by hand.
+Geolocation was already required by the context-aware feature (Nearby Stores), so one sensor now supports a real user goal on both platforms. 
 Removing the microphone also removed the `RECORD_AUDIO` permission and its
-  
 privacy cost.
+
 Removal commits: Kotlin `7a71779` (Miguel Velandia), Flutter `f87c6fc`
 (Juliana Durán).
 ### 6.2 Updated status
@@ -233,12 +238,14 @@ Android (Kotlin)
 | Juan Felipe Sáenz | Kotlin MVC refactor (packages `app/model/controller/view`, controllers replacing ViewModels) |
 | Miguel Velandia | Kotlin Firebase integration and the original layered structure and composition root |
 | Martín Riveira | Home and navigation presentation consuming controller state |
+
 iOS (Flutter)
 | Member | Contribution |
 |---|---|
 | Santiago Casasbuenas | Flutter MVC reorganization and dependency composition |
 | Juliana Durán | Product, recommendation and nearby flows on the controller/repository boundaries |
 | Jerónimo Franco | Authentication, profile and analytics integration |
+
 ### 7.4 Design Pattern
 
 See section 5: one pattern per member, split by platform.
@@ -372,15 +379,14 @@ iOS (Flutter)
 | Jerónimo Franco | `get_nearest_store`, shared by both apps |
 
 ---
-## 8. References
-- 
-[Original Sprint 2 page](./sprint_2.md)
-- 
-Kotlin: https://github.com/Moviles-G13-S1/whynot-front-kotlin
-- 
-Flutter: https://github.com/Moviles-G13-S1/whynot-front-flutter
-- 
-Backend: https://github.com/Moviles-G13-S1/whynot-back (analytics documented in `docs/admin-analytics.md`)
-- 
-Admin Web: https://github.com/Moviles-G13-S1/whynot-analytics-dashboard
 
+## 8. References
+[Original Sprint 2 page](../sprint_2/Sprint2/sprint_2.md)
+
+Kotlin: https://github.com/Moviles-G13-S1/whynot-front-kotlin
+
+Flutter: https://github.com/Moviles-G13-S1/whynot-front-flutter
+
+Backend: https://github.com/Moviles-G13-S1/whynot-back (analytics documented in `docs/admin-analytics.md`)
+
+Admin Web: https://github.com/Moviles-G13-S1/whynot-analytics-dashboard
