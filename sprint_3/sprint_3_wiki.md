@@ -88,8 +88,8 @@ iOS (Flutter)
 | Functionality | Owner | Offline behavior |
 |---|---|---|
 | Create product | Juliana | Product drafts are stored in SQLite, one per wishlist, and restored without internet. |
-| Smart recommendations | Santiago | Cached recommendations are shown, expired results are identified and a retry is offered. |
-| Nearby stores | Santiago | Failures of the Nearby service show a specific message and a retry. |
+| Smart recommendations | Santiago | Home and the For you catalog retain the last nonempty result in memory and mark it outdated when offline or after a failed refresh, even beyond the normal cache TTL. Catalog details stay viewable, but Save needs a fresh backend eligibility check and is disabled offline. A reconnect refreshes mounted views; Check connection retries a stale offline signal. |
+| Nearby stores | Santiago | A previously loaded store is shown as outdated only for the same user and a current location fix within 100 metres of the original fix. Otherwise the view shows a specific location, permission, or service error and a recovery action. Reconnection retries with a new location fix. |
 | Login and registration | Jerónimo | Authentication error states for the cases without internet. |
 | Home | Jerónimo | Home shows what is available and the state of each section. |
 | Profile | Jerónimo | Profile recovery after a failed load or update. |
@@ -119,7 +119,7 @@ Android (Kotlin), Miguel. Samsung Galaxy A21s (SM-A217M) with the Demo account; 
 
 **iOS implementation notes.** Unlike an automatic background synchronization queue, Juliana's product creation flow uses local draft persistence and an explicit retry after reconnection. SQLite retains unfinished input, while Firestore stores the confirmed product. The local draft is removed only after a successful remote save. This avoids presenting an unfinished draft as a synchronized product.
 
-Santiago's recommendation and nearby-store behavior complements this approach by allowing network-dependent content to provide cached results or actionable error states, rather than leaving the user without feedback.
+Santiago's recommendation and nearby-store behavior complements this approach by allowing network-dependent content to provide cached results or actionable error states, rather than leaving the user without feedback. The complete cache policy, four protected views, asynchronous code, tests and limitations are in [Santiago's caching and connectivity implementation](Santiago_caching_connectivity.md).
 
 
 ---
@@ -131,7 +131,7 @@ Santiago's recommendation and nearby-store behavior complements this approach by
 | Product creation and management | Miguel | Juliana |
 | Wishlist management | Miguel, Juan Felipe | Juliana, Jerónimo |
 | Smart recommendations | Juan Felipe, Miguel | Juliana, Santiago |
-| Context-aware nearby stores | Juan Felipe, Miguel | Juliana, Jerónimo |
+| Context-aware nearby stores | Juan Felipe, Miguel | Juliana, Jerónimo, Santiago (Flutter connectivity) |
 | Home and navigation | Martín | Jerónimo |
 | Analytics dashboard (Admin Web) | Shared backend and BQ owners | Shared backend and BQ owners |
 ### 3.2 Business questions of Sprint 3
@@ -140,7 +140,7 @@ These questions are different from the Sprint 2 ones. Each one is calculated in 
 |---|---|---|---|---|
 | Juliana | iOS | Which core saving feature has the most saved records? (Create Wishlist, Add Product Manually or Save Recommended Product) | Type 3 | Shows which saving feature users rely on, to decide which one to improve. Backend metric `core_saving_features`. TODO(Juliana): confirm the type. |
 | Jerónimo | iOS | How many errors does the app produce weekly? | Type 1 | Weekly error counts show the technical health of the app. Backend metric `weekly_app_errors` and Admin Web view are done. The error events written by the app are in PR #33, still open. |
-| Santiago | iOS | What percentage of the recommendations shown on Home are opened in the detail view? | Type 3 | It tells whether the recommendation detail view is useful and easy to find. Backend metric `recommendation_home_opens`. |
+| Santiago | iOS | What percentage of recommendations displayed on Flutter Home are opened in the recommendation detail view? | Type 3 | Measures detail-view usage after a visible Home card exposure. Backend metric `recommendation_home_opens`; see [counting contract and evidence](Santiago_home_recommendation_BQ.md). |
 | Miguel | Android | How much money have users saved on the products they marked as purchased? | Type 2 | Users see the benefit of the app. The price paid is asked when marking a purchase. Backend metric `purchase_savings`. Details in [Miguel's BQ page](Miguel_money_saved_BQ.md). |
 | Martín | Android | How often do users add a product manually? | Type 3 | The backend metric `manual_product_usage` reports manual entry as a percentage of classified current saved products, compared with saved recommendations. Admin Web shows the percentage, both counts and unclassified records. It uses the shared existing classification rules and excludes deleted products. It measures the composition of current saved products, not historical action frequency. |
 | Juan Felipe | Android | What are the buying patterns of users based on the products they marked as purchased? | Type * (2 and 4) | Time to purchase and purchase hours help reminders (Type 2). Conversion, price and brands per category help stores and brands (Type 4). Backend metric `buying_patterns`. |
@@ -164,14 +164,15 @@ Why. A product form is long, and losing it because of a lost connection or a res
 ### 3.5 Multithreading
 Android (Kotlin), Martín. In `view/screens/home/HomeRoute.kt`, `loadHome` starts the Nearby and recommendation operations as nested `async` coroutines inside `supervisorScope` and awaits their completion. Each operation calls its controller with `withContext(Dispatchers.IO)` and returns to the Main context provided by Compose to update its own loading, result and error state. The sections can display their results independently. Errors are handled within each operation and cancellation is rethrown. `HomeSmartSections.kt` runs this work in a `LaunchedEffect` keyed by location permission and connectivity; changing those keys or leaving the screen cancels the previous effect. On reconnection it requests a fresh recommendation and retries Nearby when location is allowed. Existing Firestore flows and the other members' repositories and cache remain in place.
 iOS (Flutter), Jerónimo. Home and Profile load their independent sections without waiting for each other: each section is a `LiveSection` that subscribes to its own data and keeps its own loading, success and error state with its own retry. The profile photo is resolved without blocking the first profile result. The interface stays responsive while each section loads.
+iOS (Flutter), Santiago. The recommendation and Nearby views use `FutureBuilder` for independent loading and error states. Their controllers use `Future` with `async`/`await` for network and location reads, Future handlers for completion and error handling, and streams/listeners for connectivity and recommendation invalidation. Concurrent identical recommendation requests share one in-flight Future. These are asynchronous I/O strategies, not Dart isolates or separate worker threads. See [Santiago's code walkthrough](Santiago_caching_connectivity.md#asynchronous-execution).
 Why. A slow request in one section should not delay the rest of the screen.
 
 ### 3.6 Caching
 Android (Kotlin), Juan Felipe. `RecommendationCache` is an Android `LruCache` per authenticated user (uid): at most 5 entries and a time to live of 30 minutes. It counts hits, misses, expirations and evictions, and writes them to Logcat with the tag `WhyNotCache`. `RecommendationController` reads the cache first. Without internet, or if the backend fails, it shows the last recommendation marked as stale with a Retry action, and it refreshes when the connection returns. The cache is invalidated when a recommendation is saved and when the profile is edited, and it is cleared on sign out.
 Coil 3.2.0 loads images with a global memory cache (25% of the available memory) and a disk cache (50 MB). A custom User-Agent was needed because some image hosts blocked the default one.
 
-iOS (Flutter), Santiago. A per-user LRU cache of recommendation results with a maximum capacity and an expiration time, plus a cache of the catalog snapshot and of the five recently opened products. Entries are invalidated when the saved categories change. `cached_network_image` caches product images, and the profile photo has its own cache.
-Why. The recommendation is a Cloud Function call with a visible delay, and the same user often opens Home several times in a session. The cache avoids repeating the call and gives something to show when there is no internet.
+iOS (Flutter), Santiago. The full recommendation catalog uses one per-user snapshot, fresh for five minutes (30 seconds when empty). A separate `LinkedHashMap` LRU retains display fields for the five most recently opened catalog products; Home's top pick has its own eight-entry LRU. Successful local product, wishlist, profile and recommendation-save changes invalidate affected entries. An expired nonempty result can remain as a visibly outdated, session-only fallback during connectivity failure, but it is not a fresh cache hit. A repeat product open still asks the backend to recheck eligibility and create a new saveable event. [Implementation and tests](Santiago_caching_connectivity.md).
+Why. The catalog is a database-backed Cloud Function response and users may reopen it repeatedly. The snapshot avoids repeated list requests; the five-product LRU accelerates detail display without treating an old save event as valid. Recommendation images still use `Image.network` with a fallback, so the recommendation feature does **not** claim a dedicated image-cache library. The profile photo uses `cached_network_image` separately.
 
 ---
 ## 4. Application sharing
